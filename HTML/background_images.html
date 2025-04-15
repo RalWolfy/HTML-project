@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> HTML Background Images </title>
+<style type="text/css">
+h1{text-align:center; margin:100px; font-family:arial;}
+body{margin:10vw; background-color:#eeffab; font-size:1.6vw; font-size:15px; font-family:arial;}
+h2{margin:0 50px;}
+table, td{border:2px solid grey; border-collapse:collapse; padding:5px; margin:auto; background-color:white;}
+td:hover{border-color:black; background-color:silver;}
+</style>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="discription" content="Background Images">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1> Background Images </h1>
+</header>
+<main>
+<p> A background image can be specified for almost any HTML element. </p>
+<div id="on_a_element">
+<h2> Background Image on a HTML element </h2>
+<p> To add a background image on an HTML element, use the HTML style attribute and the CSS <span style="color:#00d500;">background-image property</span>: </p>
+<table>
+<thead> </thead>
+<tbody> <tr> <td> <code>
+&#60;p style="background-image: url('img_girl.jpg');"&#62; 
+</code> </td> </tr> </tbody>
+<tfoot> </tfoot>
+</table>
+<p> You can also specify the background image in the &#60;style&#62; element, in the &#60;head&#62; section: </p>
+<table>
+<thead>
+</thead>
+<tbody>
+<tr>
+<td> <pre> <code>
+&#60;style&#62;
+p {
+  background-image: url('img_girl.jpg');
+}
+&#60;/style&#62;
+</code> </pre> </td>
+</tr>
+</tbody>
+<tfoot>
+</tfoot>
+</table>
+</div>
+<div id="on_a_page">
+<h2> Background Image on a Page </h2>
+<p> If you want the entire page to have a background image, you must specify the background image on the &#60;body&#62; element: </p>
+<table>
+<thead>
+</thead>
+<tbody>
+<tr>
+<td> <pre> <code>
+&#60;style&#62;
+body {
+  background-image: url('img_girl.jpg');
+}
+&#60;/style&#62;
+</code> </pre> </td>
+</tr>
+</tbody>
+<tfoot>
+</tfoot>
+</table>
+</div>
+<div id="background_repeat">
+<h2> Background Repeat </h2>
+<p> If the background image is smaller than the element, the image will repeat itself, horizontally and vertically, until it reaches the end of the element: </p>
+<p> To avoid the background image from repeating itself, set the <span style="color:#00d500;">background-repeat property</span> to no-repeat. </p>
+<table>
+<thead> </thead>
+<tbody> <tr> <td> <pre> <code>
+&#60;style&#62;
+body {
+  background-image: url('example_img_girl.jpg');
+  background-repeat:no-repeat;
+}
+&#60;/style&#62;
+</code> </pre> </td> </tr> </tbody>
+<tfoot> </tfoot>
+</table>
+</div>
+<div id="background_cover">
+<h2> Background Cover </h2>
+<p> If you want the background image to cover the entire element, you can set the <span style="color:#00d500;">background-size property</span> to cover. </p>
+<p> Also, to make sure the entire element is always covered, set the <span style="color:#00d500;">background-attachment property</span> to fixed. </p>
+<p> This way, the background image will cover the entire element, with no stretching (the image will keep its original proportions). </p>
+<table>
+<thead> </thead>
+<tbody> <tr> <td> <pre> <code>
+&#60;style&#62;
+body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+&#60;/style&#62;
+</code> </pre> </td> </tr> </tbody>
+<tfoot> </tfoot>
+</table>
+</div>
+<div id="background_stretch">
+<h2> Background Stretch </h2>
+<p> If you want the background image to stretch to fit the entire element, you can set the <span style="color:#00d500;">background-size property</span> to 100% 100%. </p>
+<p> Try resizing the browser window, and you will see that the image will stretch, but always cover the entire element. </p>
+<table>
+<thead> </thead>
+<tbody> <tr> <td> <pre> <code>
+&#60;style&#62;
+body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+&#60;/style&#62;
+</code> </pre> </td> </tr> </tbody>
+<tfoot> </tfoot>
+</table>
+</div>
+</main>
+</body>
+</html>

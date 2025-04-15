@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Web Workers API </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="A web worker is a JavaScript running in the background, without affecting the performance of the page.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1{text-align:center;}
+body{margin: 10vw; background-color:lightslategrey;}
+</style>
+<script src="demo_workers.js"></script>
+</head>
+<body>
+<header> <h1> HTML Web Workers API </h1> </header>
+<main>
+<p> A web worker is a JavaScript running in the background, without affecting the performance of the page. </p>
+<div id="whatis">
+<h2> What is a Web Worker? </h2>
+<p> When executing scripts in an HTML page, the page becomes unresponsive until the script is finished. </p>
+<p> A web worker is a JavaScript that runs in the background, independently of other scripts, without affecting the performance of the page. You can continue to do whatever you want: clicking, selecting things, etc., while the web worker runs in the background. </p>
+</div>
+<div id="exampleww">
+<h2> HTML Web Workers Example </h2>
+<p> The example below creates a simple web worker that count numbers in the background: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;p&#62; Count numbers: &#60;output id="result"&#62;&#60;/output&#62; &#60;/p&#62;
+&#60;button onclick="startWorker()"&#62;Start Worker&#60;/button&#62;
+&#60;button onclick="stopWorker()"&#62;Stop Worker&#60;/button&#62;
+
+&#60;p&#62; &#60;strong&#62;Note:&#60;/strong&#62; Internet Explorer 9 and earlier versions do not support Web Workers. &#60;/p&#62;
+
+&#60;script&#62;
+var w;
+
+function startWorker() {
+  if(typeof(Worker) !== "undefined") {
+    if(typeof(w) == "undefined") {
+      w = new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+&#60;/script&#62;
+</code></pre></td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
+<script>
+var w;
+
+function startWorker() {
+  if(typeof(Worker) !== "undefined") {
+    if(typeof(w) == "undefined") {
+      w = new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
+  }
+}
+
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+</script>
+</div>
+<div id="checkwebsupport">
+<h2> Check Web Worker Support </h2>
+<p> Before creating a web worker, check whether the user's browser supports it: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+if (typeof(Worker) !== "undefined") {
+  // Yes! Web worker support!
+  // Some code.....
+} else {
+  // Sorry! No Web Worker support..
+}
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="createwwfile">
+<h2> Create a Web Worker File </h2>
+<p> Now, let's create our web worker in an external JavaScript. </p>
+<p> Here, we create a script that counts. The script is stored in the "demo_workers.js" file: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+var i = 0;
+
+function timedCount() {
+  i = i + 1;
+  postMessage(i);
+  setTimeout("timedCount()",500);
+}
+
+timedCount();
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<p> The important part of the code above is the postMessage() method - which is used to post a message back to the HTML page. </p>
+<p> <u>Note:</u> Normally web workers are not used for such simple scripts, but for more CPU intensive tasks. </p>
+</div>
+<div id="createwwobject">
+<h2> Create a Web Worker Object </h2>
+<p> Now that we have the web worker file, we need to call it from an HTML page. </p>
+<p> The following lines checks if the worker already exists, if not - it creates a new web worker object and runs the code in "demo_workers.js": </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+if (typeof(w) == "undefined") {
+  w = new Worker("demo_workers.js");
+}
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<p> Then we can send and receive messages from the web worker. </p>
+<p> Add an "onmessage" event listener to the web worker. </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+w.onmessage = function(event){
+  document.getElementById("result").innerHTML = event.data;
+};
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<p> When the web worker posts a message, the code within the event listener is executed. The data from the web worker is stored in event.data. </p>
+</div>
+<div id="terminateww">
+<h2> Terminate a Web Worker </h2>
+<p> When a web worker object is created, it will continue to listen for messages (even after the external script is finished) until it is terminated. </p>
+<p> To terminate a web worker, and free browser/computer resources, use the terminate() method: <code>w.terminate();</code> </p>
+</div>
+<div id="reuseww">
+<h2> Reuse the Web Worker </h2>
+<p> If you set the worker variable to undefined, after it has been terminated, you can reuse the code: <code>w = undefined;</code> </p>
+</div>
+<div id="fullwwexemple">
+<h2> Full Web Worker Example Code </h2>
+<p> We have already seen the Worker code in the .js file. Below is the code for the HTML page: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;p&#62;Count numbers: &#60;output id="result_two"&#62;&#60;/output&#62;&#60;/p&#62;
+&#60;button onclick="startWorker()"&#62;Start Worker&#60;/button&#62;
+&#60;button onclick="stopWorker()"&#62;Stop Worker&#60;/button&#62;
+  
+&#60;script&#62;
+  var w;
+  
+  function startWorker() {
+    if (typeof(Worker) !== "undefined") {
+      if (typeof(w) == "undefined") {
+        w = new Worker("demo_workers.js");
+      }
+      w.onmessage = function(event) {
+        document.getElementById("result_two").innerHTML = event.data;
+      };
+    } else {
+      document.getElementById("result_two").innerHTML = "Sorry! No Web Worker support.";
+    }
+  }
+  
+  function stopWorker() {
+    w.terminate();
+    w = undefined;
+  }
+  &#60;/script&#62;
+</code></pre></td></tr>
+<tr><td>
+<p>Count numbers: <output id="result_two"></output></p>
+<button onclick="startWorker()">Start Worker</button>
+<button onclick="stopWorker()">Stop Worker</button>
+
+<script>
+var w;
+
+function startWorker() {
+  if (typeof(Worker) !== "undefined") {
+    if (typeof(w) == "undefined") {
+      w = new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("result_two").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result_two").innerHTML = "Sorry! No Web Worker support.";
+  }
+}
+
+function stopWorker() {
+  w.terminate();
+  w = undefined;
+}
+</script>
+</td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="wwanddom">
+<h2> Web Workers and the DOM </h2>
+<p> Since web workers are in external files, they do not have access to the following JavaScript objects: </p>
+<ul style="list-style-type: disc;">
+<li>The window object</li>
+<li>The document object</li>
+<li>The parent object</li>
+</ul>
+</div>
+</main>
+</body>
+</html>

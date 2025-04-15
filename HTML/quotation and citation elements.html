@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Quotation and Citation Elements</title>
+<style type="text/css">
+h1{text-align: center; margin: 10vw;}
+body{margin: 10vw; background-color: #78ffe4d9; font-size:1.7vw;}
+table, td{border: 2px ridge black; border-collapse: collapse; background-color: rgb(160, 246, 252); margin:auto;}
+a:link{color:rgb(36, 0, 128);}
+a:hover{color:green;}
+a:visited{color:rgb(78, 13, 152);}
+a:active{color:red;}
+abbr{text-decoration: none;}
+</style>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Quotation and Citation Elements">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1> HTML Quotation and Citation Elements </h1>
+</header>
+<main>
+<p> In this chapter we will go through the <a href="#blockquote">&#60;blockquote&#62;</a>, <a href="#short_quotations">&#60;q&#62;</a>, <a href="#abbr">&#60;abbr&#62;</a>, <a href="#address">&#60;address&#62;</a>,<a href="#cite">&#60;cite&#62;</a>, and <a href="#bdo">&#60;bdo&#62;</a> HTML elements. </p>
+<div id="blockquote">
+<h2> HTML &#60;blockquote&#62; for Quotations </h2>
+<p> The HTML &#60;blockquote&#62; element defines a section that is quoted from another source. </p>
+<p> Browsers usually indent &#60;blockquote&#62; elements. </p>
+<table>
+<caption> Example</caption>
+<thead></thead>
+<tbody> <tr> <td> <pre>
+<code>&#60;p&#62;</code>Here is a quote from WWF's website:<code>&#60;/p&#62;</code>
+<code>&#60;blockquote cite="http://www.worldwildlife.org/who/index.html"&#62;</code>
+For 60 years, WWF has worked to help people and nature thrive. <br />As the world's leading conservation organization, WWF works in nearly 100 countries. <br />At every level, we collaborate with people around the world to develop and deliver <br />innovative solutions that protect communities, wildlife, and the places in which they live.
+<code>&#60;/blockquote&#62;</code> 
+</pre> </td> </tr> 
+<tr> <td>
+<p>Here is a quote from WWF's website:</p>
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+For 60 years, WWF has worked to help people and nature thrive. <br />
+As the world's leading conservation organization, WWF works in nearly 100 countries. <br />
+At every level, we collaborate with people around the world to develop and deliver <br />
+innovative solutions that protect communities, wildlife, and the places in which they live.
+</blockquote>
+</td> </tr> </tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="short_quotations">
+<h2> HTML &#60;q&#62; for Short Quotations </h2>
+<p> The HTML &#60;q&#62; tag defines a short quotation. </p>
+<p> Browsers normally insert quotation marks around the quotation. </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody> <tr> <td>
+<code>&#60;p&#62;</code> WWF's goal is to: <code>&#60;q&#62;</code>Build a future where people live in harmony with nature.<code>&#60;q&#62;</code> <code>&#60;/p&#62;</code>
+</td></tr>
+<tr> <td>
+<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+</td> </tr>
+</tbody>
+</table>
+</div>
+<div id="abbr">
+<h2> HTML &#60;abbr&#62; for Abbreviations </h2>
+<p> The HTML  &#60;abbr&#62; tag defines an abbreviation or an acronym, like "<abbr title="Hyper Text Markup Language">HTML</abbr>", "<abbr title="Cascading Style Sheets">CSS</abbr>", "<abbr title="Mister">Mr.</abbr>", "<abbr title="Doctor">Dr.</abbr>", "<abbr title="As soon as possible">ASAP</abbr>, "<abbr title="Automated Teller Machine ">ATM</abbr>". </p>
+<p> Marking abbreviations can give useful information to browsers, translation systems and search-engines. Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element.  </p>
+<table> 
+<caption> Example </caption>
+<thead></thead>
+<tbody> <tr> <td>
+The &#60;abbr title="World Health Organization"&#62;WHO&#60;/abbr&#62; was founded in 1948.
+</td> </tr>
+<tr> <td> The <abbr title="World Health Organization">WHO</abbr> was founded in 1948. </td></tr></tbody>
+</table>
+</div>
+<div id="address"> 
+<h2> HTML &#60;address&#62; for Contact Information </h2>
+<p> The HTML &#60;address&#62; tag defines the contact information for the author/owner of a document or an article. </p>
+<p> The contact information can be an email address, URL, physical address, phone number, social media handle, etc. </p>
+<p> The text in the &#60;address&#62; element usually renders in italic, and browsers will always add a line break before and after the &#60;address&#62; element. </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody> <tr> <td> <code>
+&#60;address&#62;
+Written by John Doe.<br>
+Visit us at:<br>
+Box 564, Disneyland<br>
+USA
+&#60;/address&#62;
+</code> </td> </tr>
+<tr> <td>
+<address>
+Written by John Doe.<br>
+Visit us at:<br>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address>
+</td> </tr> </tbody>
+<tfoot></tfoot>   
+</table>
+</div>
+<div id="cite">
+<h2> HTML &#60;cite&#62; for Work Title </h2> 
+<p> The HTML &#60;cite&#62; tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.). </p>
+<p> <span style="color:blue;"><u>Note:</u></span> A person's name is not the title of a work. </p>
+<p> The text in the &#60;cite&#62; element usually renders in italic. </p>
+<table>
+<thead></thead>
+<tbody> <tr> <td> 
+<code> &#60;cite&#62;</code>The Scream<code>&#60;cite&#62;</code> by Edvard Munch. Painted in 1893.
+</td></tr>
+<tr> <td>
+<cite>The Scream</cite> by Edvard Munch. Painted in 1893.   
+</td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div> 
+<div id="bdo">
+<h2> HTML &#60;bdo&#62; for Bi-Directional Override </h2>
+<p> BDO stands for Bi-Directional Override. </p>
+<p> The HTML &#60;bdo&#62; tag is used to override the current text direction: </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody> <tr> <td> 
+<code>&#60;bdo dir="rtl"&#62;</code> This text will be written from right to left. <code>&#60;/bdo&#62;</code>
+</td> </tr>
+<tr> <td>
+<bdo dir="rtl">This text will be written from right to left</bdo>
+</td></tr>
+<tr> <td> 
+<code>&#60;bdo dir="ltr"&#62;</code> This text will be written from left to right. <code>&#60;/bdo&#62;</code>
+</td> </tr>
+<tr> <td>
+<bdo dir="ltr">This text will be written from left to right.</bdo>
+</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</main>
+</body>
+</html>

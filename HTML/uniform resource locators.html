@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<title> Uniform Resource Locators </title>
+<style type="text/css">
+h1{text-align:center; font-family:comic sans MS;}
+header{padding:100px;}
+body{margin:100px; background-color:#95ff78;}
+table{border-collapse:collapse; margin:auto; background-color:white;}
+td:hover{background-color:#ff7070;}
+th:hover{background-color:#ff7070;}
+th, td{padding:5px 20px;}
+.personalized:before{content:"-->"; color:#ff7070;}
+abbr{text-decoration:none;}
+.scheme_types{background-color:#b6ffd9;}
+.the_first_line{background-color:#68ffb1;}
+.schemes{border:3px solid grey;}
+header:hover{background-color:#7affc7;}
+</style>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="URL - Uniform Resource Locator">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1> <u> HTML <abbr title="URL"> Uniform Resource Locators </abbr> </u> </h1>
+</header>
+<main>
+<ul style="list-style-type:disc;">
+<li> A URL is another word for a web address. </li>
+<li> A URL can be composed of words (e.g. w3schools.com), or an <abbr title="Internet Protocol"> IP </abbr> address (e.g. 192.68.20.50).
+</ul>
+<p>Most people enter the name when surfing, because names are easier to remember than numbers. </p>
+<p> Web browsers request pages from web servers by using a URL. </p>
+<p> A Uniform Resource Locator (URL) is used to address a document (or other data) on the web. </p>
+<p> A web address like https://www.w3schools.com/html/default.asp follows these syntax rules: </p>
+<table class="schemes">
+<thead></thead>
+<tbody>
+<tr> 
+<td>scheme://prefix.domain:port/path/filename</td>
+<td> <u>Explanation:</u>
+<ul type="square">
+<li> <span style="border:2px solid grey;">scheme</span> - defines the type of Internet service (most common is http or https)</li>
+<li> <span style="border:2px solid grey;">prefix</span> - defines a domain prefix (default for http is www)</li>
+<li> <span style="border:2px solid grey;">domain</span> - defines the Internet domain name (like w3schools.com)</li>
+<li> <span style="border:2px solid grey;">port</span> - defines the port number at the host (default for http is 80)</li>
+<li> <span style="border:2px solid grey;">path</span> - defines a path at the server (If omitted: the root directory of the site)</li>
+<li> <span style="border:2px solid grey;">filename</span> - defines the name of a document or resource</li>
+</ul>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<div id="common_url">
+<h2> Common URL Schemes </h2>
+<table>
+<caption> The table below lists some common schemes: </caption>
+<colgroup>
+<col span="1"  class="scheme_types">
+</colgroup>
+<thead> <tr> <th class="the_first_line">Scheme</th> <th class="the_first_line">Short for</th> <th class="the_first_line">Used for</th> </tr> </thead>
+<tbody> <tr> <th class="scheme_types">http</th> <td>HyperText Transfer Protocol</td> <td>Common web pages. Not encrypted</td> </tr>
+<tr> <th>https</th> <td>Secure HyperText Transfer Protocol</td> <td>Secure web pages. Encrypted</td> </tr>
+<tr> <th class="scheme_types">ftp</th> <td>File Transfer Protocol</td> <td>Downloading or uploading files</td> </tr>
+<tr> <th class="scheme_types">file</th> <td></td> <td>A file on your computer</td> </tr> </tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="encoding_url">
+<h2> URL Encoding </h2>
+<ul type="none">
+<li class="personalized">URLs can only be sent over the Internet using the ASCII character-set. If a URL contains characters outside the ASCII set, the URL has to be converted.</li>
+<li class="personalized">URL encoding converts non-ASCII characters into a format that can be transmitted over the Internet.</li>
+<li class="personalized">URL encoding replaces non-ASCII characters with a "%" followed by hexadecimal digits.</li>
+<li class="personalized">URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign, or %20.</li>
+</ul>
+</div>
+<div id="encoding_ascii">
+<h2> ASCII Encoding Examples </h2>
+<p> Your browser will encode input, according to the character-set used in your page. </p>
+<p style="color:#ff7070;"> The default character-set in HTML5 is UTF-8. </p>
+<table>
+<colgroup>
+<col span="1"  class="scheme_types">
+</colgroup>
+<thead> <tr> <th class="the_first_line">Character</th>	<th class="the_first_line">From Windows-1252</th> <th class="the_first_line">From UTF-8</th> </tr> </thead>
+<tbody><tr> <td>&#128;</td>	<td>%80</td> <td>%E2%82%AC</td> </tr>
+<tr> <td>&#163;</td>	<td>%A3</td> <td>%C2%A3</td> </tr>
+<tr> <td>&#169;</td>	<td>%A9</td> <td>%C2%A9</td> </tr>
+<tr> <td>&#174;</td>	<td>%AE</td> <td>%C2%AE</td> </tr>
+<tr> <td>&#192;</td>	<td>%C0</td> <td>%C3%80</td> </tr>
+<tr> <td>&#193;</td>	<td>%C1</td> <td>%C3%81</td> </tr>
+<tr> <td>&#194;</td>	<td>%C2</td> <td>%C3%82</td> </tr>
+<tr> <td>&#195;</td>	<td>%C3</td> <td>%C3%83</td> </tr>
+<tr> <td>&#196;</td>	<td>%C4</td> <td>%C3%84</td> </tr>
+<tr> <td>&#197;</td>	<td>%C5</td> <td>%C3%85</td> </tr> </tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</main>
+</body>
+</html>

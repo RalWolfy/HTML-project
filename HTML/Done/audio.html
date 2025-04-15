@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Audio </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML, audio, audioformats">
+<meta name="description" content="The HTML &#60;audio&#62; element is used to play an audio file on a web page.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1{text-align: center; margin:10vw;}
+body{margin:10vw; background-color: rgb(184, 245, 177);}
+table, td{border:2px solid grey; border-collapse:collapse; background-color: rgb(178, 255, 213);}
+.linecolor{text-decoration: none; border-bottom: 1px solid red;}
+.linecolor :hover{background-color:red;}
+abbr{text-decoration:none;}
+</style>
+</head>
+<body>
+<header> <h1> HTML Audio </h1> </header>
+<main>
+<p> The HTML &#60;audio&#62; element is used to play an audio file on a web page. </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;audio controls&#62;
+    &#60;source src="Audio formats/Imany - Don't Be So Shy.ogg" type="audio/ogg"&#62;
+    &#60;source src="Audio formats/Imany - Don't Be So Shy.mp3" type="audio/mpeg"&#62;
+  Your browser does not support the audio element.
+&#60;/audio&#62;
+</code></pre></td></tr>
+<tr><td>
+<audio controls>
+  <source src="Audio formats/Imany - Don't Be So Shy.ogg" type="audio/ogg">
+  <source src="Audio formats/Imany - Don't Be So Shy.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<div id="howworks">
+<h2> Audio - How It Works </h2>
+<p> The controls attribute adds audio controls, like play, pause, and volume. </p>
+<p> The &#60;source&#62; element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format. </p>
+<p> The text between the &#60;audio&#62; and &#60;/audio&#62; tags will only be displayed in browsers that do not support the &#60;audio&#62; element. </p>
+</div>
+<div id="autoplay">
+<h2> HTML &#60;audio&#62; Autoplay </h2>
+<p> To start an audio file automatically, use the autoplay attribute: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;audio controls autoplay&#62;
+    &#60;source src="Audio formats/Imany - Don't Be So Shy.ogg" type="audio/ogg"&#62;
+    &#60;source src="Audio formats/Imany - Don't Be So Shy.mp3" type="audio/mpeg"&#62;
+  Your browser does not support the audio element.
+&#60;/audio&#62;
+</code></pre></td></tr>
+<tr><td>
+  <audio controls autoplay>
+    <source src="Audio formats/Imany - Don't Be So Shy.ogg" type="audio/ogg">
+    <source src="Audio formats/Imany - Don't Be So Shy.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+</td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<p> <u>Note:</u> Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed. </p>
+<p> Add muted after autoplay to let your audio file start playing automatically (but muted): </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;audio controls autoplay muted&#62;
+  &#60;source src="Audio formats/Imany - Don't Be So Shy.ogg" type="audio/ogg"&#62;
+  &#60;source src="Audio formats/Imany - Don't Be So Shy.mp3" type="audio/mpeg"&#62;
+  Your browser does not support the audio element.
+&#60;/audio&#62;
+</code></pre></td></tr>
+<tr><td>
+<audio controls autoplay muted>
+  <source src="Audio formats/Imany - Don't Be So Shy.ogg" type="audio/ogg">
+  <source src="Audio formats/Imany - Don't Be So Shy.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="loop">
+<h2> HTML &#60;audio&#62; Loop </h2>
+<p> Specifies that the audio will start over again, every time it is finished. </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+  &#60;audio controls loop &#62;
+      &#60;source src="Audio formats/Imany - Don't Be So Shy.ogg" type="audio/ogg"&#62;
+      &#60;source src="Audio formats/Imany - Don't Be So Shy.mp3" type="audio/mpeg"&#62;
+    Your browser does not support the audio element.
+  &#60;/audio&#62;
+</code></pre></td></tr>
+<tr><td>
+<audio controls loop>
+<source src="Audio formats/Imany - Don't Be So Shy.ogg" type="audio/ogg">
+<source src="Audio formats/Imany - Don't Be So Shy.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="preloud">
+<h2> HTML &#60;audio&#62; Preload </h2>
+<p> preloud="auto | metadata | none;" </p>
+<p> Specifies if and how the author thinks the audio should be loaded when the page loads. </p>
+<table>
+  <thead></thead>
+  <tbody><tr><td><pre><code>
+  &#60;audio controls preloud="auto"&#62;
+      &#60;source src="Audio formats/Imany - Don't Be So Shy.ogg" type="audio/ogg"&#62;
+      &#60;source src="Audio formats/Imany - Don't Be So Shy.mp3" type="audio/mpeg"&#62;
+    Your browser does not support the audio element.
+  &#60;/audio&#62;
+  </code></pre></td></tr>
+  <tr><td>
+    <audio controls preload="auto">
+      <source src="Audio formats/Imany - Don't Be So Shy.ogg" type="audio/ogg">
+      <source src="Audio formats/Imany - Don't Be So Shy.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+  </td></tr></tbody>
+  <tfoot></tfoot>
+  </table>
+</div>
+<div id="audioformats">
+<h2> HTML Audio Formats </h2>
+<p> There are three supported audio formats: MP3, WAV, and OGG. The browser support for the different formats is: </p>
+<table style="height:200px; width:200px;">
+<thead><tr><th>Browser</th><th>MP3</th><th>WAV</th><th>OGG</th></tr></thead>
+<tbody>
+<tr><th>Edge/IE</th><td>YES</td><td>YES*</td><td>YES*</td></tr>
+<tr><th>Chrome</th><td>YES</td><td>YES</td><td>YES</td></tr>
+<tr><th>Firefox</th><td>YES</td><td>YES</td><td>YES</td></tr>
+<tr><th>Safari</th><td>YES</td><td>YES</td><td>NO</td></tr>
+<tr><th>Opera</th><td>YES</td><td>YES</td><td>YES</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<p> *From Edge 79 </p>
+</div>
+<div id="categories">
+<h2> Categories of Audio Formats </h2>
+<p> It's quite simple once we realize that all audio formats fall into three major categories. </p>
+<h3> Uncompressed Audio Formats </h3>
+<p> Uncompressed audio consists of real sound waves captured and converted to digital format without further processing. As a result, uncompressed audio files tend to be the most accurate but take up a LOT of disk space—about 34 MB per minute for 24-bit 96KHz stereo. </p>
+<h4> Audio File Format: <abbr title="Pulse-Code Modulation">PCM</abbr> </h4>
+<p> <abbr title="Pulse-Code Modulation">PCM</abbr> stands for Pulse-Code Modulation, a digital representation of raw analog audio signals. Analog sounds exist as waveforms. To convert a waveform into digital bits, the sound must be sampled and recorded at certain intervals (or pulses). </p>
+<p> This digital audio format has a "sampling rate" (how often a sample is made) and a "bit depth" (how many bits are used to represent each sample). There is no compression involved. Digital recording is a close-to-exact representation of analog sound. </p>
+<h4> Person Loading CD Into Computer </h4>
+<p> <abbr title="Pulse-Code Modulation">PCM</abbr> is the most common audio format used in CDs and DVDs. There is a subtype of <abbr title="Pulse-Code Modulation">PCM</abbr> called Linear Pulse-Code Modulation, where samples are taken at linear intervals. <abbr title="Linear Pulse-Code Modulation">LPCM</abbr>is the most common form of <abbr title="Pulse-Code Modulation">PCM</abbr>, which is why the two terms are almost interchangeable at this point. </p>
+<h4> Audio File Format: <abbr title="Waveform Audio File Format">WAV</abbr> </h4>
+<p> <abbr title="Waveform Audio File Format">WAV</abbr> stands for Waveform Audio File Format (also called Audio for Windows at some point but not anymore). It's a standard that was developed by Microsoft and IBM back in 1991. </p>
+<p> Many assume that all <abbr title="Waveform Audio File Format">WAV</abbr> files are uncompressed audio files, but that's not true. <abbr title="Waveform Audio File Format">WAV</abbr> is a Windows container for different music formats. This means that a <abbr title="Waveform Audio File Format">WAV</abbr> file could potentially contain compressed audio, but it's rarely used for that. </p>
+<p> Most <abbr title="Waveform Audio File Format">WAV</abbr> files contain uncompressed audio in PCM format. The <abbr title="Waveform Audio File Format">WAV</abbr> file is just a wrapper for the <abbr title="Pulse-Code Modulation">PCM</abbr> encoding, making it more suitable for use on Windows systems. However, Mac systems can usually open <abbr title="Waveform Audio File Format">WAV</abbr> files without any issues. </p>
+<h4> Audio File Format: <abbr title="Audio Interchange File Format">AIFF</abbr> </h4>
+<p> <abbr title="Audio Interchange File Format">AIFF</abbr> stands for Audio Interchange File Format. Similar to how Microsoft and IBM developed <abbr title="Waveform Audio File Format">WAV</abbr> for Windows, <abbr title="Audio Interchange File Format">AIFF</abbr> is an audio file format developed by Apple for Mac systems back in 1988. </p>
+<p> Another audio format similar to <abbr title="Waveform Audio File Format">WAV</abbr> files, <abbr title="Audio Interchange File Format">AIFF</abbr> files can contain multiple kinds of audio formats. For example, there is a compressed version called AIFF-C and another version called Apple Loops used by GarageBand and Logic Pro. They both use the same <abbr title=".aiff">AIFF</abbr> extension. </p>
+<p> Most <abbr title="Audio Interchange File Format">AIFF</abbr> files contain uncompressed audio in <abbr title="Pulse-Code Modulation">PCM</abbr> format. The <abbr title="Audio Interchange File Format">AIFF</abbr> file is just a wrapper for the <abbr title="Pulse-Code Modulation">PCM</abbr> encoding, making it more suitable for use on Mac systems. However, Windows systems can usually open <abbr title="Audio Interchange File Format">AIFF</abbr> files without any issues. </p>
+<h3> Audio Formats With Lossy Compression </h3>
+<p> Lossy compression is when some data is lost during the compression process—and compression is important because uncompressed audio takes up lots of disk space. </p>
+<p> In other words, lossy compression means sacrificing sound quality and audio fidelity for smaller file sizes. We'll hear artifacts and other weirdnesses in the audio when it's done poorly. But when it's done well, we can't hear the difference. </p>
+<h4> Audio File Format: <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> </h4>
+<p> <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> stands for MPEG-1 Audio Layer 3. It was released back in 1993 and exploded in popularity, eventually becoming the most popular audio format in the world for music files. There's a reason we had "MP3 players" but not "OGG players!". </p>
+<p> <u>Note</u>: <span class="linecolor"> <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> is not the same as <abbr title="MPEG-4 Part 14 -  MPEG (Moving Picture Experts Group)">MP4</abbr>! </span> The difference between the audio file extensions is simple: <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> covers audio only, while <abbr title="MPEG-4 Part 14 -  MPEG (Moving Picture Experts Group)">MP4</abbr> includes audio and video. So, an <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> player only supports audio, but an <abbr title="MPEG-4 Part 14 -  MPEG (Moving Picture Experts Group)">MP4</abbr> player can play audio and video media types. </p>
+<h4> Audio File Format: <abbr title="Advanced Audio Coding">AAC</abbr> </h4>
+<p> <abbr title="Advanced Audio Coding">AAC</abbr> stands for Advanced Audio Coding. It was developed in 1997 as the successor to MP3; while it did catch on as a popular digital audio format, it never really overtook <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> as the most popular. </p>
+<p> The compression algorithm used by <abbr title="Advanced Audio Coding">AAC</abbr> is much more advanced and technical than the MP3 music file type, so when you compare the same recording in <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> and <abbr title="Advanced Audio Coding">AAC</abbr> formats at the same bitrate, the <abbr title="Advanced Audio Coding">AAC</abbr> one will generally have better sound quality. </p>
+<p> Even though <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> is more of a household format, <abbr title="Advanced Audio Coding">AAC</abbr> is still widely used today. In fact, it's the standard audio compression method used by YouTube, Android, iOS, iTunes, later Nintendo portables, and later PlayStations. </p>
+<h4> Audio File Format: OGG (Vorbis) </h4>
+<p> OGG doesn't stand for anything. Actually, it's not even a compression format. Instead, OGG is a multimedia container that can hold all kinds of compression formats but is most commonly used to hold Vorbis files—which is why these audio file types are called Ogg Vorbis files. </p>
+<p> Vorbis was first released in 2000 and grew in popularity for two reasons: It adheres to the principles of open-source software and performs significantly better than most other lossy compression formats (meaning it produces a smaller file size for equivalent audio quality). </p>
+<p> <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> and <abbr title="Advanced Audio Coding">AAC</abbr> have such strong footholds that OGG has had a hard time breaking into the spotlight—not many devices support it natively—but it's getting better with time. For now, it's mostly used by hardcore proponents of open-source software. </p>
+<h4> Audio File Format: <abbr title="Windows Media Audio">WMA</abbr> (Lossy) </h4>
+<p> <abbr title="Windows Media Audio">WMA</abbr> stands for Windows Media Audio. It was first released in 1999 and has undergone several evolutions since then, all while keeping the same <abbr title="Windows Media Audio">WMA</abbr> name and extension. It's a proprietary format created by Microsoft. </p>
+<p> Not unlike <abbr title="Advanced Audio Coding">AAC</abbr> and OGG, <abbr title="Windows Media Audio">WMA</abbr> was meant to address some flaws in the <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> compression method—and it turns out that <abbr title="Windows Media Audio">WMA</abbr>'s approach to compression is pretty similar to those of <abbr title="Advanced Audio Coding">AAC</abbr> and OGG. So yes, in terms of objective compression quality, <abbr title="Windows Media Audio">WMA</abbr> is actually the better audio file type than <abbr title="MPEG-1 Audio Layer 3">MP3</abbr>. </p>
+<p> But since <abbr title="Windows Media Audio">WMA</abbr> is proprietary, not many devices and platforms support it. It also doesn't offer any real benefits over <abbr title="Advanced Audio Coding">AAC</abbr> or OGG, so when <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> isn't good enough, it's simply more practical to go with one of those two instead of <abbr title="Windows Media Audio">WMA</abbr>. </p>
+<h3> Audio Formats With Lossless Compression </h3>
+<p> Opposite lossy compression is lossless compression, a method that reduces an audio file's size without ANY data loss between the source and the compressed audio files. </p>
+<p> The downside is that lossless compressed audio files are bigger than lossy compressed audio files—up to 2x to 5x larger for the same source file. </p>
+<h4> Audio File Format: <abbr title="Free Lossless Audio Codec">FLAC</abbr> </h4>
+<p> <abbr title="Free Lossless Audio Codec">FLAC</abbr> stands for Free Lossless Audio Codec. Maybe it is a bit on the nose, but it has quickly become one of the most popular lossless formats available since its introduction in 2001. </p>
+<p> What's nice is that <abbr title="Free Lossless Audio Codec">FLAC</abbr> can compress an original source file by up to 60 percent without losing a single bit of data. What's even nicer is that <abbr title="Free Lossless Audio Codec">FLAC</abbr> is an open-source and royalty-free audio file format, so it doesn't impose any intellectual property constraints. </p>
+<p> <abbr title="Free Lossless Audio Codec">FLAC</abbr> is supported by most major progr>ams and devices and is the main alternative to MP3 for music. With it, you get the full quality of raw uncompressed audio at half the file size. That's why many see <abbr title="Free Lossless Audio Codec">FLAC</abbr> as the best audio format. </p>
+<h4> Audio File Format: <abbr title="Apple Lossless Audio Codec">ALAC</abbr> </h4>
+<p> <abbr title="Apple Lossless Audio Codec">ALAC</abbr> stands for Apple Lossless Audio Codec. It was developed and launched in 2004 as a proprietary format but eventually became open-source and royalty-free in 2011. <abbr title="Apple Lossless Audio Codec">ALAC</abbr> is sometimes referred to as Apple Lossless. </p>
+<p> While <abbr title="Apple Lossless Audio Codec">ALAC</abbr> is good, it's slightly less efficient than <abbr title="Free Lossless Audio Codec">FLAC</abbr> regarding compression. However, Apple users don't have a choice between the two because iTunes and iOS both provide native support for <abbr title="Apple Lossless Audio Codec">ALAC</abbr> and no support for <abbr title="Free Lossless Audio Codec">FLAC</abbr>. </p>
+<h4> Audio File Format: <abbr titile="Windows Media Audio">WMA</abbr> (Lossless) </h4>
+<p> <abbr titile="Windows Media Audio">WMA</abbr> stands for Windows Media Audio. We covered this above in the lossy compression section, but we mention it here because there's a lossless alternative called <abbr titile="Windows Media Audio">WMA</abbr> Lossless that uses the same extension. Confusing, I know. </p>
+<p> Compared to <abbr title="Free Lossless Audio Codec">FLAC</abbr> and <abbr title="Apple Lossless Audio Codec">ALAC</abbr>, <abbr titile="Windows Media Audio">WMA</abbr> Lossless is the worst in terms of compression efficiency—but not by much. It's a proprietary format, so it's no good for fans of open-source software, but it's supported natively on both Windows and Mac systems. </p>
+<p> The biggest issue with WMA Lossless is the limited hardware support. If you want to play lossless compressed audio across multiple devices and platforms, you should stick with <abbr title="Free Lossless Audio Codec">FLAC</abbr>. </p>
+</div>
+<div id="example-of-formats">
+<h2> Example of audio audio formats </h2>
+<p> APE:
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.ape" type="audio/ape">
+Your browser does not support the audio element.
+</audio>
+ FLAC:
+<audio controls>
+<source src="Audio formats/imany-dont-be-so-shy.flac" type="audio/flac">
+Your browser does not support the audio element.
+</audio>
+ M4A:
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.m4a" type="audio/m4a">
+Your browser does not support the audio element.
+</audio>
+</p>
+<p> MP3:
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.mp3" type="audio/mp3">
+Your browser does not support the audio format.
+</audio>
+ MPC:
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.mpc" type="audio/mpc">
+Your browser does not support the audio format.
+</audio>
+ OGG:
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.ogg" type="audio/ogg">
+Your browser does not support the audio format.
+</audio>
+</p>
+<p> OFR:
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.ofr" type="audio/ofr">
+Your browser does not support the audio format.
+</audio>
+ OPUS:
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.opus" type="audio/opus">
+Your browser does not support the audio format.
+</audio>
+ SPX
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.spx" type="audio/spx">
+Your browser does not support the audio format.
+</audio>
+</p>
+<p> TAK:
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.tak" type="audio/tak">
+Your browser does not support the audio format.
+</audio>
+ WAV:
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.wav" type="audio/wav">
+Your browser does not support the audio format.
+</audio>
+ WMA:
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.wma" type="audio/wma">
+Your browser does not support the audio format.
+</audio>
+</p>
+<p> WV:
+<audio controls>
+<source src="Audio formats/Imany - Don't Be So Shy.wv" type="audio/wv">
+Your browser does not support the audio format.
+</audio>
+ AAC:
+<audio controls>
+<source src="Audio formats/imany-dont-be-so-shy.aac" type="audio/aac">
+Your browser does not support the audio format.
+</audio>
+ AC3:
+<audio controls>
+<source src="Audio formats/imany-dont-be-so-shy.ac3" type="audio/ac3">
+Your browser does not support the audio format.
+</audio>
+</p>
+<p> M4R:
+<audio controls>
+<source src="Audio formats/imany-dont-be-so-shy.m4r" type="audio/m4r">
+Your browser does not support the audio format.
+</audio>
+</p>
+</div>
+<div id="which">
+<h2> Which Audio File Format Is the best for what we doing? </h2>
+<p> <i>For most people, the decision is pretty easy:</i> </p>
+<ul type="disc">
+<li> If you're capturing and editing raw audio, use an uncompressed audio file format. This way, you're working with the truest quality of audio possible. Then, when you're done, you can export or convert it to a compressed format. </li>
+<li> If you're listening to music and want faithful audio representation, use lossless audio compression. This is why audiophiles always scramble for <abbr title="Free Lossless Audio Codec">FLAC</abbr> albums over <abbr title="MPEG-1 Audio Layer 3">MP3</abbr> albums. Note that you'll need a lot of storage space for these. </li>
+<li> If you're okay with "good enough" music quality, if your audio file doesn't have any music, or if you need to conserve disk space, use lossy audio compression. Most people actually can't hear the difference between lossy and lossless compression. </li>
+<li> For those who want the utmost quality in their music playback, note that high-quality audio files won't matter if your playback device can't faithfully recreate those sounds. </li>
+</ul>
+</div>
+<div id="mpe">
+<h2> HTML Audio - Methods, Properties, and Events </h2>
+<p> The HTML DOM defines methods, properties, and events for the &#60;audio&#62; element. </p>
+<p> This allows you to load, play, and pause audios, as well as set duration and volume. </p>
+<p> There are also DOM events that can notify you when an audio begins to play, is paused, and others. </p>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Example of Geolocation API </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Example of a  API Geolocation code.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width">
+<style type="text/css">
+body{margin:10vw;}
+table, td{border:2px solid grey; border-collapse:collapse; margin: auto;  margin-bottom: 20px;}
+h1{text-align:center;}
+</style>
+</head>
+<body>
+<header>
+<h1> Example of Geolocation API </h1>
+</header>
+<main>
+<p> Click the button to get your coordinates. </p>
+<button onclick="getLocation()"> Try It </button>
+<p id="demo"></p>
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + "<br> Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation." 
+            break;
+            case error.POSITION_UNAVAILABLE:
+            x.innerHTML ="Location information is unavailable."
+            break;
+            case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+            case error.UNKONOWN_ERROR:
+            x.innerHTML = "An unknown erroroccurred."
+            break;
+    }
+}
+</script>
+<p> You can also click the below button to see the live position. </p>
+<button onclick="getLocation()"> Try It </button>
+<p id="the_second_demo"></p>
+<script>
+var x = document.getElementById("the_second_demo");
+function getLocation(){
+    if (navigator.geoloaction) {
+        navigator.geolocation.watchPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + "<br> Longitude: " + position.coords.longitude;
+}
+</script>
+<div id="how">
+<h2> How can be created </h2>
+<table>
+<caption> The first - getCurrentPosition method </caption>
+<thead></thead>
+<tbody>
+<tr><td><pre><code>
+    &#60;button onclick="getLocation()"&#62; Try It &#60;/button&#62;
+    &#60;p id="demo"&#62;&#60;/p&#62;
+    &#60;script&#62;
+    var x = document.getElementById("demo");
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude + "<br> Longitude: " + position.coords.longitude;
+    }
+    
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                x.innerHTML = "User denied the request for Geolocation." 
+                break;
+                case error.POSITION_UNAVAILABLE:
+                x.innerHTML ="Location information is unavailable."
+                break;
+                case error.TIMEOUT:
+                x.innerHTML = "The request to get user location timed out."
+                break;
+                case error.UNKONOWN_ERROR:
+                x.innerHTML = "An unknown erroroccurred."
+                break;
+        }
+    }
+    &#60;/script&#62;
+</code></pre></td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<table>
+<caption> The second - watchPosition method </caption>
+<thead></thead>
+<tbody>
+<tr><td><pre><code>
+    &#60;button onclick="getLocation()"&#62; Try It &#60;/button&#62;
+    &#60;p id="demo"&#62;&#60;/p&#62;
+    &#60;script&#62;
+    var x = document.getElementById("demo");
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.watchPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+      "&#60;br&#62;Longitude: " + position.coords.longitude;
+    }
+    &#60;/script&#62;
+</code></pre></td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Links </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML, Links">
+<meta name="description" content="The &#60;a&#62; tag defines a hyperlink, which is used to link from one page to another.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:10vw; background-color: darkgray;}
+h1{text-align: center; margin: 10vw;}
+table,td {border:2px solid black; background-color: whitesmoke; padding: 10px; margin:20px; border-collapse: collapse; width:auto;}
+details{margin-bottom: 2vw; background-color: rgb(224, 224, 224); padding: 20px;}
+</style>
+</head>
+<body>
+<h1> Links </h1>
+<p> The &#60;a&#62; tag defines a hyperlink, which is used to link from one page to another. </p>
+<div id="t_n">
+<h2> Tips and Notes </h2>
+<ul style="list-style-type:square">
+<li> <u>Tip</u>: If the &#60;a&#62; tag has no href attribute, it is only a placeholder for a hyperlink. </li>
+<li> <u>Tip</u>: A linked page is normally displayed in the current browser window, unless you specify another target. </li>
+</ul>
+</div>
+<div id="attributes">
+<h2> Attributes </h2>
+<div id="download">
+<details><summary>download - Specifies that the target will be downloaded when a user clicks on the hyperlink</summary>
+<p> The download attribute specifies that the target (the file specified in the href attribute) will be downloaded when a user clicks on the hyperlink. </p>
+<p> The optional value of the download attribute will be the new name of the file after it is downloaded. There are no restrictions on allowed values, and the browser will automatically detect the correct file extension and add it to the file (.img, .pdf, .txt, .html, etc.). </p>
+<p> If the value is omitted, the original filename is used. </p>
+<div id="syntax">
+<h3> Syntax </h3>
+<p style="border: 2px solid black; margin: 10px; padding: 8px;"> &#60;a download="filename"&#62; </p>
+<p> Filename - Optional. Specifies the new filename for the downloaded file. </p>
+<p> Specify a value for the download attribute, which will be the new filename of the downloaded file ("w3logo.jpg" instead of "myw3schoolsimage.jpg"): </p>
+<p style="border: 2px solid black; margin: 10px; padding: 8px;"> &#60;a href="/images/myw3schoolsimage.jpg" download="w3logo"&#62; </p>
+</div>
+</details>
+</div>
+<div id="href">
+<details><summary>href - Specifies the URL of the page the link goes to. </summary>
+<p> <u>Tip</u>: You can use href="#top" or href="#" to link to the top of the current page! </p>
+<div id="pv">
+<h3> Possible values: </h3>
+<ul style="list-style-type: none;">
+<li> An absolute URL - points to another web site (like href="http://www.example.com/default.htm") </li>
+<li> A relative URL - points to a file within a web site (like href="default.htm") </li>
+<li> Link to an element with a specified id within the page (like href="#section2") </li>
+<li> Other protocols (like https://, ftp://, mailto:, file:, etc..) </li>
+<li> A script (like href="javascript:alert('Hello');") </li>
+</ul>
+</div>
+</details>
+</div>
+<div id="hreflang">
+<details>
+<summary>hreflang - language_code - Specifies the language of the linked document</summary>
+<p style="border:2px solid black; margin:10px; padding: 8px;"> &#60;a href="https://www.w3schools.com" hreflang="en"&#62;W3Schools&#60;/a&#62; </p>
+<p> This attribute is only used if the href attribute is set. </p>
+<p> <u>Note</u>: This attribute is purely advisory. </p>
+</details>
+</div>
+<div id="media">
+<details>
+<summary>media - media_query - Specifies what media/device the linked document is optimized for</summary>
+<p style="border:2px solid black; margin:10px; padding: 8px;"> &#60;a href="att_a_media.asp?output=print" media="print and (resolution:300dpi)"&#62; Open media attribute page for print. &#60;/a&#62; </p>
+<div id="d_u">
+<h3> Definition and Usage </h3>
+<p> The media attribute specifies what media or device the linked document is optimized for. </p>
+<p> This attribute is used to specify that the target URL is designed for special devices (like iPhone), speech or print media. </p>
+<p> This attribute can accept several values. </p>
+<p> <u>Note</u>: This attribute is purely advisory. </p>
+</div>
+<div id="syntax_2">
+<h3> Syntax </h3>
+<p style="border:2px solid black; margin:10px; padding: 8px;"> &#60;a media="value"&#62; </p>
+</div>
+<table>
+<caption> Possible Operators </caption>
+<colgroup>
+<col span="1" style="background-color: palegoldenrod;">
+<col span="1">
+</colgroup>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>and</td><td>Specifies an AND operator</td></tr>
+<tr><td>not</td><td>Specifies a NOT operator</td></tr>
+<tr><td>,</td><td>Specifies an OR operator</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<table>
+<caption> Devices </caption>
+<colgroup>
+<col span="1" style="background-color:coral; text-decoration: wavy;">
+<col span="1">
+</colgroup>
+<thead><tr><th>Value</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>all</td><td>Default. Suitable for all devices</td></tr>
+<tr><td>aural</td><td>Speech synthesizers</td></tr>
+<tr><td>braille</td><td>Braille feedback devices</td></tr>
+<tr><td>handheld</td><td>Handheld devices (small screen, limited bandwidth)</td></tr>
+<tr><td>projection</td><td>Projectors</td></tr>
+<tr><td>print</td><td>Print preview mode/printed pages</td></tr>
+<tr><td>screen</td><td>Computer screens</td></tr>
+<tr><td>tty</td><td>Teletypes and similar media using a fixed-pitch character grid</td></tr>
+<tr><td>tv</td><td>Television type devices (low resolution, limited scroll ability)</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<table>
+<caption>Values</caption>
+<colgroup>
+<col span="1" style="background-color:yellowgreen; text-decoration: wavy;">
+<col span="1">
+<col span="1">
+</colgroup>
+<thead><tr><th>Value</th><th>Description</th><th></th></tr></thead>
+<tbody>
+<tr><td>width</td><td>Specifies the width of the targeted display area. <br />"min-" and "max-" prefixes can be used.</td><td><u>Example</u>: media="screen and (min-width:500px)"</td></tr>
+<tr><td>height</td><td>Specifies the height of the  targeted display area. <br />"min-" and "max-" prefixes can be used.</td><td><u>Example</u>: media="screen and (max-height:700px)"</td></tr>
+<tr><td>device-width</td><td>Specifies the width of the target display/paper. <br />"min-" and "max-" prefixes can be used.</td><td><u>Example</u>: media="screen and (device-width:500px)"</td></tr>
+<tr><td>device-height</td><td>Specifies the height of the target display/paper. <br />"min-" and "max-" prefixes can be used.</td><td><u>Example</u>: media="screen and (device-height:500px)"</td></tr>
+<tr><td>orientation</td><td>Specifies the orientation of the target display/paper. <br />Possible values: "portrait" or "landscape"</td><td><u>Example</u>: media="all and (orientation: landscape)"</td></tr>
+<tr><td>aspect-ratio</td><td>Specifies the width/height ratio of the targeted display area. <br />"min-" and "max-" prefixes can be used.</td><td><u>Example</u>: media="screen and (aspect-ratio:16/9)"</td></tr>
+<tr><td>device-aspect-ratio</td><td>Specifies the device-width/device-height ratio of the target display/paper. <br />"min-" and "max-" prefixes can be used.</td><td><u>Example</u>: media="screen and (aspect-ratio:16/9)"</td></tr>
+<tr><td>color</td><td>Specifies the bits per color of target display. <br />"min-" and "max-" prefixes can be used.</td><td><u>Example</u>: media="screen and (color:3)"</td></tr>
+<tr><td>color-index</td><td>Specifies the number of colors the target display can handle. <br />"min-" and "max-" prefixes can be used.</td><td><u>Example</u>: media="screen and (min-color-index:256)"</td></tr>
+<tr><td>monochrome</td><td>Specifies the bits per pixel in a monochrome frame buffer. <br />"min-" and "max-" prefixes can be used.</td><td><u>Example</u>: media="screen and (monochrome:2)"</td></tr>
+<tr><td>resolution</td><td>Specifies the pixel density (dpi or dpcm) of the target display/paper. <br />"min-" and "max-" prefixes can be used.</td><td><u>Example</u>: media="print and (resolution:300dpi)"</td></tr>
+<tr><td>scan</td><td>Specifies scanning method of a tv display. <br />Possible values are "progressive" and "interlace".</td><td><u>Example</u>: media="tv and (scan:interlace)"</td></tr>
+<tr><td>grid</td><td>Specifies if the output device is grid or bitmap. <br />Possible values are "1" for grid, and "0" otherwise.</td><td><u>Example</u>: media="handheld and (grid:1)"</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</details>
+</div>
+<div id="ping">
+<details><summary>ping - list_of_URLs - Specifies a space-separated list of URLs to which, when the link is followed, post requests with the body ping will be sent by the browser (in the background). Typically used for tracking.</summary>
+<div id="ex">
+<h3> Example </h3>
+<table>
+<caption>Notify w3schools.com/trackpings, when a user clicks on the link:</caption>
+<thead></thead>
+<tbody><tr><td><pre><code>&#60;*a href="https://www.w3schools.com/html" ping="https://www.w3schools.com/trackpings"&#62;</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="d_u_2">
+<h3> Definition and Usage </h3>
+<p> The ping attribute specifies a list of URLs to be notified if the user follows the hyperlink. </p>
+<p> When the user clicks on the hyperlink, the ping attribute will send a short HTTP POST request to the specified URL. </p>
+<p> This attribute is useful for monitoring/tracking. </p>
+<p> URL	Specifies the URL to be notified if the user follows the hyperlink. Must be a space separated list of one or more valid URLs. </p>
+</div>
+</details>
+</div>
+<div id="referrerpolicy">
+<details><summary>referrerpolicy - Specifies which referrer information to send with the link </summary>
+<p style="border:2px solid black; margin:10px; padding: 8px;"> &#60;a href="https://www.w3schools.com" referrerpolicy="origin"&#62; </p>
+<p> The referrerpolicy attribute specifies which referrer information to send when the user clicks on the hyperlink. </p>
+<h3> Syntax </h3>
+<p style="border:2px solid black; margin:10px; padding: 8px;"> &#60;a referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"&#62; </p>
+<table>
+<caption>Attribute Values</caption>
+<thead></thead>
+<tbody>
+<tr><td>no-referrer</td><td>No referrer information is sent</td></tr>
+<tr><td>no-referrer-when-downgrade</td><td>Default. Sends the origin, path, and query string if the protocol security level stays the same or is higher (HTTP to HTTP, HTTPS to HTTPS, HTTP to HTTPS is ok). Sends nothing to less secure level (HTTPS to HTTP is not ok)</td></tr>
+<tr><td>origin</td><td>Sends the origin (scheme, host, and port) of the document</td></tr>
+<tr><td>origin-when-cross-origin</td><td>Sends the origin of the document for cross-origin request. Sends the origin, path, and query string for same-origin request</td></tr>
+<tr><td>same-origin</td><td>Sends a referrer for same-origin request. Sends no referrer for cross-origin request</td></tr>
+<tr><td>strict-origin-when-cross-origin</td><td>Sends the origin if the protocol security level stays the same or is higher (HTTP to HTTP, HTTPS to HTTPS, and HTTP to HTTPS is ok). Sends nothing to less secure level (HTTPS to HTTP)</td></tr>
+<tr><td>unsafe-url</td><td>Sends the origin, path, and query string (regardless of security). Use this value carefully!</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</details>
+</div>
+<div id="rel">
+<details><summary>rel - Specifies the relationship between the current document and the linked document</summary>
+<p style="border: 2px solid black; margin:10px; padding: 8px;"> &#60;a rel="nofollow" href="http://www.functravel.com/"&#62;Cheap Flights&#60;/a&#62; </p>
+<p> <u>Tip</u>: Search engines can use this attribute to get more information about a link! </p>
+<table>
+<caption>Attribute Values</caption>
+<thead></thead>
+<tbody>
+<tr><td>alternate</td><td>Provides a link to an alternate representation of the document (i.e. print page, translated or mirror)</td></tr>
+<tr><td>author</td><td>Provides a link to the author of the document</td></tr>
+<tr><td>bookmark</td><td>Permanent URL used for bookmarking</td></tr>
+<tr><td>external</td><td>Indicates that the referenced document is not part of the same site as the current document</td></tr>
+<tr><td>help</td><td>Provides a link to a help document</td></tr>
+<tr><td>license</td><td>Provides a link to licensing information for the document</td></tr>
+<tr><td>next</td><td>Provides a link to the next document in the series</td></tr>
+<tr><td>nofollow</td><td>Links to an unendorsed document, like a paid link. <br /> ("nofollow" is used by Google, to specify that the Google search spider should not follow that link)</td></tr>
+<tr><td>noopener</td><td>Requires that any browsing context created by following the hyperlink must not have an opener browsing context</td></tr>
+<tr><td>noreferrer</td><td>Makes the referrer unknown. No referer header will be included when the user clicks the hyperlink</td></tr>
+<tr><td>prev</td><td>The previous document in a selection</td></tr>
+<tr><td>search</td><td>Links to a search tool for the document</td></tr>
+<tr><td>tag</td><td>A tag (keyword) for the current document</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</details>
+</div>
+<div id="target">
+<details><summary>target - Specifies where to open the linked document</summary>
+<h3> Syntax </h3>
+<p style="border:2px solid black; margin:10px; padding: 8px;"> &#60;a target="_blank|_self|_parent|_top|framename"&#62; </p>
+<table>
+<caption>Attribute Values</caption>
+<thead></thead>
+<tbody>
+<tr><td>_blank</td><td>Opens the linked document in a new window or tab</td></tr>
+<tr><td>_self</td><td>Opens the linked document in the same frame as it was clicked (this is default)</td></tr>
+<tr><td>_parent</td><td>Opens the linked document in the parent frame</td></tr>
+<tr><td>_top</td><td>Opens the linked document in the full body of the window</td></tr>
+<tr><td>framename</td><td>Opens the linked document in the named iframe</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</details>
+</div>
+<div id="type">
+<details><summary>type - media_type - Specifies the media type of the linked document</summary>
+<p style="border:2px solid black; margin:10px; padding: 8px;"> &#60;a href="https://www.w3schools.com" type="text/html"&#62;W3Schools&#60;/a>&#62; </p>
+<p> The type attribute specifies the Internet media type (formerly known as MIME type) of the linked document. </p>
+<p> <u>Note</u>: This attribute is purely advisory. </p>
+<h3> Syntax </h3>
+<p style="border:2px solid black; margin:10px; padding: 8px;"> &#60;a type="media_type"&#62; </p>
+<p> Look at <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external"> IANA Media Types </a> for a complete list of standard media types. </p>
+</details>
+</div>
+</div>
+<div id="examples">
+<table>
+<caption>How to use an image as a link:</caption>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.hindustantimes.com%2Fimg%2F2022%2F08%2F07%2F1600x900%2Fcat_1659882617172_1659882628989_16598826<wbr>
+&tbnid=pA3GwL1D0mAM7M&vet=12ahUKEwjTvuC2pt2AAxXIpicCHYGpBDsQMygOegQIARBp..i&imgrefurl=https%3A%2F%2Fwww.hindustantimes.com%2Flifestyle%2Fpet%2Finternational-cat-day-9-<wbr>
+common-cat-myths-you-need-to-stop-believing-101659882544976.html&docid=lnRfczL97o8UdM&w=1600&h=900&q=cats&client=opera-gx&ved=2ahUKEwjTvuC2pt2AAxXIpicCHYGpBDsQMygOegQI<wbr>
+ARBp"&#62;
+&#60;img border="0" alt="W3Schools"  style="margin: 0 30px;"" src="Images/cats_links.jpeg" width="300px" height="168px" /&#62;
+&#60;/a&#62;
+</code></pre></td></tr>
+<tr><td>
+<a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.hindustantimes.com%2Fimg%2F2022%2F08%2F07%2F1600x900%2Fcat_1659882617172_1659882628989_1659882628989.jpg&tbnid=pA3GwL1D0mAM7M&vet=12ahUKEwjTvuC2pt2AAxXIpicCHYGpBDsQMygOegQIARBp..i&imgrefurl=https%3A%2F%2Fwww.hindustantimes.com%2Flifestyle%2Fpet%2Finternational-cat-day-9-common-cat-myths-you-need-to-stop-believing-101659882544976.html&docid=lnRfczL97o8UdM&w=1600&h=900&q=cats&client=opera-gx&ved=2ahUKEwjTvuC2pt2AAxXIpicCHYGpBDsQMygOegQIARBp">
+<img style="border:0; width:300px; height:168px; margin: 0 150px;" alt="W3Schools" src="Images/cats_links.jpeg" />
+</a>
+</td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<table>
+<caption>How to open a link in a new browser window:</caption>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.hindustantimes.com%2Fimg%2F2022%2F08%2F07%2F1600x900%2Fcat_1659882617172_1659882628989_165988262<wbr>
+8989.jpg&tbnid=pA3GwL1D0mAM7M&vet=12ahUKEwjTvuC2pt2AAxXIpicCHYGpBDsQMygOegQIARBp..i&imgrefurl=https%3A%2F%2Fwww.hindustantimes.com%2Flifestyle%2Fpet%2Finternational-ca<wbr>
+t-day-9-common-cat-myths-you-need-to-stop-believing-101659882544976.html&docid=lnRfczL97o8UdM&w=1600&h=900&q=cats&client=opera-gx&ved=2ahUKEwjTvuC2pt2AAxXIpicCHYGpBDsQ<wbr>
+MygOegQIARBp" target="_blank"&#62;Visit Hindustantimes.com!&#60;/a&#62;
+</code></pre></td></tr>
+<tr><td><a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.hindustantimes.com%2Fimg%2F2022%2F08%2F07%2F1600x900%2Fcat_1659882617172_1659882628989_1659882628989.jpg&tbnid=pA3GwL1D0mAM7M&vet=12ahUKEwjTvuC2pt2AAxXIpicCHYGpBDsQMygOegQIARBp..i&imgrefurl=https%3A%2F%2Fwww.hindustantimes.com%2Flifestyle%2Fpet%2Finternational-cat-day-9-common-cat-myths-you-need-to-stop-believing-101659882544976.html&docid=lnRfczL97o8UdM&w=1600&h=900&q=cats&client=opera-gx&ved=2ahUKEwjTvuC2pt2AAxXIpicCHYGpBDsQMygOegQIARBp" target="_blank">Visit Hindustantimes.com!</a></td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<div id="email">
+<h2> Email links </h2>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;a href="<span style="color:blue;">mailto:nowhere@mozilla.org</span><span style="color:chartreuse;">?cc=name2@rapidtables.com</span><span style="color:brown;">&bcc=name3@rapidtables.com</span><span style="color: darkgreen;">&subject=The%20subject%20of%20the%20email</span><span style="color:indigo;">&body=The%20body%20of%20the%20email"</span>&#62;<wbr> Send <span style="color:blue;"><abbr title="nowhere@mozilla.org">mail</abbr></span> with <span style="color:chartreuse;"><abbr title="name2@rapidtables.com">cc</abbr></span>, <span style="color:brown;"><abbr title="name3@rapidtables.com">bcc</abbr></span>, <span style="color: darkgreen;"><abbr title="The subject of the email">subject</abbr></span> and <span style="color:indigo;"><abbr title="The body of the email">body</abbr></span>. &#60;/a&#62;
+</code></pre></td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email"> Send mail with cc, bcc, subject and body </a>
+<table>
+<caption>How to link to an email address:</caption>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;a href="mailto:someone@example.com"&#62;Send email&#60;/a&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<table>
+    <caption>How to link to a phone number:</caption>
+    <thead></thead>
+    <tbody><tr><td><pre><code>
+    &#60;a href="tel:+4733378901"&#62;+47 333 78 901&#60;/a&#62;
+    </code></pre></td></tr>
+    <tr><td><a href="tel:+4733378901">+47 333 78 901</a></td></tr>
+    </tbody>
+    <tfoot></tfoot>
+</table>
+<table>
+<caption>How to link to another section on the same page:</caption>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;a href="#section2"&#62;Go to Section 2&#60;/a&#62; <b>OR</b> &#60;a href="html_demo.html#C4"&#62; Jump to Chapter 4 &#60;/a&#62;
+</code></pre></td></tr>
+<tr><td><a href="#section2">Go to Section 2</a> OR <a href="html_demo.html#C4"> Jump to Chapter 4 </a></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<table>
+<caption>How to link to a JavaScript:</caption>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;a href="javascript:alert('Hello World!');"&#62;Execute JavaScript&#60;/a&#62;
+</code></pre></td></tr>
+<tr><td><a href="javascript:alert('Hello World!');">Execute JavaScript</a></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="base">
+<h2> &#60;base&#62; link </h2>
+<p> Specify a default URL and a default target for all links on a page: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;head&#62;
+&#60;base href="https://www.w3schools.com/" target="_blank"&#62;
+&#60;/head&#62;
+
+&#60;body&#62;
+&#60;img src="images/stickman.gif" width="24" height="39" alt="Stickman"&#62;
+&#60;a href="tags/tag_base.asp"&#62;HTML base Tag&#62;/a&#62;
+&#60;/body&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<div id="d_u_3">
+<h3> Definition and Usage </h3>
+<p> The &#60;base&#62; tag specifies the base URL and/or target for all relative URLs in a document. </p>
+<p> The &#60;base&#62; tag must have either an href or a target attribute present, or both. </p>
+<p> There can only be one single &#60;base&#62; element in a document, and it must be inside the &#60;head&#62; element. </p>
+</div>
+</div>
+</body>
+</html>

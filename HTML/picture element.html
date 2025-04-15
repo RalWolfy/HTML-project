@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Picture </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="The HTML &#60;picture&#62; element allows you to display different pictures for different devices or screen sizes.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+h1{text-align: center; margin: 5vw;}
+body{margin:10vw; background-color:blanchedalmond; font-size:1.3vw;}
+table, td{border:2px solid grey; border-collapse:collapse; margin:auto; background-color: white;}
+</style>
+</head>
+<body>
+<header>
+<h1> HTML &#60;picture&#62; Element </h1>
+</header>
+<main>
+<p> The HTML &#60;picture&#62; element allows you to display different pictures for different devices or screen sizes. </p>
+<p> The HTML &#60;picture&#62; element gives web developers more flexibility in specifying image resources. </p>
+<p> The &#60;picture&#62; element contains one or more &#60;source&#62; elements, each referring to different images through the srcset attribute. This way the browser can choose the image that best fits the current view and/or device. </p>
+<p> Each &#60;source&#62; element has a media attribute that defines when the image is the most suitable. </p>
+<div id="example">
+<h2> Example </h2>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+  &#60;picture&#62;
+    &#60;source media="(min-width: 250px)" srcset="Images/wolf_2.jpg"&#62;
+    &#60;source media="(min-width: 168px)" srcset="Images/wolf_1.jpg"&#62;
+    &#60;img src="img_girl.jpg"&#62;
+  &#60;/picture&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<p> <u>Note</u>: Always specify an &#60;img&#62; element as the last child element of the &#60;picture&#62; element. The &#60;img&#62; element is used by browsers that do not support the &#60;picture&#62; element, or if none of the &#60;source&#62; tags match. </p>
+</div>
+<div id="when">
+<h2> When to use the Picture Element </h2>
+<p> There are two main purposes for the &#60;picture&#62; element: </p>
+<ol style="list-style-type:decimal;">
+<li> Bandwidth: If you have a small screen or device, it is not necessary to load a large image file. The browser will use the first &#60;source&#62; element with matching attribute values, and ignore any of the following elements. </li>
+<li> Format Support: Some browsers or devices may not support all image formats. By using the &#60;picture&#62; element, you can add images of all formats, and the browser will use the first format it recognizes, and ignore any of the following elements. </li>
+</ol>
+<p> <u>Note</u>: The attributes <b>height</b>, <b>width</b>, <b>alt</b> are not allowed on element source. </p>
+</div>
+<picture>
+<source media="(min-width:450px;)" srcset="Images/wolf_2.jpg" style="height:450px;">
+<source media="(min-width:336px;)" srcset="Images/wolf_1.jpg" style="height:900px;">
+<img src="Images/wolf_3.jpg" style="max-width:100%;" alt="wolf" />
+</picture>
+</main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Layout Flexbox </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="An example of layout flexbox">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+*{box-sizing:border-box;}
+body{font-family: Arial, Helvetica, sans-serif;}
+h1, h2{text-align: center; margin: 5vw;}
+table, td{border:2px solid grey; border-collapse: collapse; padding: 10px; margin: auto;}
+header{background-color: rosybrown;}
+main{display:-webkit-flex; display: flex;}
+article{-webkit-flex: 3; -ms-flex: 3; flex: 3;background-color: rgb(245, 123, 123); padding:5vw;}
+nav{-webkit-flex: 1; flex: 1; background-color: rgb(132, 46, 46); padding: 10px; -ms-flex: 1;}
+footer{background-color: rgb(255, 179, 179); padding:10px;}
+@media(max-width:600px){ main{ -webkit-flex-direction:column; flex-direction:column;}}
+li{margin:10px;}
+</style>
+</head>
+<body>
+<header> <h1> Layout Flexbox </h1> </header>
+<main>
+<article>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;style type="text/css"&#62;
+*{box-sizing:border-box;} /* <span id="box-sizing">Box-sizing</span> */
+
+
+body{font-family: Arial, Helvetica, sans-serif;} /* <span id="body_styled">Body</span> */
+
+
+h1{text-align: center;} 
+header{margin: 5vw; background-color: rosybrown;} /* <span id="header_styled">Header</span> */
+    
+
+main{display:-webkit-flex; display: flex;} /* <span id="main_styled">Main</span> */
+    
+
+article{-webkit-flex: 2; -ms-flex: 2; flex: 2;background-color: rgb(245, 123, 123); padding:5vw;} /* <span id="article_nav">Article and Nav</span> */
+nav{-webkit-flex: 2; flex: 2; background-color: rgb(132, 46, 46); padding: 10px; -ms-flex: 2;}
+
+
+footer{background-color: rgb(255, 179, 179); padding:10px;} /* <span id="footer_styled">Footer</span> */
+
+
+@media(max-width:600px){ main{ -webkit-flex-direction:column; flex-direction:column;}} /* <span id="media">Media</span> */
+&#60;/style&#62;
+</code></pre></td></tr></tbody>
+</table>
+</article>
+<nav>
+<h2> Navigation </h2>
+<ul style="list-style-type:none;">
+<li> <a href="#box-sizing">Box-sizing</a> </li>
+<li> <a href="#body_styled">Body</a> </li> 
+<li> <a href="#header_styled">Header</a> </li>
+<li> <a href="#main_styled">Main</a> </li>
+<li> <a href="#article_nav">Article and Nav</a> </li>
+<li> <a href="#footer_styled">Footer</a> </li>
+<li> <a href="#media">Media</a> </li>
+</ul>
+</nav>
+</main>
+<footer> <h2> Footer </h2> </footer>
+</body>
+</html>

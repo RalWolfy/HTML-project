@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Text Formatting </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Text Formatting">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+h1{text-align:center; font-size:60px;} 
+title{color:red;} 
+body{margin:10vw; background-color:azure;} 
+table{border:5px solid black;  background-color:beige; margin:auto; border-collapse:collapse;} 
+th, td{border:3px solid black; padding:8px; font-size:15px;} 
+abbr{text-decoration:none;}
+.personalization::before{content:">>"; color:orangered;}
+</style>
+<body>
+<header>
+<h1> Text Formatting </h1>
+</header>
+<main>
+<ul style="list-style-type:none;"><li class="personalization"> Formatting text is very esential for web sites. One of its uses is to help readers know the important parts a web content easily.</li></ul>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<th> <code> &lt;b&gt; </code> </th>
+<td> <b> bolds a text </b> </td>
+</tr>
+<tr>
+<th> <code> &lt;i&gt; </code> </th>
+<td> <i> italicizes a text </i> </td>
+</tr>
+<tr>
+<th> <code> &lt;ins&gt; </code> </th>
+<td> <ins> mark a text inserted </ins> </td>
+</tr>
+<tr>
+<th> <code> &lt;u&gt; </code> </th>
+<td> <u> underlines a text </u> </td>
+</tr>
+<tr>
+<th> <code> &lt;code&gt; </code> </th>
+<td> <code> defines a text as a code </code> </td>
+</tr>
+<tr>
+<th> Where the &#60;tt&#62; element would have been used for marking up keyboard input, consider the &#60;kbd&#62; element; for variables, consider the &#60;var&#62; element; for computer code, consider the &#60;code&#62; element; and for computer output, consider the &#60;samp&#62; element. </th> 
+<td> <kbd> marking up keyboard input </kbd> <br />
+    <var> for variables </var> <br />
+    <code> for computer code </code> <br />
+    <samp> for computer output </samp> </td>
+</tr>
+<tr>
+<th> <code> &lt;small&gt; </code> </th>
+<td> <small> makes a text smaller </small> </td>
+</tr>
+<tr>
+<th> <abbr title="helps readers to know th important parts"> <code> &lt;em&gt; </code> </abbr> </th>
+<td> <em> emphasizes a text, may be italicized, depending on the browser </em> </td>
+</tr>
+<tr>
+<th> <abbr title="helps readers to know th important parts"> <code> &lt;strong&gt; </code> </abbr> </th>
+<td> <strong> emphasizes a text, may be boldened, depending on the browser </strong> </td>
+</tr>
+<tr> 
+<th> &#60;dfn&#62; HTML element is used to indicate the term being defined within the context of a definition phrase or sentence </th>
+<td> <p>A <dfn id="def-validator">validator</dfn> is a program that checks for syntax errors in code or documents.</p> </td></tr>
+<tr> 
+<th> &#60;ruby&#62; HTML element represents small annotations </th>
+<td> 
+<pre>
+&#60;ruby&#62;
+  漢 &#60;rp&#62;(&#60;/rp&#62;&#60;rt&#62;Kan&#60;/rt&#62;&#60;rp&#62;)&#60;/rp&#62;
+  字 &#60;rp&#62;(&#60;/rp&#62;&#60;rt&#62;ji&#60;/rt&#62;&#60;rp&#62;)&#60;/rp&#62;
+&#60;/ruby&#62;
+</pre>
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+</td>
+</tr>
+<tr>
+<th> <code> &lt;mark&gt; </code> </th>
+<td> <mark> marks a text like a highlighting pen </mark> </td>
+</tr>
+<tr>
+<th> <code> &lt;q&gt; </code> </th>
+<td> <q> enquotes a text </q> </td>
+</tr>
+<tr>
+<th> For the <code>&#60;s&#62;</code> and strike elements, if they are marking up a removal from the element, consider using the <code> &lt;del&gt; </code> element instead. </th>
+<td> <del> strikes through a text </del> </td>
+</tr>
+<tr>
+<th> <code> &lt;sup&gt; </code> </th>
+<td> make a text be  displayed as <sup> superscript </sup> </td>
+</tr>
+<tr>
+<th> <code> &lt;sub&gt; </code> </th>
+<td> make a text be displayed as <sub> subscripted </sub> </td>
+</tr>
+<tr>
+<td> <code> &#60;time&#62; </code> </td>
+<td> <pre>
+  &#60;!-- Standard simple date --&#62;
+  &#60;time datetime="2016-01-20"&#62;20 January 2016&#60;/time&#62;
+  <time datetime="2016-01-20">20 January 2016</time>
+  <br />
+  &#60;!-- Just year and month --&#62;
+  &#60;time datetime="2016-01"&#62;January 2016&#60;/time&#62;
+  <time datetime="2016-01">January 2016</time>
+  <br />
+  &#60;!-- Just month and day --&#62;
+  &#60;time datetime="01-20"&#62;20 January&#60;/time&#62;
+  <time datetime="01-20">20 January</time>
+  <br />
+  &#60;!-- Just time, hours and minutes --&#62;
+  &#60;time datetime="19:30"&#62;19:30&#60;/time&#62;
+  <time datetime="19:30">19:30</time>
+  <br />
+  &#60;!-- You can do seconds and milliseconds too! --&#62;
+  &#60;time datetime="19:30:01.856"&#62;19:30:01.856&#60;/time&#62;
+  <time datetime="19:30:01.856">19:30:856</time>
+  <br />
+  &#60;!-- Date and time --&#62;
+  &#60;time datetime="2016-01-20T19:30"&#62;7.30pm, 20 January 2016&#60;/time&#62;
+  <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+  <br />
+  &#60;!-- Date and time with timezone offset --&#62;
+  &#60;time datetime="2016-01-20T19:30+01:00">&#62;7.30pm, 20 January 2016 is 8.30pm in France&#60;/time&#62;
+  <time datetime="2016-01-20T19:30+01:00">7.30, 20 January 2016 is 8.30pm in France</time>
+  <br />
+  &#60;!-- Calling out a specific week number --&#62;
+  &#60;time datetime="2016-W04">The fourth week of 2016&#60;/time&#62;
+  <time datetime="2016-W04">The fourth week of 2016</time>
+</pre> </td>
+</tr>
+<tr>
+<td> &#60;bdi&#62; (Bi-Directional Isolation) - This element is useful when embedding user-generated content with an unknown text direction. </td>
+<td><pre><code>
+&#60;ul&#62;
+  &#60;li&#62;User &#60;bdi&#62;hrefs&#60;/bdi&#62;: 60 points&#60;/li&#62;
+  &#60;li&#62;User &#60;bdi&#62;jdoe&#60;/bdi&#62;: 80 points&#60;/li&#62;
+  &#60;li&#62;User &#60;bdi&#62;إيان&#60;/bdi&#62;: 90 points&#60;/li&#62;
+&#60;/ul&#62;
+</code></pre></td>
+</tr>
+<tr> <td>&#60;br&#62;</td> <td>Insert single line breaks in a text. </td> </tr>
+<tr>
+<td> &#60;bdo&#62; (Bi-Directional Override) - It is used to override the current text direction. </td>
+<td><pre><code>
+&#60;bdo dir="rtl"&#62;
+  This text will go right-to-left.
+  &#60;/bdo&#62;</code></pre>
+<br />
+Attributes "dir":
+<ul style="type:disc;">	
+<li> ltr </li>
+<li> rtl (Required) </li>
+</ul>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</main>
+</body>
+</html>

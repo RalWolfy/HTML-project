@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Web Storage API </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="With web storage, web applications can store data locally within the user's browser.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width">
+<style type="text/css">
+h1{text-align: center;}
+body{margin:10vw; background-color: gray;}
+table, td{border:2px solid black; border-collapse: collapse; background-color: whitesmoke; margin: auto;}
+</style>
+</head>
+<body>
+<header>
+<h1> HTML Web Storage API </h1>
+<p style="text-align: center; margin-bottom: 5vw;"> <cite>HTML web storage; better than cookies</cite> </p>
+</header>
+<main>
+<div id="whatis">
+<h2> What is HTML Web Storage? </h2>
+<p> With web storage, web applications can store data locally within the user's browser. </p>
+<p> Before HTML5, application data had to be stored in cookies, included in every server request. Web storage is more secure, and large amounts of data can be stored locally, without affecting website performance. </p>
+<p> Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server. </p>
+<p> Web storage is per origin (per domain and protocol). All pages, from one origin, can store and access the same data. </p>
+</div>
+<div id="storageobjects">
+<h2> HTML Web Storage Objects </h2>
+<p> HTML web storage provides two objects for storing data on the client:</p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre>
+window.localStorage - stores data with no expiration date
+window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)
+</pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<p> Before using web storage, check browser support for localStorage and sessionStorage: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+if (typeof(Storage) !== "undefined") {
+  // Code for localStorage/sessionStorage.
+} else {
+  // Sorry! No Web Storage support..
+}
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="localstorage">
+<h2> The localStorage Object </h2>
+<p> The localStorage object stores the data with no expiration date. The data will not be deleted when the browser is closed, and will be available the next day, week, or year. </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;div id="result"&#62;&#60;/div&#62;
+&#60;script&#62;
+  // Check browser support
+  if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "Smith");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+  }
+&#60;/script&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<div id="exexplained">
+<h3> Example explained: </h3>
+<ol type="1">
+<li> Create a localStorage name/value pair with name="lastname" and value="Smith". </li>
+<li> Retrieve the value of "lastname" and insert it into the element with id="result". </li>
+</ol>
+<p> <b>The example above could also be written like this:</b> </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+// Store
+localStorage.lastname = "Smith";
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.lastname;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="removing">
+<h3> The syntax for removing the "lastname" localStorage item is as follows: </h3>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+localStorage.removeItem("lastname");
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<p> <u>Note</u>: Name/value pairs are always stored as strings. Remember to convert them to another format when needed! </p>
+<h3> The following example counts the number of times a user has clicked a button. </h3>
+<p> In this code the value string is converted to a number to be able to increase the counter: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;script&#62;
+    function clickCounter() {
+      if (typeof(Storage) !== "undefined") {
+        <span style="color:royal blue;">if (localStorage.clickcount) {
+          localStorage.clickcount = Number(localStorage.clickcount)+1;
+        } else {
+          localStorage.clickcount = 1;
+        }
+        document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s)."; </span>
+      } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+      }
+    }
+&#60;/script&#62;
+&#60;p&#62;&#60;button onclick="clickCounter()" type="button"&#62;Click me!&#60;/button&#62;&#60;/p&#62;
+&#60;div id="result"&#62;&#60;/div&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</div>
+<div id="sessionstorage">
+<h2> The sessionStorage Object </h2>
+<p> The sessionStorage object is equal to the localStorage object, except that it stores the data for only one session. The data is deleted when the user closes the specific browser tab. </p>
+<p> The following example counts the number of times a user has clicked a button, in the current session: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;script&#62;
+  function clickCounter() {
+    if (typeof(Storage) !== "undefined") {
+        <span style="color:royal blue;">if (sessionStorage.clickcount) {
+        sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+      } else {
+        sessionStorage.clickcount = 1;
+      }
+      document.getElementById("result").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";</span>
+    } else {
+      document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+  }
+&#60;/script&#62;
+&#60;p&#62;&#60;button onclick="clickCounter()" type="button"&#62;Click me!&#60;/button&#62;&#60;/p&#62;
+&#60;div id="result"&#62;&#60;/div&#62;
+</code></pre></td></tr></tbody>
+ <tfoot></tfoot>
+ </table>
+ </div>
+ <div id="example">
+<h2> For examples: </h2>
+<p> <button type="button"><a target="_blank" href="examples of storage.html">Click!</a></button></p>
+ </div>
+ </main>
+ </body>
+ </html>

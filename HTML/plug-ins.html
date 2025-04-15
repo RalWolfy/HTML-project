@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Plug-ins </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Plug-ins are computer programs that extend the standard functionality of the browser.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+h1{text-align: center;}
+header{margin:5vw;}
+body{margin:10vw; background-color: blanchedalmond;}
+.personalized:before{content:">>"; color:red;}
+</style>
+</head>
+<body>
+<header>
+<h1> Plug-ins </h1>
+</header>
+<main>
+<p> Plug-ins are computer programs that extend the standard functionality of the browser. </p>
+<p> Plug-ins were designed to be used for many different purposes: </p>
+<ul style="list-style-type:disc;">
+<li> To run Java applets. </li>
+<li> To run Microsoft ActiveX controls. </li>
+<li> To display Flash movies. </li>
+<li> To display maps. </li>
+<li> To scan for viruses. </li>
+<li> To verify a bank id. </li>
+</ul>
+<p> Most browsers no longer support Java Applets and Plug-ins. </p>
+<p> ActiveX controls are no longer supported in any browsers. </p>
+<p> The support for Shockwave Flash has also been turned off in modern browsers. </p>
+<div id="object">
+<h2> The &#60;object&#62; Element </h2>
+<p> The &#60;object&#62; element is supported by all browsers. </p>
+<p> The &#60;object&#62; element defines an embedded object within an HTML document. </p>
+<p> It was designed to embed plug-ins (like Java applets, <abbr title="Portable Document Format">PDF</abbr> readers, and Flash Players) in web pages, but can also be used to include HTML in HTML: </p>
+<p style="text-align:center; margin:10px; border:2px solid gray; padding:6px; background-color: seashell;"> &#60;object width="100%" height="500px" data="snippet.html"&#62;&#60;/object&#62; </p>
+<h3> Or images if you like: </h3>
+<p style="text-align:center; margin:10px; border:2px solid gray; padding:6px; background-color: seashell;"> &#60;object data="audi.jpeg"&#62;&#60;/object&#62; </p>
+</div>
+<div id="embed">
+<h2> The &#60;embed&#62; Element </h2>
+<p> The &#60;embed&#62; element is supported in all major browsers. </p>
+<p> The <embed> element also defines an embedded object within an HTML document. </p>
+<p> Web browsers have supported the <embed> element for a long time. However, it has not been a part of the HTML specification before HTML5. </p>
+<p style="text-align:center; margin:10px; border:2px solid gray; padding:6px; background-color: seashell;"> &#60;embed src="audi.jpeg"&#62; </p>
+<p> <ul style="list-style-type:none;"><li class="personalized"> Note that the &#60;embed&#62; element does not have a closing tag. It can not contain alternative text. </li></ul> </p>
+<h3> The &#60;embed&#62; element can also be used to include HTML in HTML: </h3>
+<p style="text-align:center; margin:10px; border:2px solid gray; padding:6px; background-color: seashell;"> &#60;embed width="100%" height="500px" src="snippet.html"&#62; </p>
+</div>
+</main>
+</body>
+</html>
+

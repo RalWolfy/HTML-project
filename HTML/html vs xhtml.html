@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> HTML versus XHTML </title>
+<style type="text/css">
+h1{text-align: center; margin:10vw;}
+body{margin:10vw; background-color: rgba(245, 171, 171, 0.905);}
+div{background-color: rgba(139, 139, 242, 0.723);}
+abbr{text-decoration: none;}
+</style>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="HTML (Hyper Text Markup Language) versus  XHTML (eXtensible Hyper Text Markup Language)">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<header> 
+<h1> <abbr title="Hyper Text Markup Language">HTML</abbr> versus <abbr title="eXtensible Hyper Text Markup Language">XHTML</abbr> </h1>
+</header>
+<main>
+<div id="what_is">
+<h2> What is <abbr title="eXtensible Hyper Text Markup Language">XHTML</abbr>? </h2>
+<ul>
+<li> XHTML stands for EXtensible HyperText Markup Language </li>
+<li> XHTML is a stricter, more XML-based version of HTML </li>
+<li> XHTML is HTML defined as an XML application </li>
+<li> XHTML is supported by all major browsers </li>
+</ul>
+</div>
+<div id="why">
+<h2> Why <abbr title="eXtensible Hyper Text Markup Language">XHTML</abbr>? </h2>
+<p> XML is a markup language where all documents must be marked up correctly (be "well-formed"). </p>
+<p> XHTML was developed to make HTML more extensible and flexible to work with other data formats (such as XML). In addition, browsers ignore errors in HTML pages, and try to display the website even if it has some errors in the markup. So XHTML comes with a much stricter error handling. </p>
+</div>
+<div id="most_important_differnces">
+<h2> The Most Important Differences from <abbr title="Hyper Text Markup Language">HTML</abbr> </h2>
+<table>
+<thead></thead>
+<tbody>
+<tr> <td>XHTML - <code>&#60;!DOCTYPE ....&#62;</code> Is Mandatory <br />An XHTML document must have an XHTML <code>&#60;!DOCTYPE ....&#62;</code> declaration.</td> </tr>
+<tr> <td>The xmlns attribute in <code>&#60;html&#62;</code> is mandatory.</td> </tr>
+<tr> <td><code>&#60;html&#62;</code>, <code>&#60;head&#62;</code>, <code>&#60;title&#62;</code>, and <code>&#60;body&#62;</code> are mandatory.</td> </tr>
+<tr> <td>Elements must always be properly nested.</td> </tr>
+<tr> <td>Elements must always be closed.</td> </tr>
+<tr> <td>Elements must always be in lowercase.</td> </tr>
+<tr> <td>Attribute names must always be in lowercase.</td> </tr>
+<tr> <td>Attribute values must always be quoted.</td> </tr>
+<tr> <td>Attribute minimization is forbidden.</td> </tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="br_and_hr">
+<h2> Correct: </h2>
+<p> A break: &#60;br /&#62; </p>
+<p> A horizontal rule: &#60;hr /&#62; </p>
+<p> An image: &#60;img src="happy.gif" alt="Happy face" /&#62; </p>
+</div>
+</main>
+</html>

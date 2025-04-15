@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Image Maps </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML, maps, area, image">
+<meta name="description" content="The HTML &#60;map&#62; tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more &#60;area&#62; tags.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1{text-align: center; margin: 5vw;}
+h2{margin: 5vw 5vw 0;}
+body{margin: 10vw; background-color: blanchedalmond; font-size: 0.9vw;}
+table, td{border:2px solid black; margin:auto; margin-top:15px; margin-bottom: 15px; padding: 10px; border-collapse:collapse; background-color: silver;}
+</style>
+</head>
+<body>
+<header> <h1> HTML Image Maps </h1> </header>
+<main>
+<p> The HTML &#60;map&#62; tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more &#60;area&#62; tags. </p>
+<img src="Images/lchsn.jpg" alt="Workplace" usemap="#workmap" style="margin: 2vw 19vw; width:40vw; height:28vw;">
+<map name="workmap">
+  <area shape="poly" coords="0,382,640,0,640,273,374,258,365,247" alt="Computer" href="image_maps/laptop.html">
+  <area shape="rect" coords="234,248,256,387" alt="Phone" href="image_maps/phone.html">
+  <area shape="circle" coords="207,119,59" alt="Coffee" href="image_maps/coffee.html">
+  <area shape="rect" coords="436,302,640,426" alt="Notebook" href="image_maps/notebook.html">
+</map>
+<table>
+<caption> Here is the HTML source code for the image map above: </caption>
+<thead></thead>
+<tbody>
+<tr><td><pre><code>
+&#60;img src="workplace.jpg" alt="Workplace" usemap="#workmap"&#62;
+
+&#60;map name="workmap"&#62;
+  &#60;area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm"&#62;
+  &#60;area shape="rect" coords="234, 248, 256, 387" alt="Phone" href="phone.htm"&#62;
+  &#60;area shape="circle" coords="207, 119, 59" alt="Coffee" href="coffee.htm"&#62;
+&#60;/map&#62;
+</code></pre></td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<div id="how_does_work">
+<h2> How Does it Work? </h2>
+<p> The idea behind an image map is that you should be able to perform different actions depending on where in the image you click. </p>
+<p> To create an image map you need an image, and some HTML code that describes the clickable areas. </p>
+<div id="image">
+<h3> The Image </h3>
+<p> The image is inserted using the &#60;img&#62; tag. The only difference from other images is that you must add a usemap attribute: <span style="border:2px solid grey; padding:5px;"><code>&#60;img src="workplace.jpg" alt="Workplace" usemap="#workmap"&#62;</code></span> </p>
+<p> The usemap value starts with a hash tag # followed by the name of the image map, and is used to create a relationship between the image and the image map. </p>
+<p> <u>Tip:</u> You can use any image as an image map! </p>
+</div>
+<div id="create_image">
+<h3> Create Image Map </h3>
+<p> Then, add a &#60;map&#62; element. </p>
+<p> The &#60;map&#62; element is used to create an image map, and is linked to the image by using the required name attribute: <span style="border:2px solid grey; margin: 5px;"><code>&#60;map name="workmap"&#62;</code></span> </p>
+<p> The name attribute must have the same value as the &#60;img&#62;'s usemap attribute . </p>
+</div>
+<div id="areas">
+<h3> The Areas </h3>
+<p> Then, add the clickable areas. </p>
+<p> A clickable area is defined using an &#60;area&#62; element. </p>
+<div id="attributes">
+<h4> Attributes </h4>
+<details><summary>alt - Specifies an alternate text for the area. Required if the href attribute is present</summary>
+<table> 
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="planetmap"&#62;
+&#60;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun"&#62;
+&#60;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&#62;
+&#60;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&#62;
+&#60;/map&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</details>
+<details><summary>coords - Use the coords attribute to specify the coordinates of each area in the image map</summary>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="planetmap"&#62;
+&#60;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun"&#62;
+&#60;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&#62;
+&#60;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&#62;
+&#60;/map&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<p> <u>Tip</u>: The coordinates of the top-left corner of an area are 0,0. </p>
+<div id="values">
+<h5> Attribute Values </h5>
+<table>
+<thead></thead>
+<tbody>
+<tr><th>x1,y1,x2,y2</th><td>Specifies the coordinates of the top-left and bottom-right corner of the rectangle (shape="rect")</td></tr>
+<tr><th>x,y,radius</th><td>Specifies the coordinates of the circle center and the radius (shape="circle")</td></tr>
+<tr><th>x1,y1,x2,y2,..,xn,yn</th><td>Specifies the coordinates of the edges of the polygon. <wbr> If the first and last coordinate pairs are not the same, the browser will add the last coordinate pair to close the polygon (shape="poly")</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</details>
+<details><summary>download - filename - Specifies that the target will be downloaded when a user clicks on the hyperlink</summary>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="planetmap"&#62;
+&#60;area shape="rect" coords="0,0,82,126" alt="Sun" href="info_about_the_sun.htm" download="sun"&#62;
+&#60;area shape="circle" coords="90,58,3" alt="Mercury" href="merglobe.gif" download="mercury"&#62;
+&#60;area shape="circle" coords="124,58,8" alt="Venus" href="information_about_the_planet_venus.txt" download="venus"&#62;
+&#60;/map&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<ul style="list-style-type: disc;">
+<li> The download attribute specifies that the target (the file specified in the href attribute) will be downloaded when a user clicks on the hyperlink. </li>
+<li> The optional value of the download attribute will be the new name of the file after it is downloaded. There are no restrictions on allowed values, and the browser <wbr>  will automatically detect the correct file extension and add it to the file (.img, .pdf, .txt, .html, etc.). </li>
+<li> If the value is omitted, the original filename is used. </li>
+</ul>
+<table>
+<caption>Syntax</caption>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;area download="filename"&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</details>
+<details><summary>href - URL - Specifies the hyperlink target for the area</summary>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="planetmap"&#62;
+&#60;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun"&#62;
+&#60;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&#62;
+&#60;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&#62;
+&#60;/map&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<div id="values_2">
+<h5>Possible values:</h5>
+<ul style="list-style-type: circle;">
+<li>An absolute URL - points to another web site (like href="http://www.example.com/sun.htm").</li>
+<li>A relative URL - points to a file within a web site (like href="sun.htm").</li>
+<li>Link to an element with a specified id within the page (like href="#top").</li>
+<li>Other protocols (like https://, ftp://, mailto:, file:, etc..).</li>
+<li>A script (like href="javascript:alert('Hello');").</li>
+</ul>
+</div>
+</details>
+<details><summary>hreflang - language_code - Specifies the language of the target URL</summary>
+<p> Use the hreflang attribute to specify the language of the target URL for each area in the image map: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="planetmap"&#62;
+&#60;area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm" hreflang="en"&#62;
+&#60;/map&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<p> <u>Note</u>: This attribute is purely advisory. </p>
+</details>
+<details><summary>media - media query - Specifies what media/device the target URL is optimized for</summary>
+<p> Use the media attribute to specify what media/device the target URL is optimized for: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="planetmap"&#62;
+&#60;area shape="rect" coords="0,0,82,126" alt="Sun"
+  href="sun.htm" media="screen and (min-color-index:256)"&#62;
+&#60;/map&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<p> This attribute is used to specify that the URL is designed for special devices (like iPhone), speech or print media. </p>
+<p> This attribute can accept several values. </p>
+<p> <u>Note</u>: This attribute is purely advisory. </p>
+<p style="border:2px solid black; margin:10px; padding:5px;"> &#60;area media="value"&#62; </p>
+<table>
+<caption>Possible Operators</caption>
+<thead></thead>
+<tbody>
+<tr><td>and</td><td>Specifies an AND operator</td></tr>
+<tr><td>not</td><td>Specifies a NOT operator</td></tr>
+<tr><td>,</td><td>Specifies an OR operator</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<table>
+<caption>Devices</caption>
+<thead></thead>
+<tbody>
+<tr><td>all</td><td>Default. Suitable for all devices</td></tr>
+<tr><td>aural</td><td>Speech synthesizers</td></tr>
+<tr><td>braille</td><td>Braille feedback devices</td></tr>
+<tr><td>handheld</td><td>Handheld devices (small screen, limited bandwidth)</td></tr>
+<tr><td>projection</td><td>Projectors</td></tr>
+<tr><td>print</td><td>Print preview mode/printed pages</td></tr>
+<tr><td>screen</td><td>Computer screens</td></tr>
+<tr><td>tty</td><td>Teletypes and similar media using a fixed-pitch character grid</td></tr>
+<tr><td>tv</td><td>Television type devices (low resolution, limited scroll ability)</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<table>
+<caption>Values</caption>
+<thead></thead>
+<tbody>
+<tr><td>width</td><td>Specifies the width of the targeted display area. "min-" and "max-" prefixes can be used.</td><td>Example: media="screen and (min-width:500px)"</td></tr>
+<tr><td>height</td><td>Specifies the height of the  targeted display area. "min-" and "max-" prefixes can be used.</td><td>Example: media="screen and (max-height:700px)"</td></tr>
+<tr><td>device-width</td><td>Specifies the width of the target display/paper. "min-" and "max-" prefixes can be used.</td><td>Example: media="screen and (device-width:500px)"</td></tr>
+<tr><td>device-height</td><td>Specifies the height of the target display/paper. "min-" and "max-" prefixes can be used.</td><td>Example: media="screen and (device-height:500px)"</td></tr>
+<tr><td>orientation</td><td>Specifies the orientation of the target display/paper. Possible values: "portrait" or "landscape"</td><td>Example: media="all and (orientation: landscape)"</td></tr>
+<tr><td>aspect-ratio</td><td>Specifies the width/height ratio of the targeted display area. "min-" and "max-" prefixes can be used.</td><td>Example: media="screen and (aspect-ratio:16/9)"</td></tr>
+<tr><td>device-aspect-ratio</td><td>Specifies the device-width/device-height ratio of the target display/paper. "min-" and "max-" prefixes can be used.</td><td>Example: media="screen and (aspect-ratio:16/9)"</td></tr>
+<tr><td>color</td><td>Specifies the bits per color of target display. "min-" and "max-" prefixes can be used.</td><td>Example: media="screen and (color:3)"</td></tr>
+<tr><td>color-index</td><td>Specifies the number of colors the target display can handle. "min-" and "max-" prefixes can be used.</td><td>Example: media="screen and (min-color-index:256)"</td></tr>
+<tr><td>>monochrome</td><td>Specifies the bits per pixel in a monochrome frame buffer. "min-" and "max-" prefixes can be used.</td><td>Example: media="screen and (monochrome:2)"</td></tr>
+<tr><td>resolution</td><td>Specifies the pixel density (dpi or dpcm) of the target display/paper. "min-" and "max-" prefixes can be used.</td><td>Example: media="print and (resolution:300dpi)"</td></tr>
+<tr><td>scan</td><td>Specifies scanning method of a tv display. Possible values are "progressive" and "interlace".</td><td>Example: media="tv and (scan:interlace)"</td></tr>
+<tr><td>grid</td><td>Specifies if the output device is grid or bitmap. Possible values are "1" for grid, and "0" otherwise.</td><td>Example: media="handheld and (grid:1)"</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</details>
+<details><summary>referrerpolicy - no-referrer</summary>
+<table>
+<caption>Set the referrerpolicy attribute for the area hyperlinks:</caption>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="planetmap"&#62;
+&#60;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun" referrerpolicy="same-origin"&#62;
+&#60;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury" referrerpolicy="same-origin"&#62;
+&#60;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus" referrerpolicy="same-origin"&#62;
+&#60;/map&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<div id="d_u">
+<h5> Definition and Usage </h5>
+<p> The referrerpolicy attribute specifies which referrer information to send when the user clicks on the hyperlink. </p>
+</div>
+<div id="syntax">
+<h5> Syntax </h5>
+<p style="border:2px solid black; margin: 10px; padding: 5px;"> &#60;area referrerpolicy="no-referrer|no-referrer-when-downgrade|origin|origin-when-cross-origin|same-origin|strict-origin-when-cross-origin|unsafe-url"&#62; </p>
+</div>
+<div id="a_v">
+<h5> Attribute Values </h5>
+<table>
+<thead></thead> 
+<tbody>
+<tr><td>no-referrer</td><td>No referrer information is sent.</td></tr>
+<tr><td>no-referrer-when-downgrade</td><td>Default. Sends the origin, path, and query string if the protocol security level stays the same or is higher (HTTP to HTTP, HTTPS to HTTPS, HTTP to HTTPS is ok). Sends nothing to less secure level (HTTPS to HTTP is not ok).</td></tr>
+<tr><td>origin</td><td>Sends the origin (scheme, host, and port) of the document.</td></tr>
+<tr><td>origin-when-cross-origin</td><td>Sends the origin of the document for cross-origin request. Sends the origin, path, and query string for same-origin request.</td></tr>
+<tr><td>same-origin</td><td>Sends a referrer for same-origin request. Sends no referrer for cross-origin request.</td></tr>
+<tr><td>strict-origin-when-cross-origin</td><td>Sends the origin if the protocol security level stays the same or is higher (HTTP to HTTP, HTTPS to HTTPS, and HTTP to HTTPS is ok). Sends nothing to less secure level (HTTPS to HTTP).</td></tr>
+<tr><td>>unsafe-url</td><td>Sends the origin, path, and query string (regardless of security). Use this value carefully!</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</details>
+<details><summary>&#60;area&#62; rel - Attribute</summary>
+<p> Use the rel attribute to specify the relationship between the current document and the linked document: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="planetmap"&#62;
+&#60;area shape="rect" coords="0,0,82,126" alt="Sun" href="sun.htm" rel="alternate"&#62;
+&#60;/map&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<div id="a_v_2">
+<h5> Attribute Values </h5>
+<table>
+<thead></thead>
+<tbody>
+<tr><td>alternate</td><td>Links to an alternate version of the document (i.e. print page, translated or mirror).</td></tr>
+<tr><td>author</td><td>Links to the author of the document.</td></tr>
+<tr><td>bookmark</td><td>Permanent URL used for bookmarking.</td></tr>
+<tr><td>help</td><td>Links to a help document.</td></tr>
+<tr><td>license</td><td>Links to copyright information for the document.</td></tr>
+<tr><td>next</td><td>The next document in a selection.</td></tr>
+<tr><td>nofollow</td><td>Links to an unendorsed document, like a paid link. <wbr> ("nofollow" is used by Google, to specify that the Google search spider should not follow that link).</td></tr>
+<tr><td>noreferrer</td><td>Specifies that the browser should not send a HTTP referer header if the user follows the hyperlink.</td></tr>
+<tr><td>prefetch</td><td>Specifies that the target document should be cached.</td></tr>
+<tr><td>prev</td><td>The previous document in a selection.</td></tr>
+<tr><td>search</td><td>Links to a search tool for the document.</td></tr>
+<tr><td>tag</td><td>A tag (keyword) for the current document.</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</details>
+<details><summary>&#60;area&#62; shape Attribute</summary>
+<p> Use the shape attribute to specify the shape of each area  in the image map: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="planetmap"&#62;
+&#60;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun"&#62;
+&#60;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&#62;
+&#60;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&#62;
+&#60;/map&#62;
+</code></pre></td></tbody>
+<tfoot></tfoot>
+</table>
+<div id="a_u">
+<h5> Attribute Values </h5>
+<table>
+<thead></thead>
+<tbody>
+<tr><td>default</td><td>Specifies the entire region</td></tr>
+<tr><td>rect</td><td>Defines a rectangular region</td></tr>
+<tr><td>circle</td><td>Defines a circular region</td></tr>
+<tr><td>poly</td><td>Defines a polygonal region</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</details>
+<details><summary>target - Specifies where to open the target URL</summary>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="planetmap"&#62;
+&#60;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun" target="_blank"&#62;
+&#60;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&#62;
+&#60;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&#62;
+&#60;/map&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<div id="a_v_3">
+<h5> Attribute Values </h5>
+<table>
+<thead></thead>
+<tbody>
+<tr><td>_blank</td><td>Opens the linked document in a new window or tab.</td></tr>
+<tr><td>_self</td><td>Opens the linked document in the same frame as it was clicked.</td></tr>
+<tr><td>_parent</td><td>Opens the linked document in the parent frame.</td></tr>
+<tr><td>_top</td><td>Opens the linked document in the full body of the window.</td></tr>
+<tr><td>framename</td><td>Opens the linked document in a named iframe.</td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</details>
+<details><summary>type - media_type - Specifies the media type of the target URL</summary>
+<table>
+<caption>Use the type attribute to specify the MIME type of the target URL:</caption>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="planetmap"&#62;
+&#60;area shape="rect" coords="0,0,82,126" alt="Sun"
+  href="/images/sun.gif" type="image/gif"&#62;
+  &#60;/map&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<div id="d_u_2">
+<h5> Definition and Usage </h5>
+<p> The type attribute specifies the Internet media type (formerly known as MIME type) of the target URL. </p>
+<p> <u>Note</u>: This attribute is purely advisory. </p>
+<p> Look at <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">IANA Media Types</a> for a complete list of standard media types. 
+</div>
+</details>
+</div>
+<div id="shape">
+<h3> Shape </h3>
+<p> You must define the shape of the clickable area, and you can choose one of these values: </p>
+<ul>
+<li> rect - defines a rectangular region. </li>
+<li> circle - defines a circular region. </li>
+<li> poly - defines a polygonal region. </li>
+<li> default - defines the entire region. </li>
+</ul>
+<p> You must also define some coordinates to be able to place the clickable area onto the image. </p>
+<table>
+<thead></thead>
+<tbody>
+<tr><td>Shape="rect"</td><td> <p> The coordinates for shape="rect" come in pairs, one for the x-axis and one for the y-axis. </p> </td><td> <p> So, the coordinates 34,44 is located 34 pixels from the left margin and 44 pixels from the top. </p> <p> The coordinates 270,350 is located 270 pixels from the left margin and 350 pixels from the top. </p> <p> Now we have enough data to create a clickable rectangular area:<code>&#60;area shape="rect" coords="34, 44, 270, 350" href="computer.htm"&#62;</code> </p> </td></tr>
+<tr><td>Shape="circle"</td><td> <p> To add a circle area, first locate the coordinates of the center of the circle: <span style="color:turquoise;">337, 300</span> pixels. Then specify the radius of the circle: <span style="color:turquoise;">44</span> pixels. </p> </td><td> <p> Now you have enough data to create a clickable circular area: <code>&#60;area shape="circle" coords="337, 300, 44" href="coffee.htm"&#62;</code> </p> </td></tr>
+<tr><td>Shape="poly"</td><td> <p> The shape="poly" contains several coordinate points, which creates a shape formed with straight lines (a polygon). This can be used to create any shape. Like maybe a croissant shape! </p> </td><td> <p> How can we make the croissant in the image below become a clickable link? We have to find the x and y coordinates for all edges of the croissant. </p> <p> The coordinates come in pairs, one for the x-axis and one for the y-axis: <code>&#60;area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm"&#62;</code> </p> </td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="image_map_and_javascript">
+<h3> Image Map and JavaScript </h3>
+<p> A clickable area can also trigger a JavaScript function. </p>
+<p> Add a click event to the &#60;area&#62; element to execute a JavaScript function. </p>
+<p> Here, we use the onclick attribute to execute a JavaScript function when the area is clicked: </p>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;map name="workmap"&#62;
+  &#60;area shape="circle" coords="337,300,44" href="coffee.htm" onclick="myFunction()"&#62;
+&#60;/map&#62;
+
+&#60;script&#62;
+function myFunction() {
+  alert("You clicked the coffee cup!");
+}
+&#60;/script&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</div>
+</div>
+</main>
+</body>
+</html>

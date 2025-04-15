@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Layout Float </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="An example of layout float.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width">
+<style type="text/css">
+*{box-sizing:border-box;}
+body{font-family: Arial, Helvetica, sans-serif;}
+header{background-color: azure; margin:5vw;}
+h1, h2{text-align:center;}
+main: :after{content: ""; display:table; clear:both;}
+article{background-color: aliceblue; width:80%; padding:5vw; float:left;}
+nav{background-color: aquamarine; width:20%; padding:2vw; float:left; height:100%;}
+@media (max-width:700px;) {
+    nav, article{
+        width:100%;
+        height: auto;
+    }
+}
+footer{padding:10vw; background-color: antiquewhite; float:left; width:100%;}
+table, td{border:2px solid grey; border-collapse: collapse; padding:10px; margin: auto;}
+</style>
+</head>
+<body>
+<header> <h1> Layout float </h1> </header>
+<main>
+<article>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+
+&#60;style type="text/css"&#62;
+
+*{box-sizing:border-box;} <span id="box">/* Box-sizing */</span>
+
+
+body{font-family: sens-serif, Helvetica, Arial;} <span id="body_styled">/* body */</span>
+
+
+header{background-color: azure;} <span id="header_styled">/* header */</span>
+h1, h2{text-align:center;}
+        
+
+main: :after{content: ""; display:table; clear:both;} <span id="main_styled">/* main */</span>
+
+
+article{background-color: aliceblue; width:80%; padding:5vw; float:left;} <span id="article_nav">/* article and nav */</span>
+nav{background-color: aquamarine; width:20%; padding:2vw; float:right;}
+        
+
+@media (max-width:800px;) {
+            nav, article{
+                width:100%;
+                height: auto;
+            }
+} <span id="media">/* media */</span>
+        
+        
+footer{padding:5vw; background-color: antiquewhite;} <span id="footer_styled">/* footer */</span>
+        </style>
+
+
+
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</article>
+<nav>
+<h2> Navigation </h2>
+<ul style="list-style-type:none;">
+<li> <a href="#box">Box-sizing</a> </li>
+<br>
+<li> <a href="#body_styled">Body</a> </li>
+<br>
+<li> <a href=#header_styled">Header</a> </li>
+<br>
+<li> <a href="#main_styled">Main</a> </li>
+<br>
+<li> <a href="#article_nav">Article and Nav</a> </li>
+<br>
+<li> <a href="#media">Media</a> </li>
+<br>
+<li> <a href="#footer_styled">Footer</a> </li>
+</ul>
+</nav>
+</main>
+<footer>
+<h2> Footer </h2>
+</footer>

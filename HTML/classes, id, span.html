@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Classes, Span, Id </title>
+<style type="text/css"> 
+.city{background-color: tomato; color: white; border: 2px solid black; margin: 2vw; padding: 2vw;}
+.note{font-size: 120%; color: red;}
+#myHeader {background-color: lightblue; color: black; padding: 4vw; text-align: center;}
+h1{text-align:center;}
+body{margin:10vw; font-size:1vw;}}
+div{margin:50vw 0;} 
+main{background-color:white;}
+.class_element{background-color:#ffae5d;}
+.span_element{background-color:#98ffc7;}
+.id_element{background-color:#cdff69;}
+.bookmarks_element{background-color:#55dfa1;}
+.similarity_and_difference_id_and_class{background-color:#57a0ff;}
+table, td{border-collapse:collapse; border:3px inset black; margin:auto; padding:2vw;}
+</style>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Classes, Span, Id">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header> 
+<h1> Classes, Span, Id </h1>
+</header>
+<main>
+<div class="class_element">
+<h2> Classes </h2>
+<p>
+<ul type="disc">
+<li> The HTML class attribute specifies one or more class names for an element </li>
+<li> Classes are used by CSS and JavaScript to select and access specific elements </li>
+<li> The class attribute can be used on any HTML element </li>
+<li> Different HTML elements can point to the same class name </li>
+</ul>
+</p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td>
+<pre>
+<code>
+&lt;style&gt;
+.city {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+&lt;/style&gt;
+</code>
+</pre>
+</td>
+<td>
+<pre>
+<code>
+&lt;div class="city"&gt;
+  &lt;h2&gt; London &lt;/h2&gt;
+  &lt;p&gt; London is the capital of England. &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="city"&gt;
+  &lt;h2&gt; Paris &lt;/h2&gt;
+&lt;p&gt; Paris is the capital of France. &lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="city"&gt;
+&lt;h2&gt; Tokyo &lt;/h2&gt;
+&lt;p&gt; Tokyo is the capital of Japan. &lt;/p&gt;
+&lt;/div&gt;
+</code>
+</pre>
+</td>
+</tr>
+<tr>	
+<td colspan="2">
+<div class="city">
+<h2>London</h2>
+<p> London is the capital of England.</p>
+</div>
+<div class="city">
+<h2>Paris</h2>
+<p>Paris is the capital of France.</p>
+</div>
+<div class="city">
+<h2> Tokyo zz</h2>
+<p> Tokyo is the capital of Japan. </p>
+</div>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div class="span_element">
+<h2> Span </h2>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td>
+<pre>
+<code>
+&lt;style&gt;
+.note {
+  font-size: 120%;
+  color: red;
+}
+&lt;/style&gt;
+</code>
+</pre>
+</td>
+<td>
+<pre>
+<code>
+&lt;h1&gt; My &lt;span class="note"&gt; Important &lt;/span&gt; Heading &lt;/h1&gt;
+&lt;p&gt; This is some &lt;span class="note"&gt; important &lt;/span&gt; text. &lt;/p&gt;
+</code>
+</pre>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<h1>My <span class="note">Important</span> Heading</h1>
+<p>This is some <span class="note">important</span> text.</p>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<section>
+<div class="id_element">
+<h2> Id </h2>
+<p>
+<ul type="disc">
+<li> The HTML id attribute is used to specify a unique id for an HTML element. </li> 
+<li> You cannot have more than one element with the same id in an HTML document. </li> 
+<li> The value of the id attribute must be unique within the HTML document. </li>
+<li> The id attribute is used by CSS and JavaScript to style/select a specific element. </li> 
+<li> The id attribute is also used to create HTML bookmarks. </li> 
+</ul>
+</p> 
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td>
+&lt;style&gt;
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+&lt;/style&gt;
+</td>
+<td>
+&lt;h1 id="myHeader"&gt; My Header &lt;/h1&gt;
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<h1 id="myHeader"> My Header </h1>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<p> Note: The id name must contain at least one character, cannot start with a number, and must not contain whitespaces (spaces, tabs, and others). </p>
+</div>
+<div class="bookmarks_element">
+<h2> Bookmarks </h2>
+<p> 
+<ul type="disc">
+<li> HTML bookmarks are used to allow readers to jump to specific parts of a webpage. </li>
+<li> Bookmarks can be useful if your page is very long. </li>
+</ul>
+</p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td>
+&lt;h2 id="C4"&gt; Chapter 4 &lt;/h2&gt;
+</td>
+<td>
+&lt;a href="#C4"&gt; Jump to Chapter 4 &lt;/a&gt;
+</td>
+</tr>
+<tr>
+<td colspan="2">
+&lt;a href="html_demo.html#C4"&gt; Jump to Chapter 4 &lt;/a&gt;
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</section>
+<div class="similarity_and_difference_id_and_class">
+<h2> Similarity </h2>
+<p> The id, class name is case sensitive! </p>
+<h2> Difference Between Class and ID </h2>
+<p> A class name can be used by multiple HTML elements, while an id name must only be used by one HTML element within the page. </p>
+</div>
+</main>
+</body>
+</html>

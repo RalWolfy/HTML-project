@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Computer Code Elements </title>
+<style type="text/css">
+h1{text-align: center; margin:10vw;}
+body{margin:10vw; background-color: #1b1b1b; color:white; font-size:1.6vw;}
+.personalized:before{content:"-->"; color:blue;}
+table, td{border:3px ridge green; border-collapse: collapse; padding:10px; margin:auto;}
+td:hover{background-color: rgb(35, 151, 35);}
+h1:hover{color: rgb(35, 151, 35);}
+h2:hover{color: rgb(35, 151, 35);}
+p:hover{color: rgb(35, 151, 35);}
+ul{list-style-type:none;}
+</style>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="HTML contains several elements for defining user input and computer code">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header> 
+<h1> <u>Computer Code Elements</u> </h1>
+</header>
+<main>
+<p> HTML contains several elements for defining user input and computer code. </p>
+<table>
+<caption> Example</caption>
+<thead></thead>
+<tbody> <tr> <td> <pre> <code> 
+    x = 5;
+    y = 6;
+    z = x + y;
+</code> </pre> </td> </tr> </tbody>
+<tfoot></tfoot>
+</table>
+<div id="keyboard_input">
+<h2> HTML &#60;kbd&#62; For Keyboard Input </h2>
+<p> The HTML &#60;kbd&#62; element is used to define keyboard input. The content inside is displayed in the browser's default monospace font. </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody> <tr> <td> Save the document by pressing &#60;kbd&#62;Ctrl + S&#60;/kbd&#62; </td> <td> Save the document by pressing <kbd>Ctrl + S</kbd> </td> </tr> </tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="program_output">
+<h2> HTML &#60;samp&#62; For Program Output </h2>
+<p> The HTML &#60;samp&#62; element is used to define sample output from a computer program. The content inside is displayed in the browser's default monospace font. </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody> <tr> <td> &#60;samp&#62;File not found. <br> Press F1 to continue&#60;/samp&#62; </td> <td> <samp>File not found.<br>Press F1 to continue</samp> </td> </tr> </tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="computer_code">
+<h2> HTML &#60;code&#62; For Computer Code </h2>
+<p> The HTML &#60;code&#62; element  is used to define a piece of computer code. The content inside is displayed in the browser's default monospace font. </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody> <tr> <td> <pre> 
+&#60;code&#62; 
+    x = 5;
+    y = 6;
+    z = x + y; 
+&#60;/code&#62; </pre></td> <td> <pre> <code>  
+    x = 5;
+    y = 6;
+    z = x + y; </code> </pre> </td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<ul>
+<li class="personalized"> Notice that the &#60;code&#62; element does not preserve extra whitespace and line-breaks. </li>
+<li class="personalized"> To fix this, you can put the &#60;code&#62; element inside a &#60;pre&#62; element. </li>
+</ul>
+</div>
+<div id="variables">
+<h2> HTML &#60;var&#62; For Variables </h2>
+<p> The HTML &#60;var&#62; element  is used to define a variable in programming or in a mathematical expression. The content inside is typically displayed in italic. </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody> 
+<tr> <td> <pre>The area of a triangle is: 1/2 
+    
+x <code>&#60;var&#62;</code>b<code>&#60;/var&#62;</code> 
+x <code>&#60;var&#62;</code>h<code>&#60;/var&#62;</code>,
+where <code>&#60;var&#62;</code>b<code>&#60;/var&#62;</code> is the base, 
+and <code>&#60;var&#62;</code>h<code>&#60;/var&#62;</code> is the vertical height. </pre> </td> </tr>
+<tr> <td> <pre>The area of a triangle is: 1/2 
+x <var>b</var> 
+x <var>h</var>, 
+where <var>b</var> is the base, 
+and <var>h</var> is the vertical height. </pre> </td> </tr>
+</tbody>
+</table>
+</div>
+</main>
+</body>
+</html>

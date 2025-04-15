@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Semantic Elements </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" conteent="A semantic element clearly describes its meaning to both the browser and the developer.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1{text-align:center;}
+body{margin:10vw; background-color:white;}
+table, td{border-radius:10px; border: 4px solid grey; margin: 1vw 5vw; font-size:14px; border-collapse:collapse; padding:10px;}
+.elements{border-radius:15px; border:2px solid  grey; padding:6px;}
+.personalized: li{content:"-->"; color:red;}
+#nav_elm{background-color:#96b7ff;}
+#aside_elm{background-color:#97e2ff;}
+#header_elm{background-color:#97fffd;}
+#main_elm{background-color:#97ffc9;}
+#section_elm{background-color:#a8ff97;}
+#article_elm{background-color:#d0ff97;}
+#footer_elm{background-color:#eaff97;}
+#mark_elm{background-color:#ffee97;}
+#figure_and_figcaption_elm{background-color:#ffc997;}
+#details_elm{background-color:#ffaf97;}
+#time_elm{background-color:#ff9797;}
+div{border-radius:20px; padding:10px;}
+a:link{color:#078f8a;}
+a:hover{color:red;}
+a:active{color:green;}
+a:visited{color:#00d5ff;}
+#semantic_element{background-color:silver;}
+a{text-decoration:none;}
+</style>
+</head>
+<body>
+<header>
+<h1> HTML Semantic Elements </h1>
+</header>
+<main>
+<div id="semantic_element">
+<p> Semantic elements = elements with a meaning. </p>
+<div id="whatIs">
+<h2> What are Semantic Elements? </h2>
+<p> A semantic element clearly describes its meaning to both the browser and the developer. </p>
+<ul style="list-style-type:none;">
+<li class="personalized"> Examples of non-semantic elements: &lt;div&gt; and &lt;span&gt; - Tells nothing about its content. </li>
+<li class="personalized"> Examples of semantic elements: &lt;form&gt;, &lt;table&gt;, and &lt;article&gt; - Clearly defines its content. </li>
+</ul>
+</div>
+<div id="semantic_elements">
+<h2> Semantic Elements in HTML </h2>
+<p> Many web sites contain HTML code like: &lt;div id="nav"&gt; &lt;div class="header"&gt; &lt;div id="footer"&gt; to indicate navigation, header, and footer. </p>
+<p> In HTML there are some semantic elements that can be used to define different parts of a web page: </p>  
+</div>
+<table class="elements">
+<thead></thead>
+<tbody><tr><td><pre><code>
+<a href="#nav">&#60;nav&#62;</a>
+<a href="#aside">&#60;aside&#62;</a>
+<a href="#header">&#60;header&#62;</a>
+<a href="#main">&#60;main&#62;</a>
+<a href="#section_element">&#60;section&#62;</a>
+<a href="#article_element">&#60;article&#62;</a>
+<a href="#footer">&#60;footer&#62;</a>
+</code></pre></td><td>
+<pre><code>
+<a href="#mark">&#60;mark&#62;</a>
+<a href="#figure_and_figcaption">&#60;figure&#62;</a>
+<a href="#figure_and_figcaption">&#60;figcaption&#62;</a>
+<a href="#details">&#60;details&#62;</a>
+<a href="#details">&#60;summary&#62;</a>
+<a href="#time">&#60;time&#62;</a>
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<div id="nav_elm">
+<h2 id="nav_element"> HTML &#60;nav&#62; Element </h2>
+<p> The &#60;nav&#62; element defines a set of navigation links. </p>
+<p> Notice that NOT all links of a document should be inside a &#60;nav&#62; element. The &#60;nav&#62; element is intended only for major blocks of navigation links. </p>
+<p> Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content. </p>
+</div>
+<div id="aside_elm">
+<h2 id="aside_element"> HTML &#60;aside&#62; Element </h2>
+<p> The &#60;aside&#62; element defines some content aside from the content it is placed in (like a sidebar). </p>
+<p> The &#60;aside&#62; content should be indirectly related to the surrounding content. </p>
+</div>
+<div id="header_elm">
+<h2 id="header_element"> HTML &#60;header&#62; Element </h2>
+<p> The &#60;header&#62; element represents a container for introductory content or a set of navigational links. </p>
+<p> A &#60;header&#62; element typically contains: </p>
+<ul type="circle">
+<li>one or more heading elements (&#60;h1&#62; - &#60;h6&#62;)</li>
+<li>logo or icon</li>
+<li>authorship information</li>
+</ul>
+<p> <mark><u>Note:</u> You can have several &#60;header&#62; elements in one HTML document. However, &#60;header&#62; cannot be placed within a &#60;footer&#62;, &#60;address&#62; or another &#60;header&#62; element.</mark> </p>
+</div>
+<div id="main_elm">
+<h2 id="main"> HTML main element </h2>
+<p> Specifies the main content of a document. </p>
+</div>
+<div id="section_elm">
+<h2 id="section_element"> HTML  &#60;section&#62; Element </h2>
+<p> The &#60;section&#62; element defines a section in a document. </p>
+<dl>
+<dt> According to W3C's HTML documentation: </dt>
+<dd> "A section is a thematic grouping of content, typically with a heading." </dd>
+</dl>
+<details>
+<summary> Examples of where a &#60;section&#62; element can be used </summary>
+<ul type="disc">
+<li>Chapters</li>
+<li>Introduction</li>
+<li>News items</li>
+<li>Contact information</li>
+</ul>
+</details>
+<p> A web page could normally be split into sections for introduction, content, and contact information. </p>
+</div>
+<div id="article_elm">
+<h2 id="article_element"> HTML &#60;article&#62; Element </h2>
+<p> The &#60;article&#62; element specifies independent, self-contained content. </p>
+<p>An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site. </p>
+<details>
+<summary> Examples of where the &#60;article&#62; element can be used </summary>
+<ul type="disc">
+<li>Forum posts</li>
+<li>Blog posts</li>
+<li>User comments</li>
+<li>Product cards</li>
+<li>Newspaper articles</li>
+</ul>
+</details>
+</div>
+<section>
+<h2> Nesting &#60;article&#62; in &#60;section&#62; or Vice Versa? </h2>
+<p> The &#60;article&#62; element specifies independent, self-contained content. </p>
+<p> The &#60;section&#62; element defines section in a document. </p>
+<p> Can we use the definitions to decide how to nest those elements? No, we cannot! </p>
+<p> So, you will find HTML pages with &#60;section&#62; elements containing &#60;article&#62; elements, and &#60;article&#62; elements containing &#60;section&#62; elements. </p>
+</section>
+<div id="footer_elm">
+<h2 id="footer_element"> HTML &#60;footer&#62; Element </h2>
+<p> The &#60;footer&#62; element defines a footer for a document or section. </p>
+<details> 
+<summary> A &#60;footer&#62; element typically contains </summary>
+<ul type="disc">
+<li>authorship information</li>
+<li>copyright information</li>
+<li>contact information</li>
+<li>sitemap</li>
+<li>back to top links</li>
+<li>related documents</li>
+</ul>
+</details>
+<p> You can have several &#60;footer&#62; elements in one document. </p>
+</div>
+<div id="mark_elm">
+<h2 id="mark_element"> HTML mark element </h2>
+<p> Defines marked/highlighted text. </p>
+</div>
+<div id="figure_and_figcaption_elm">
+<h2> HTML &#60;figure&#62; and &#60;figcaption&#62; Elements </h2>
+<p> The &#60;figure&#62; tag specifies self-contained content, like illustrations, diagrams, photos, code listings and others. </p>
+<p> The &#60;figcaption&#62; tag defines a caption for a &#60;figure&#62; element. The &#60;figcaption&#62; element can be placed as the first or as the last child of a &#60;figure&#62; element. </p>
+<p> The &#60;img&#62; element defines the actual image/illustration. </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody><tr><td>
+&lt;figure&gt;
+&lt;img src="pic_trulli.jpg" alt="Trulli"&gt;
+&lt;figcaption&gt;Fig1. - Trulli, Puglia, Italy.&lt;/figcaption&gt;
+&lt;/figure&gt;
+</td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="details_elm">
+<h2> HTML details and summary element</h2>
+<p> Defines additional details that the user can view or hide. </p>
+<p> Defines a visible heading for a &#60;details&#62; element. </p>
+</div>
+<div id="time_elm">
+<h2 id="time_element"> HTML time element </h2>
+<p> Defines a date/time. </p>
+</div>
+<hr />
+<dl>
+<dt> Why Semantic Elements? </dt>
+<dd> According to the W3C: "A semantic Web allows data to be shared and reused across applications, enterprises, and communities." </dd>
+</dl>
+<section>
+<h3> Semantic Elements in HTML </h3>
+<p> Below is a list of some of the semantic elements in HTML. </p>
+<details>
+<summary> <u>Tag	Description</u> </summary>
+<dl>
+<dt> &#60;article&#62; </dt>
+<dd> Defines independent, self-contained content. </dd>
+</dl>
+<dl>
+<dt> &#60;aside&#62; </dt>
+<dd> Defines content aside from the page content. </dd>
+</dl>
+<dl>
+<dt> &#60;details&#62; </dt> 
+<dd> Defines additional details that the user can view or hide. </dd>
+</dl>
+<dl>
+<dt> &#60;figcaption&#62; </dt>
+<dd> Defines a caption for a &#60;figure&#62; element. </dd>
+</dl>
+<dl>
+<dt> &#60;figure&#62; </dt>
+<dd> Specifies self-contained content, like illustrations, diagrams, photos, code listings and others. </dd>
+</dl>
+<dl>
+<dt> &#60;footer&#62; </dt>
+<dd> Defines a footer for a document or section. </dd>
+</dl>
+<dl>
+<dt> &#60;header&#62; </dt> 
+<dd> Specifies a header for a document or section. </dd>
+</dl>
+<dl>
+<dt> &#60;main&#62; </dt>
+<dd> Specifies the main content of a document. </dd>
+</dl>
+<dl>
+<dt> &#60;mark&#62; </dt> 
+<dd> Defines marked/highlighted text. </dd>
+</dl>
+<dl>
+<dt> &#60;nav&#62; </dt> 
+<dd> Defines navigation links. </dd>
+</dl>
+<dl>
+<dt> &#60;section&#62; </dt> 
+<dd> Defines a section in a document. </dd>
+</dl>
+<dl>
+<dt> &#60;summary&#62; </dt> 
+<dd> Defines a visible heading for a &#60;details&#62; element. </dd>
+</dl>
+<dl>
+<dt> &#60;time&#62; </dt> 
+<dd> Defines a date/time. </dd>
+</dl>
+</details>
+</section>
+</div>
+</main>
+</body>
+</html>

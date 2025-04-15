@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Canvas Graphics </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="The HTML &lt;canvas&gt; element is used to draw graphics on a web page.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1{text-align: center;}
+td{border-radius:5px; border:3px solid grey;}
+table{margin:auto; background-color: hsl(212, 71%, 73%);}
+body{margin:10vw; background-color: rgb(196, 229, 246);}
+header{margin:5vw;}
+h2{margin:5vw 5vw 0;}
+canvas{margin: 5vw 35vw;}
+img{margin: 5vw 35vw 2vw;}
+</style>
+</head>
+<body>
+<header>
+<h1> Canvas Graphics </h1>
+</header>
+<main>
+
+<canvas id="draw" width="200" height="100" style="border:2px solid black"></canvas> 
+<script>
+var c =document.getElementById("draw");
+var ctx = c.getContext("2d");
+ctx.font="30px Arial red";
+ctx.fillText("Smile", 60, 60);
+</script>
+
+
+
+
+<canvas id="drawcolorgradient_one" width="10" height="100" style="border-top: 1px solid white; border-bottom: 1px solid white; border-left:1px solid white; border-right:1px solid blue;"></canvas>
+<script>
+var c=document.get.getElementById("drawcolorgradient_one");
+var ctx=c.getContext("2d");
+
+var grd=ctx.createLinearGradient(0, 0, 10, 0);
+grd.addColorStop(0, "purple");
+grd.addColorStop(1, "blue");
+
+ctx.fillStyle=grd;
+ctx.fillRect(0, 0, 10, 0);
+</script>
+
+
+
+
+
+
+
+
+<p> The HTML &#60;canvas&#62; element is used to draw graphics on a web page. </p>
+<p> The graphic to the left is created with &#60;canvas&#62;. It shows four elements: a red rectangle, a gradient rectangle, a multicolor rectangle, and a multicolor text. </p>
+<div id="whatis">
+<h2> What is HTML Canvas? </h2>
+<p> The HTML &#60;canvas&#62; element is used to draw graphics, on the fly, via JavaScript. </p>
+<p> The &#60;canvas&#62; element is only a container for graphics. You must use JavaScript to actually draw the graphics. </p>
+<p> Canvas has several methods for drawing paths, boxes, circles, text, and adding images. </p>
+</div>
+<div id="canvasexemple">
+<h2> Canvas Examples </h2>
+<p> A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content. </p>
+<div id="markup">
+<h3> <u>The markup looks like this:</u> </h3>
+<p style="border:2px solid grey; padding:3px; margin:3px;"> <code>&#60;canvas id="myCanvas" width="200" height="100"&#62;Your browser does not support the HTML canvas tag.&#60;/canvas&#62;</code> </p>
+<p> <u>Note:</u> Always specify an id attribute (to be referred to in a script), and a width and height attribute to define the size of the canvas. To add a border, use the style attribute. </p>
+</div>
+<div id="emptycanvas">
+<h3> <u>Here is an example of a basic, empty canvas:</u> </h3>
+<p style="border:2px solid grey; margin:3px; padding:3px;"> <code>
+&#60;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"&#62;Your browser does not support the HTML canvas tag.
+&#60;/canvas&#62;
+</code> </p>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"> Your browser does not support the HTML canvas tag.
+</canvas>
+</div>
+</div>
+<div id="addjavascript">
+<h2> Add a JavaScript </h2>
+<p> After creating the rectangular canvas area, you must add a JavaScript to do the drawing. </p>
+<p> <u>Here are some examples:</u> </p>
+<div id="line">
+<h3> Draw a Line </h3>
+<table>
+<thead></thead>
+<tbody>
+<tr><td><pre><code>
+&#60;canvas id="drawaline" width="200" height="100" style="border:1px solid #d3d3d3;"&#62;Your browser does not support the HTML canvas tag.&#60;/canvas&#62; 
+&#60;script&#62;
+var c = document.getElementById("drawaline");
+var ctx = c.getContext("2d");
+ctx.moveTo(0, 0);
+ctx.lineTo(200, 100);
+ctx.stroke();
+&#60;/script&#62;
+</code></pre></td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<canvas id="drawaline" width="200" height="100" style="border:1px solid #d3d3d3;">Your browser does not support the HTML canvas tag.</canvas>  
+<script>
+var c = document.getElementById("drawaline");
+var ctx = c.getContext("2d");
+ctx.moveTo(0, 0);
+ctx.lineTo(200, 100);
+ctx.stroke();
+</script>
+</div>
+<div id="circle">
+<h3> Draw a Circle </h3>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;canvas id="drawacircle" width="200" height="100" style="border:1px solid #d3d3d3;"&#62;Your browser does not support the HTML canvas tag.&#60;/canvas&#62; 
+&#60;script&#62;
+var c = document.getElementById("drawacircle");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();
+&#60;/script&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<canvas id="drawacircle" width="200" height="100" style="border:1px solid #d3d3d3;">Your browser does not support the HTML canvas tag.</canvas>
+<script>
+var c = document.getElementById("drawacircle");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();
+</script>
+</div>
+<div id="text">
+<h3> Draw a text </h3>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&lt;canvas id="drawatext" width="200" height="100" style="border:1px solid #d3d3d3;"&gt;Your browser does not support the HTML canvas tag.&lt;/canvas&gt;
+&lt;script&lt;
+var c = document.getElementById("drawatext");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText("Hello World", 10, 50);
+&lt;/script&lt;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<canvas id="drawatext" width="200" height="100" style="border:1px solid #d3d3d3;">Your browser does not support the HTML canvas tag.</canvas>
+<script>
+var c = document.getElementById("drawatext");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText("Hello World", 10, 50);
+</script>
+</div>
+</div>
+<div id="stroke">
+<h2> Stroke text </h2>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;canvas id="stroketext" width="200" height="100" style="border:1px solid #000000;"&#62; Your browser does not support the HTML canvas tag.
+&#60;/canvas&#62;
+&#60;script&#62;
+var c = document.getElementById("stroketext");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.strokeText("Hello World", 10, 50);
+&#60;/script&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<canvas id="stroketext" width="200" height="100" style="border:1px solid #000000;"> Your browser does not support the HTML canvas tag.
+</canvas>
+<script>
+var c = document.getElementById("stroketext");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.strokeText("Hello World", 10, 50);
+</script>
+</div>
+<div id="lineargradient">
+<h2> Draw Linear Gradient </h2>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;canvas id="drawlineargradient" width="200" height="100" style="border:1px solid #000000;"&#62; Your browser does not support the HTML canvas tag.
+&#60;/canvas&#62;
+&#60;script&#62;
+var c = document.getElementById("drawlineargradient");
+var ctx = c.getContext("2d");
+        
+// Create gradient
+var grd = ctx.createLinearGradient(0, 0, 200, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+        
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+&#60;/script&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<canvas id="drawlineargradient" width="200" height="100" style="border:1px solid #000000;"> Your browser does not support the HTML canvas tag.
+</canvas>
+<script>
+var c = document.getElementById("drawlineargradient");
+var ctx = c.getContext("2d");
+var grd = ctx.createLinearGradient(0, 0, 200, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+</script>
+</div>
+<div id="circulargradient">
+<h2> Draw Circular Gradient </h2>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;canvas id="drawcirculargradient" width="200" height="100" style="border:1px solid #000000;"&#62; Your browser does not support the HTML canvas tag.
+&#60;/canvas&#62;
+&#60;script&#62;
+var c = document.getElementById("drawcirculargradient");
+var ctx = c.getContext("2d");
+        
+// Create gradient
+var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+        
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+&#60;/script&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<canvas id="drawcirculargradient" width="200" height="100" style="border:1px solid #000000;"> Your browser does not support the HTML canvas tag.
+</canvas>
+<script>
+var c = document.getElementById("drawcirculargradient");
+var ctx = c.getContext("2d");
+var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+</script>
+</div>
+<div id="image">
+<h2> Draw Image </h2>
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&#60;img id="lovingyou" src="../Images/loving_you_is_a_losing_game.jpg" width="" height="" alt="Loving you is a losing game!" /&#62;
+&#60;canvas id="drawaimage" width="200" height="100" style="border:1px solid #000000;"&#62; Your browser does not support the HTML canvas tag.
+&#60;/canvas&#62;
+&#60;button onclick="drawaimage()"&#62;l Try it! &#60;/button&#62;
+&#60;script&#62;
+var c = document.getElementById("drawaimage");
+var ctx = c.getContext("2d");
+var img = document.getElementById("lovingyou");
+ctx.drawImage(img, 10, 10);
+&#60;/script&#62;
+</code></pre></td></tr></tbody>
+</table>
+<img id="lovingyou" src="Images/loving_you_is_a_losing_game.jpg" width="225" height="225" alt="Loving you is a losing game!" />
+<button onclick="drawaimage()"> Try it!</button>
+<canvas id="drawaimage" width="225" height="225" style="border:1px solid #000000;"> Your browser does not support the HTML canvas tag.
+</canvas>
+<script>
+function drawaimage() {
+var c = document.getElementById("drawaimage");
+var ctx = c.getContext("2d");
+var img = document.getElementById("lovingyou");
+ctx.drawImage(img, 10, 10);
+}
+</script>
+</div>
+</main>
+</body>
+</html>

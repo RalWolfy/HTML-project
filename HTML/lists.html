@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Lists </title>
+<style type="text/css">
+h1{text-align:center; font-size:6vw;} 
+table{border:2px solid black; border-spacing:8px; margin:auto;} 
+.grey_table{background-color:silver;} 
+.red_table{background-color:red;} 
+.sandybrown_table{background-color:sandybrown; border-collapse:collapse; padding:6px;} 
+.mistyrose_table{background-color:mistyrose; border-collapse:collapse;} 
+.lightsteelblue_table{background-color:lightsteelblue; border-collapse:collapse;} 
+a, abbr{text-decoration:none;} 
+body{margin:5vw; padding:5vw; background-color:grey; font-size:1vw;} 
+a:link{color:lightyellow;} a:visited{color:lightgray;} 
+a:active{color:lemonchiffon;} a:hover{color:lightcyan;} 
+.cpl{border:2px solid black;} 
+.cssul{list-style-type:square;} 
+.cssol{list-style-type:1;} 
+.pbul{list-style:none;} 
+.paul{list-style:none;} 
+.pbul:before{content:"-->"; color:cyan;} 
+.paul:after{content:";)"; color:red;} 
+.navMenu {list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333333;} 
+li a {display: block; color: white; text-align: center; padding: 16px; text-decoration: none; float: left;} 
+li a:hover {background-color: #111111;}
+.dashedtd{border-top:2px dashed black; text-align:center;}
+</style>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Lists">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1> Lists </h1>
+</header>
+<main>
+<p style="font-size:1.6vw;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lists can be of 2 types: <a href="#ordered"> ordered </a> and <a href="#unordered"> unordered</a>. This can be styled in <a href="#CSS"> CSS </a> or <a href="#personalized"> personalized</a>.  Also, we have <a href="#list_of_definition"> list of definitions</a>. </p>
+<div id="lists_ordered">
+<h2> The <a id="ordered"> ordered </a> ones can be: </h2>
+<table class="grey_table">
+<thead></thead>
+<tbody>
+<tr>
+<th> Type="1" </th>
+<td>
+<pre>
+<code>
+&lt;ol type="1"&gt;
+&lt;li&gt; The first &lt;/li&gt;
+&lt;li&gt; The second &lt;/li&gt;
+&lt;li&gt; The third &lt;/li&gt;
+&lt;/ol&gt;
+</code>
+</pre>
+</td>
+<td>
+<ol type="1">
+<li> The first </li>
+<li> The second </li>
+<li> The third </li>
+</ol>
+</td>
+</tr>
+<tr>
+<th> Type="I" </th>
+<td>
+<pre>
+<code>
+&lt;ol type="I"&gt;
+&lt;li&gt; The first &lt;/li&gt;
+&lt;li&gt; The second &lt;/li&gt;
+&lt;li&gt; The third &lt;/li&gt;
+&lt;/ol&gt;
+</code>
+</pre>
+</td>
+<td>
+<ol type="I">
+<li> The first </li>
+<li> The second </li>
+<li> The third </li>
+</ol>
+</td>
+</tr>
+<tr>
+<th> Type="i" </th>
+<td>
+<pre>
+<code>
+&lt;ol type="i"&gt;
+&lt;li&gt; The first &lt;/li&gt;
+&lt;li&gt; The second &lt;/li&gt;
+&lt;li&gt; The third &lt;/li&gt;
+&lt;/ol&gt;
+</code>
+</pre>
+</td>
+<td>
+<ol type="i">
+<li> The first </li>
+<li> The second </li>
+<li> The third </li>
+</ol>
+</td>
+</tr>
+<tr>
+<th> Type="A" </th>
+<td>
+<pre>
+<code>
+&lt;ol type="A"&gt;
+&lt;li&gt; The first &lt;/li&gt;
+&lt;li&gt; The second &lt;/li&gt;
+&lt;li&gt; The third &lt;/li&gt;
+&lt;/ol&gt;
+</code>
+</pre>
+</td>
+<td>
+<ol type="A">
+<li> The first </li>
+<li> The second </li>
+<li> The third </li>
+</ol>
+</td>
+</tr>
+<tr>
+<th> Type="a" </th>
+<td>
+<pre>
+<code>
+&lt;ol type="a"&gt;
+&lt;li&gt; The first &lt;/li&gt;
+&lt;li&gt;; The second &lt;/li&gt;
+&lt;li&gt; The third &lt;/li&gt;
+&lt;/ol&gt;
+</code>
+</pre>
+</td>
+<td>
+<ol type="a">
+<li> The first </li>
+<li> The second </li>
+<li> The third </li>
+</ol>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<hr style="color:#757575;">
+<div id="control_list">
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By default, an ordered list will start counting from 1. If we want to start counting from a specified number, we can use the start attribute: </p>
+<table class="grey_table">
+<caption> Control List Counting </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td>
+<pre>
+<code>
+&lt;ol type="1" start="5"&gt;
+&lt;li&gt; The first &lt;/li&gt;
+&lt;li&gt; The second &lt;/li&gt;
+&lt;li&gt; The third &lt;/li&gt;
+&lt;/ol&gt;
+</code>
+</pre>
+</td>
+<td>
+<ol type="1" start="5">
+<li> The first </li>
+<li> The second </li>
+<li> The third </li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="dashedtd" colspan="2">
+With the others it dosen't work
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>>
+</div>
+<div id="lists_unordered">
+<h2> The <a id="unordered"> unordered </a> ones can be: </h2>
+<table class="red_table">
+<thead></thead>
+<tbody>
+<tr>
+<th> Type="circle" </th>
+<td>
+<pre>
+<code>
+&lt;ul type="circle"&gt;
+&lt;li&gt; The first &lt;/li&gt;
+&lt;li&gt; The second &lt;/li&gt;
+&lt;li&gt; The third &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+</td>
+<td>
+<ul type="circle">
+<li> The first </li>
+<li> The second </li>
+<li> The third </li>
+</ul>
+</td>
+</tr>
+<tr>
+<th> Type="disc" </th>
+<td>
+<pre>
+<code>
+&lt;ul type="disc"&gt;
+&lt;li&gt; The first &lt;/li&gt;
+&lt;li&gt; The second &lt;/li&gt;
+&lt;li&gt; The third &lt;li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+</td>
+<td>
+<ul type="disc">
+<li> The first </li>
+<li> The second </li>
+<li> The third </li>
+</ul>
+</td>
+</tr>
+<tr>
+<th> Type="square" </th>
+<td>
+<pre>
+<code>
+&lt;ul type="square"&gt;
+&lt;li&gt; The first &lt;/li&gt;
+&lt;li&gt; The second &lt;/li&gt;
+&lt;li&gt; The third &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+</td>
+<td>
+<ul type="square">
+<li> The first </li>
+<li> The second </li>
+<li> The third </li>
+</ul>
+</td>
+</tr>
+<tr>
+<th> Type="none" </th>
+<td>
+<pre>
+<code>
+&lt;ul type="none"&gt;
+&lt;li&gt; The first &lt;/li&gt;
+&lt;li&gt; The second &lt;/li&gt;
+&lt;li&gt; The third &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+</td>
+<td>
+<ul type="none">
+<li> The first </li>
+<li> The second </li>
+<li> The third </li>
+</ul>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="css">
+<h2> In <a id="CSS"> <abbr title="Cascading Style Sheets"> CSS </abbr> </a> </h2>
+<table class="sandybrown_table">
+<thead></thead>
+<tbody>
+<tr>
+<td class="cpl"> 
+<code>
+<abbr title="Ordered list"> ol</abbr>{list-style-type:1;} 
+</code>
+</td>
+<td class="cpl">
+<ol class="cssol">
+<li> </li>
+</ol>
+</td>
+</tr>
+<tr>
+<td class="cpl">
+<code>
+<abbr title="Unordered list"> ul</abbr>{list-style-type:square;}
+</code>
+</td>
+<td class="cpl">
+<ul class="cssul">
+<li> </li>
+</ul>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="lists_personlaized">
+<h2> <a id="personalized"> Personalized </a> </h2>
+<table class="mistyrose_table">
+<thead></thead>
+<tbody>
+<tr>
+<td class="cpl">
+<pre>
+<code>
+ul{list-style:none;}
+li:before{content:"-->"; color:gold;}
+</code>
+</pre>
+</td>
+<td class="cpl"> 
+<ul>
+<li class="pbul"> ... </li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="cpl">
+<pre>
+<code>
+ul{list-style:none;}
+li:after{content:";)"; color:gold;}
+</code>
+</pre>
+</td>
+<td class="cpl">
+<ul>
+<li class="paul"> ... </li>
+</ul>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="lists_of_definitions">
+<h2> <a id="list_of_definition"> Lists of definitions </a> </h2>
+<table class="lightsteelblue_table">
+<thead></thead>
+<tbody>
+<tr class="cpl">
+<td class="cpl">
+<pre>
+<code>
+&lt;dl&gt;
+&lt;dt&gt; The cat &lt;/dt&gt;
+&lt;dd&gt; is a domestic species of small carnivorous mammal. &lt;/dd&gt;
+&lt;dl&gt;
+</code>
+</pre>
+</td>
+<td class="cpl">
+<dl> 
+<dt> The cat </dt>
+<dd> is a domestic species of small carnivorous mammal. </dd>
+</dl>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="navigation_menu">
+<h2>Navigation Menu</h2>
+<p> We can use CSS to style the list horizontally, to create a navigation menu:</p>
+<table class="grey_table">
+<thead></thead>
+<tbody>
+<tr>
+<td class="cpl">
+<ul class="navMenu">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+<td class="cpl">
+<pre>
+<code>
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a>&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+<table style="border-collapse:collapse; border:3px ridge black; display:block; background-color:#474747;">
+<caption> In CSS </caption>
+<thead></thead>
+<tbody>
+<td>
+<pre>
+<code>
+&lt;style&gt;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111111;
+}
+&lt;/style>&gt;
+</code>
+</pre>
+</td>
+</tbody>
+<tfoot></tfoot>
+</table>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</main>
+</body>
+</html>

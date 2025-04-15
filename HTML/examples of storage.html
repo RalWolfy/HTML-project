@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Example of Storage API </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Example of storage API.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viweport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+h1{text-align:center; margin: 10vw;}
+body{margin:10vw;}
+table, tr, td{margin:auto; border:2px solid grey; border-collapse:collapse; background-color: silver; padding:5px;}
+table{height:80px; width:300px; margin-top: 10px;}
+</style>
+<script>
+    function setItem() {
+        if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("name", "Ride");
+            document.getElementById("name").innerHTML = localStorage.getItem("name");
+        } else {
+            document.getElementById("name").innerHTML = "Sorry, your browser does not support local storage!";
+        }
+    }
+</script>
+<script>
+    function clickCounter() {
+        if (typeof(Storage) !== "undefined") {
+            if(localStorage.clickcount) {
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+                } else {
+                    localStorage.clickcount = 1;
+                }
+            document.getElementById("result").innerHTML = "You have clicked the button" + localStorage.clickcount + "time(s)"; 
+          } else {
+            document.getElementById("result").innerHTML = "Sorry, your browser does not support the local storage!";
+          }
+        }
+</script>
+<script>
+    function removeItem() {
+        if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("name", "Ride");
+            document.getElementById("name").innerHTML = localStorage.removeItem("name");
+        } else {
+            document.getElementById("name").innerHTML = "Sorry, your browser does not support the local storage!";
+        }
+    }
+</script>
+</head>
+<body>
+<header> <h1> Examples of storages API </h1></header>
+<main>
+<table>
+<caption> Song </caption>
+<thead><tr><th></th><th>Name:</th><th>Artist:</th></tr></thead>
+<tbody><tr><th>1.</th><td id="name"></td><td id="artist"></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<p> To complete name of song: <button onclick="setItem()" type="button">Click!</button> </p>
+<p> To remove the name of song: <button onclick="removeItem()" type="button">Click!</button> </p>
+<div id="counter">
+<h2> Local Storage </h2>
+<p> <button type="button" onclick="clickCounter()">Click me!</button> </p>
+<h2> Session Storage </h2>
+<p> For a  example: <button><a target="_blank" href="example of session storage.html">Click!</a></button> </p>
+</div>
+<div id="result"></div>
+<script>
+if (typeof(Storage) !== "undefined") {
+    localStorage.setItem("artist", "Twenty One Pilots");
+    document.getElementById("artist").innerHTML = localStorage.getItem("artist");
+} else {
+    document.getElementByItem("artist").innerHTML = "Sorry, your browser does not support the local storage!";
+}
+</script>
+<div id="code">
+<table>
+<thead></thead>
+<tbody><tr><td><pre><code>
+    &#60;head&#62;
+
+    &#60;script&#62;
+
+        function setItem() {
+            if (typeof(Storage) !== "undefined") {
+                localStorage.setItem("name", "Ride");
+                document.getElementById("name").innerHTML = localStorage.getItem("name");
+            } else {
+                document.getElementById("name").innerHTML = "Sorry, your browser does not support local storage!";
+            }
+        }
+
+    &#60;/script&#62;
+
+    &#60;script&#62;
+
+        function clickCounter() {
+            if (typeof(Storage) !== "undefined") {
+                if(localStorage.clickcount) {
+                    localStorage.clickcount = Number(localStorage.clickcount)+1;
+                    } else {
+                        localStorage.clickcount = 1;
+                    }
+                document.getElementById("result").innerHTML = "You have clicked the button" + localStorage.clickcount + "time(s)"; 
+              } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support the local storage!";
+              }
+            }
+
+    &#60;/script&#62;
+
+    &#60;script&#62;
+
+        function removeItem() {
+            if (typeof(Storage) !== "undefined") {
+                localStorage.setItem("name", "Ride");
+                document.getElementById("name").innerHTML = localStorage.removeItem("name");
+            } else {
+                document.getElementById("name").innerHTML = "Sorry, your browser does not support the local storage!";
+            }
+        }
+
+    &#60;/script&#62;
+
+    &#60;/head&#62;
+    &#60;body&#62;
+    
+    &#60;header&#62; &#60;h1&#62; Examples of storages API &#60;/h1&#62;&#60;/header&#62;
+    
+    &#60;main&#62;
+    
+    &#60;table&#62;
+    &#60;caption&#62; Song &#60;/caption&#62;
+    &#60;thead&#62;&#60;tr&#62;&#60;th&#62;&#60;/th&#62;&#60;th&#62;Name:&#60;/th&#62;&#60;th&#62;Artist:&#60;/th&#62;&#60;/tr&#62;&#60;/thead&#62;
+    &#60;tbody&#62;&#60;tr&#62;&#60;th&#62;1.&#60;/th&#62;&#60;td id="name"&#62;&#60;/td&#62;&#60;td id="artist"&#62;&#60;/td&#62;&#60;/tr&#62;&#60;/tbody&#62;
+    &#60;tfoot&#62;&#60;/tfoot&#62;
+    &#60;/table&#62;
+    
+    &#60;p&#62; To complete name of song: &#60;button onclick="setItem()" type="button"&#62;Click!&#60;/button&#62; &#60;/p&#62;
+    &#60;p&#62; To remove the name of song: &#60;button onclick="removeItem()" type="button"&#62;Click!&#60;/button&#62; &#60;/p&#62;
+    
+    &#60;div id="counter"&#62;
+    &#60;h2&#62; Local Storage &#60;/h2&#62;
+    &#60;p&#62; &#60;button type="button" onclick="clickCounter()"&#62;Click me!&#60;/button&#62; &#60;/p&#62;
+    &#60;h2&#62; Session Storage &#60;/h2&#62;
+    &#60;p&#62; For a  example: &#60;button&#62;&#60;a href="                      <!---->"&#62;Click!&#60;/a&#62;&#60;/button&#62; &#60;/p&#62;
+    &#60;/div&#62;
+    
+    &#60;div id="result"&#62;&#60;/div&#62;
+    
+    &#60;script&#62;
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("artist", "Twenty One Pilots");
+        document.getElementById("artist").innerHTML = localStorage.getItem("artist");
+    } else {
+        document.getElementByItem("artist").innerHTML = "Sorry, your browser does not support the local storage!";
+    }
+    
+    &#60;/script&#62;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</main>
+</body>
+</html>

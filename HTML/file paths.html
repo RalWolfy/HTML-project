@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<title> File Paths </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="A file path describes the location of a file in a web site's folder structure.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1{text-align:center;}
+body{margin:100px; background-color:#6fe7c3;}
+table, td{border:3px groove black; border-collapse:collapse; padding:5px;}
+main{margin:50px 0;}
+ul: li{list-style-type:disc;}
+tr :hover{background-color:rgb(213, 252, 241);}
+</style>
+</head>
+<body>
+<header>
+<hr />
+<h1> HTML File Paths </h1>
+<hr />
+</header>
+<main>
+<ul>
+<li> <p> A file path describes the location of a file in a web site's folder structure. </p> </li>
+</ul>
+<div id="descrption_path">
+<h2> Path Description </h2>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<td> &lt;img src="picture.jpg"&gt; </td> <td> The "picture.jpg" file is located in the same folder as the current page. </td>
+</tr>
+<tr>
+<td> &lt;img src="images/picture.jpg"&gt; </td>	<td> The "picture.jpg" file is located in the images folder in the current folder. </td>
+</tr>
+<tr>
+<td> &lt;img src="/images/picture.jpg"&gt; </td> <td> The "picture.jpg" file is located in the images folder at the root of the current web. </td>
+</tr>
+<tr>
+<td> &lt;img src="../picture.jpg"&gt; </td> <td> The "picture.jpg" file is located in the folder one level up from the current folder. </td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="best_practice">
+<h2> Best Practice </h2>
+<ul>
+<li> <p> It is best practice to use relative file paths (if possible). </p> </li>
+<li> <p> When using relative file paths, your web pages will not be bound to your current base URL. All links will work on your own computer (localhost) as well as on your current public domain and your future public domains. </p> </li>
+</ul>
+</div>
+</main>
+</body>
+</html>

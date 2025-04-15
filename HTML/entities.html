@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> HTML Entities </title>
+<style type="text/css">
+h1{text-align:center; margin:5vw;}
+body{margin:10vw; background-color:#c1f8ff;}
+.bl{color:blue;}
+table, td{border-collapse:collapse; border:3px solid grey; background-color:white; margin:30px; padding:20px;}
+.personalized{content:"!"; color:red;}
+</style>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Reserved characters in HTML must be replaced with character entities.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<header>
+<h1> Entities </h1>
+</header>
+<main>
+<p> Reserved characters in HTML must be replaced with character entities. </p>
+<p> If you use the less than (&#60;) or greater than (&#62;) signs in your text, the browser might mix them with tags. </p>
+<table>
+<caption> A character entity looks like this: </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td> <code>&entity_name;</code> OR <code>&#entity_number;</code> </td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<ul type="disc">
+<li> To display a less than sign (&#60;) we must write: &#38;lt; or &#38;&#35;60; </li>
+</ul>
+<dl class="bl">
+<dt> Advantage of using an entity name: </dt>
+<dd> An entity name is easy to remember. </dd>
+</dl>
+<dl class="bl">
+<dt> Disadvantage of using an entity name: </dt>
+<dd> Browsers may not support all entity names, but the support for entity numbers is good. </dd>
+</dl>
+<dl>
+<dt> Non-breaking Space </dt>
+<dd> A commonly used entity in HTML is the non-breaking space: &nbsp; </dd>
+<dd> A non-breaking space is a space that will not break into a new line. </dd>
+<dd> Two words separated by a non-breaking space will stick together (not break into a new line). This is handy when breaking the words might be disruptive. </dd>
+</dl>
+<table>
+<caption> Examples: </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td>
+<pre>
+§ 10
+10 km/h
+10 PM
+</pre>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<p> Another common use of the non-breaking space is to prevent browsers from truncating spaces in HTML pages. </p>
+<p> If you write 10 spaces in your text, the browser will remove 9 of them. To add real spaces to your text, you can use the &#38;nbsp; character entity. </p>
+<p> <u>Tip</u>: The non-breaking hyphen (&#38;&#35;8209;) is used to define a hyphen character (&#8209;) that does not break into a new line. </p>
+<ul type="none">
+<li class="personalized"> <u>Note</u>: Entity names are case sensitive. </li>
+</ul>
+<dl>
+<dt> Combining Diacritical Marks </dt>
+<dd> A diacritical mark is a "glyph" added to a letter. </dd>
+<dd> Some diacritical marks, like grave (&#96;) and acute (&#180;) are called accents.  </dd>
+<dd> Diacritical marks can appear both above and below a letter, inside a letter, and between two letters. </dd>
+<dd> <span style="color:#eb24d4;"> Diacritical marks can be used in combination with alphanumeric characters to produce a character that is not present in the character set (encoding) used in the page. </span> </dd>
+</dl>
+</main>
+</body>
+</html>

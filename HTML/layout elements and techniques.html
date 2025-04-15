@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Layout Elements and Techniques </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Layouts Elements and Techniques">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+h1{text-align:center; margin:100px;}
+body{margin:100px; background-color:#7e7e7e;}
+h2{margin: 0 50px;}
+a:link{color:rgb(0, 0, 0);}
+a:active{color:rgb(10, 204, 52);}
+a:hover{color:red;}
+a:visited{color:rgb(0, 208, 255);}
+dt{margin:10px;}
+</style>
+</head>
+<body>
+<header>
+<h1> Layout Elements and Techniques </h1>
+</header>
+<main>
+<p> Websites often display content in multiple columns (like a magazine or a newspaper). </p>
+<div id="parts">
+<h2> HTML has several semantic elements that define the different parts of a web page: </h2>
+<dl>
+<dt> &#60;header&#62; </dt> <dd> - Defines a header for a document or a section. </dd>
+<dt> &#60;nav&#62; </dt> <dd> - Defines a set of navigation links. </dd>
+<dt> &#60;section&#62; </dt> <dd> - Defines a section in a document. </dd>
+<dt> &#60;article&#62; </dt> <dd> - Defines an independent, self-contained content. </dd>
+<dt> &#60;aside&#62; </dt> <dd> - Defines content aside from the content (like a sidebar). </dd>
+<dt> &#60;footer&#62; </dt> <dd> - Defines a footer for a document or a section. </dd>
+<dt> &#60;details&#62; </dt> <dd> - Defines additional details that the user can open and close on demand. </dd>
+<dt> &#60;summary&#62; </dt> <dd> - Defines a heading for the &#60;details&#62; element. </dd>
+</dl>
+</div>
+<div id="techniques">
+<h2> HTML Layout Techniques </h2>
+<p> There are four different techniques to create multicolumn layouts. Each technique has its pros and cons: </p>
+<ul type="square">
+<li> CSS framework </li>
+<li> CSS float property - <a href="layout float.html" target="_blank">Example</a></li>
+<li> CSS flexbox - <a href="layout flexbox.html" target="_blank">Example</a></li>
+<li> CSS grid </li>
+</ul>
+<dl>
+<dt> CSS Frameworks </dt> <dd> If you want to create your layout fast, you can use a CSS framework, like W3.CSS or Bootstrap. </dd>
+<dt> CSS Float Layout </dt> <dd> It is common to do entire web layouts using the CSS float property. </dd> <dd> Float is easy to learn - you just need to remember how the float and clear properties work. </dd> <dd> <u>Disadvantages</u>: Floating elements are tied to the document flow, which may harm the flexibility. </dd>
+<dt> CSS Flexbox Layout </dt> <dd> Use of flexbox ensures that elements behave predictably when the page layout must accommodate different screen sizes and different display devices. </dd>
+<dt> CSS Grid Layout </dt> <dd> The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. </dd>
+</dl>
+</div>
+</main>
+</body>
+</html>

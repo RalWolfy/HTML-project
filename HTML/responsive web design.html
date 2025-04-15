@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Responsive Web Design </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Responsive web design is about creating web pages that look good on all devices!">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device=width, initial-scale=1.0">
+<style type="text/css">
+.personalized:before{content:"!"; size:20px; color:red;}
+.personalized_vw:before{content:"!"; color:blue;}
+.left, .right {float: left; width: 80%;} 
+.main {float: left; width: 80%;}
+@media screen and (max-width: 800px) {.left, .main, .right {width: 100%;}}
+.mq{padding:50px;}
+table, td{border-collapse:collapse; border:3px solid black; color:grey; margin: auto; margin-bottom:50px;}
+body{margin:10vw; font-size:1.0vw; background-color:#9ccfff;}
+h1{text-align:center; margin: 50px;}
+h2, h3{margin:0 50px;}
+</style>
+</head>
+<body>
+<header>
+<h1> HTML Responsive Web Design </h1>
+</header>
+<main>
+<p> Responsive web design is about creating web pages that look good on all devices! </p>
+<p> A responsive web design will automatically adjust for different screen sizes and viewports. </p>
+<div id="whatIs">
+<h2> What is Responsive Web Design? </h2>
+<p> Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and phones): </p>
+</div>
+<div id="viewport">
+<h2> Setting The Viewport </h2>
+<p> To create a responsive website, add the following &#60;meta&#62; tag to all your web pages: </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td>
+&#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<ul style="list-style-type:disc;">
+<li> This will set the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling. </li>
+</ul>
+</div>
+<div id="images">
+<h2> Responsive Images </h2>
+<p> Responsive images are images that scale nicely to fit any browser size. </p>
+<div id="width">
+<h3> Using the width Property </h3>
+<p> If the CSS width property is set to 100%, the image will be responsive and scale up and down: </p>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<td>
+<pre>
+<code>
+&#60;img style="margin:50px 0; width:100%;" src="Images/loving_you_is_a_losing_game.jpg" alt="Loving you is a losing game" /&#62;
+</code>
+</pre>
+</td>
+<td>
+<img style="margin:50px 0; width:100%;" src="Images/loving_you_is_a_losing_game.jpg" alt="Loving you is a losing game" />
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<p> <span style="border:2px solid #9ccfff; border-bottom-color:black; padding:5px;"> &lt;img src="Images/loving_you_is_a_losing_game.jpg" style="width:100%;"&gt; </span> </p>
+<ul>
+<li class="personalized"> Notice that in the example above, the image can be scaled up to be larger than its original size. A better solution, in many cases, will be to use the max-width property instead. </li>
+</ul>
+</div>
+<div id="max_width">
+<h3> Using the max-width Property </h3>
+<p> If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size: </p>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<td>
+<pre>
+<code>
+&#60;img src="Images/loving_you_is_a_losing_game.jpg" alt="Loving you is a losing game" style="max-width:100%; height:auto; margin:1px;"&#62;
+&#60;img src="Images/loving_you_is_a_losing_game.jpg" alt="Loving you is a losing game" style="max-width:100%; margin:1px;"&#62;
+</code>
+</pre>
+</td>
+<td>
+<img src="Images/loving_you_is_a_losing_game.jpg" alt="Loving you is a losing game" style="max-width:100%; height:auto; margin:1px;" />
+<img src="Images/loving_you_is_a_losing_game.jpg" alt="Loving you is a losing game" style="max-width:100%; margin:1px;" />
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="browser_width">
+<h3> Show Different Images Depending on Browser Width </h3>
+<p> The HTML &lt;picture&gt; element allows you to define different images for different browser window sizes. </p>
+<p> Resize the browser window to see how the image below changes depending on the width: </p>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<td>
+<pre> <code>
+&#60;picture&#62;
+  &#60;source srcset="Images/225.jpg" media="(max-width: 625px)"&#62;
+  &#60;source srcset="Images/425.jpg" media="(max-width: 825px)"&#62;
+  &#60;source srcset="Images/763_1451.jpg"&#62;
+  &#60;img src="Images/2300_1288.jpg" alt="Neon wallpapers"&#62;
+&#60;/picture&#62;
+</code> </pre>
+</td>
+<td> 
+<picture>
+  <source srcset="Images/275_183.jpg" media="(max-width: 675px)">
+  <source srcset="Images/425.jpg" media="(max-width: 1025px)">
+  <source srcset="Images/763_1451.jpg">
+  <img src="Images/2300_1288.jpg" alt="A neon mask"> 
+</picture>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</div>
+<div id="text_size">
+<h2> Responsive Text Size </h2>
+<p> The text size can be set with a "vw" unit, which means the "viewport width". </p>
+<p> That way the text size will follow the size of the browser window: </p>
+<table>
+<caption> Resize the browser window to see how the text size scales. </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td> <h1 style="font-size:4vw;"> Hello World </h1> </td>
+<td> &#60;h1 style="font-size:10vw;"&#62; Hello World &#60;/h1&#62; </td>
+</tr>
+<tr> 
+<td> <h1 style="font-size:2vw;"> Hello world </h1> </td>
+<td> &#60;h1 style="font-size:5vw;"&#62; Hello world &#60;/h1&#62; </td> 
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<ul type="none">
+<li class="personalized_vw"> Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm. </li>
+</ul>
+</div>
+<div id="queries">
+<h3> Media Queries </h3>
+<p> In addition to resize text and images, it is also common to use media queries in responsive web pages. </p>
+<p> With media queries you can define completely different styles for different browser sizes. </p>
+<table>
+<caption> Example: resize the browser window to see that the three div elements below will display horizontally on large screens and stack vertically on small screens: </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td>
+<pre> <code>
+&#60;p class="left" style="background-color:blue;"&#62; Left Menu &#60;/p&#62;
+&#60;p class="main" style="background-color:green;"&#62; Main Content &#60;/p&#62;
+&#60;p class="right" style="background-color:yellow;"&#62; Right Content &#60;/p&#62;
+
+&#60;style&#62;
+.left, .right {
+  float: left;
+  width: 80%;
+} 
+
+.main {
+  float: left;
+  width: 80%;
+}
+
+/* Use a media query to add a breakpoint at 800px */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+&#60;/style&#62;
+</code> </pre>
+</td>
+<td>
+<div class="mq" style="background-color:blue;">
+<p class="left"> Left Menu </p>
+</div>
+<div class="mq" style="background-color:green;">
+<p class="main"> Main Content </p>
+</div>
+<div class="mq" style="background-color:yellow;">
+<p class="right"> Right Content </p>
+</div>
+</td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="frameworks">
+<h3> Responsive Web Design - Frameworks </h3>
+<p> A responsive web page should look good on large desktop screens and on small mobile phones. </p>
+<h4> Responsive Web Design - Frameworks </h4>
+<p> All popular CSS Frameworks offer responsive design. </p>
+<dl>
+<dt>W3.CSS</dt>
+<dd>W3.CSS is a modern CSS framework with support for desktop, tablet, and mobile design by default.</dd>
+<dd>W3.CSS is smaller and faster than similar CSS frameworks.</dd>
+<dd>W3.CSS is designed to be independent of jQuery or any other JavaScript library.</dd>
+</dl>
+<dl>
+<dt>Bootstrap</dt>
+<dd>Another popular CSS framework is Bootstrap. </dd>
+<dd> Bootstrap uses HTML, CSS and jQuery to make responsive web pages. </dd>
+</dl>
+</div>
+</main>
+</body>
+</html>

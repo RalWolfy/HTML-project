@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Forms </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="An HTML form is used to collect user input. The user input is most often sent to a server for processing.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1{text-align: center; font-size: 2vw;}
+body{margin:10vw; font-size: 0.7vw;}
+tr:hover{background-color: rgb(126, 253, 211);}
+table, td{border:2px solid grey; border-collapse: collapse; padding:1vw;}
+.e_button{margin: 30px 0; background-color: deepskyblue; font-size: 8px;}
+</style>
+</head>
+<body>
+<header>
+<h1> Forms </h1>
+</header>
+<main>
+<p> An HTML form is used to collect user input. The user input is most often sent to a server for processing. </p>
+<div id="form_element">
+<h2> The &#60;form&#62; element</h2>
+<p> The HTML &#60;form&#62; element is used to create an HTML form for user input: <span style="border:2px solid black; padding:5px;">&#60;form&#62; form elements &#60;/form&#62;</span> </p>
+<p> The &#60;form&#62; element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, and others. </p>
+</div>
+<div id="input_element">
+<h2> The &#60;input&#62; Element </h2>
+<p> The HTML &#60;input&#62; element is the most used form element. </p>
+<p> An &#60;input&#62; element can be displayed in many ways, depending on the type attribute. </p>
+<table>
+<caption></caption>
+<thead></thead>
+<tbody>
+<tr><td>Text Fields</td><td><code>&#60;input type="text"&#62;</code></td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="fname&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="fname" name="fname"&#62;
+  &#60;label for="lname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="lname" name="lname"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="fname">First name:</label><input type="text" id="fname" name="fname"><br /><label for="lname">Last name:</label><input type="text" id="lname" name="lname"></form></td><td> <p> Displays a single-line input field for text input. </p> <p> <u>Note:</u> The form itself is not visible. Also note that the default width of an input field is 20 characters. </p> </td></tr>
+<tr><td>Label element</td><td><code>&#60;label&#62;</code></td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="name"&#62; First name: &#60;/label&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="yourname"> First name: </label><input type="text" id="yourname" name="yourname"></form></td><td><p> The &#60;label&#62; tag defines a label for many form elements. </p> <p> It is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element. </p> <p> The &#60;label&#62; element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the &#60;label&#62; element, it toggles the radio button/checkbox. </p> <p> The for attribute of the &#60;label&#62; tag should be equal to the id attribute of the &#60;input&#62; element to bind them together. </p></td></tr>
+<tr><td>Radio Buttons</td><td><code>&#60;input type="radio"&#62;</code></td><td><pre><code>
+&#60;form&#62;
+  &#60;input type="radio" id="html" name="fav_language" value="HTML"&#62;
+  &#60;label for="html"&#62;HTML&#60;/label&#62;
+  &#60;input type="radio" id="css" name="fav_language" value="CSS"&#62;
+  &#60;label for="css"&#62;CSS&#60;/label&#62;
+  &#60;input type="radio" id="javascript" name="fav_language" value="JavaScript"&#62;
+  &#60;label for="javascript"&#62;JavaScript&#60;/label&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><input type="radio" id="html" name="fav_language" value="HTML"><label for="html">HTML</label><br><input type="radio" id="css" name="fav_language" value="CSS"><label for="css">CSS</label><br><input type="radio" id="javascript" name="fav_language" value="JavaScript"><label for="javascript">JavaScript</label></form></td><td>Radio buttons let a user select ONE of a limited number of choices.</td></tr>
+<tr><td>Checkboxes</td><td><code>&#60;input type="checkboxes"&#62;</code></td><td><pre><code>
+&#60;form&#62;
+  &#60;input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"&#62;
+  &#60;label for="vehicle1"&#62; I have a bike&#60;/label&#62;
+  &#60;input type="checkbox" id="vehicle2" name="vehicle2" value="Car"&#62;
+  &#60;label for="vehicle2"&#62; I have a car&#60;/label&#62;
+  &#60;input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"&#62;
+  &#60;label for="vehicle3"&#62; I have a boat&#60;/label&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> I have a bike</label><br><input type="checkbox" id="vehicle2" name="vehicle2" value="Car"><label for="vehicle2"> I have a car</label><br><input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> I have a boat</label></form></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<h3> The button element </h3>
+<table class="e_button">
+<thead></thead>
+<tbody>
+<tr><td>The submit button</td><td>&#60;input type="submit"&#62;</td><td><pre><code>
+  &#60;form action="/action_page.php"&#62;
+  &#60;label for="nname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="nname" name="nname" value="John">&#62;
+  &#60;label for=xname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="xname" name="xname" value="Doe"&#62;
+  &#60;input type="submit" value="Submit"&#62;
+  &#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php"><label for="frname">First name:</label><br><input type="text" id="frname" name="frname" value="John"><br><label for="lsname">Last name:</label><br><input type="text" id="lsname" name="lsname" value="Doe"><br><br><input type="submit" value="Submit">
+</form></td><td> <p> <mark>With a button created with the &#60;input&#62; element you can put text (but you can't put tags like &#60;i&#62;, &#60;b&#62;, &#60;strong&#62;, &#60;br&#62;, &#60;img&#62;, etc.)</mark> </p> <p> Displays a button for submitting the form data to a form-handler. </p> <p> The form-handler is typically a file on the server with a script for processing input data. </p> <p> The form-handler is specified in the form's action attribute. </p> 
+<h4> <u>Atributes</u>: </h4>
+<dl>
+  <dt>formaction <ul style="type:disc;"><li>URL</li></ul> </dt> <dd>Specifies where to send the form-data when a form is submitted. Only for type="submit".</dd>
+  <dt>formenctype <ul style="type:disc;"><li>application/x-www-form-urlencoded;</li><li>multipart/form-data;</li><li>text/plain</li></ul> </dt> <dd>Specifies how form-data should be encoded before sending it to a server. Only for type="submit".</dd>
+  <dt>formmethod	<ul style="type:disc;"><li>get</li><li>post</li></ul> </dt> <dd>Specifies how to send the form-data (which HTTP method to use). Only for type="submit".</dd>
+  <dt>formnovalidate <ul style="type:disc;"><li>formnovalidate</li></ul> </dt> <dd>Specifies that the form-data should not be validated on submission. Only for type="submit".</dd>
+  <dt>formtarget <ul style="type:disc;"><li>blank;</li><li>_self;</li><li>_parent;</li><li>_top;</li><li>framename.</li></ul> </dt> <dd>Specifies where to display the response after submitting the form. Only for type="submit".</dd>
+</dl></td></tr>
+<tr><td>The &#60;button&#62; element</td><td><code>&#60;button type="button"&#62; Click Me! &#60;/button&#62;</code></td><td><pre><code>
+  &#60;button type="button" onclick="alert('Hello World!')"&#62; Click Me! &#60;/button&#62;
+</code></pre></td><td><button type="button" onclick="alert('Hello World!')">Click Me!</button></td><td> <p> <mark> Inside a &#60;button&#62; element you can put text (and tags like &#60;i&#62;, &#60;b&#62;, &#60;strong&#62;, &#60;br&#62;, &#60;img&#62;, etc.). </mark> </p> <p> Desplays a clickable button. </p> <p> <u>Note:</u> Always specify the type attribute for the button element. Different browsers may use different default types for the button element. </p>
+<h4> <u>Atributes</u>: </h4>
+<dl>
+<dt>autofocus <ul style="type:disc;"><li>autofocus</li></ul> </dt> <dd>Specifies that a button should automatically get focus when the page loads.</dd>
+<dt>disabled <ul style="type:disc;"><li>disabled</li></ul> </dt> <dd>Specifies that a button should be disabled.</dd>
+<dt>form <ul style="type:disc;"><li>form_id</li></ul> </dt> <dd>Specifies which form the button belongs to.</dd>
+<dt>name	<ul style="type:disc;"><li>name</li></ul> </dt>	<dd>Specifies a name for the button.</dd>
+<dt>type	<ul style="type:disc;"><li>button;</li><li>reset;</li><li>submit.</li></ul> </dt>	<dd>Specifies the type of button.</dd>
+<dt>value	<ul style="type:disc;"><li>text</li></ul> </dt>	<dd>Specifies an initial value for the button.</dd>
+</dl></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+<table>
+<thead></thead>
+<tbody>
+<tr><td>The &#60;select&#62;</td><td>&#60;select id="cars" name="cars"&#62;</td><td><pre><code>
+&#60;label for="cars"&#62;Choose a car:&#60;/label&#62;
+  &#60;select id="cars" name="cars"&#62;
+  &#60;option value="volvo"&#62;Volvo&#60;/option&#62;
+  &#60;option value="saab"&#62;Saab&#60;/option&#62;
+  &#60;option value="fiat"&#62;Fiat&#60;/option&#62;
+  &#60;option value="audi"&#62;Audi&#60;/option&#62;
+&#60;/select&#62;
+</code></pre></td><td><label for="cars">Choose a car:</label><select id="cars" name="cars"><option value="volvo">Volvo</option><option value="saab">Saab</option><option value="fiat">Fiat</option><option value="audi">Audi</option></select></td><td> <p> Desplays a drop-down list. </p> <p> The &#60;option&#62; elements defines an option that can be selected. </p> <p> By default, the first item in the drop-down list is selected. </p> <p> To define a pre-selected option, add the selected attribute to the option: <span style="border:2px solid grey;">&#60;option value="fiat" selected&#62;Fiat&#60;/option&#62;</span> </p> <p> Use the size attribute to specify the number of visible values: <span style="border:2px solid grey;">&#60;select id="cars" name="cars" size="3"&#62;</span> </p> <p> Use the multiple attribute to allow the user to select more than one value: <span style="border:2px solid grey;">&#60;select id="cars" name="cars" size="4" multiple&#62;</span> </p> </td></tr>
+  
+
+
+
+
+<tr><td>The &#60;optgroup&#62;</td><td><pre><code>
+  &#60;optgroup&#62;
+</code></pre></td><td></td><td> <p> Defines a group of related options in a drop-down list. </p> </td></tr> 
+<tr><td>The search</td><td><pre><code>&#60;input type="search" name="q" placeholder="Search query" /&#62;</code></pre></td><td><pre><code>&#60;form&#62;&#60;input type="search" name="q" placeholder="Search query" /&#62; <br /> &#60;input type="submit" value="Go!" /&#62;&#60;/form&#62;</code></pre></td>
+<td>
+<form>
+<input type="search" name="q" placeholder="Search query" />
+<input type="submit" value="Go!" />
+</form></td><td>You can search what you want in the website.</td></tr>
+<tr><td>The &#60;textarea&#62; element</td><td><code>&#60;textarea name="message"&#62;&#60;/textarea&#62;</code></td><td><pre><code>
+  &#60;textarea name="message" rows="10" cols="30"&#62;
+  The cat was playing in the garden.
+  &#60;/textarea&#62;
+</code></pre></td><td><textarea name="message" rows="3" cols="10">The cat was playing in the garden.</textarea></td><td> <p> Desplays a multi-line input field (a text area). </p> <p> The rows attribute specifies the visible number of lines in a text area. </p> <p> The cols attribute specifies the visible width of a text area. </p> <p> You can also define the size of the text area by using CSS. </p> </td></tr>
+<tr><td>The &#60;fieldset&#62; and &#60;legend&#62; Elements</td><td><code>&#60;fieldset&#62; &#60;legend&#62; Login &#60;/legend&#62; &#60;/fieldset&#62;</code></td><td><pre><code>
+&#60;form action="/action_page.php"&#62;
+  &#60;fieldset&#62;
+    &#60;legend&#62;Personalia:&#60;/legend&#62;
+      &#60;label for="bname"&#62;First name:&#60;/label&#62;<br>
+      &#60;input type="text" id="bname" name="bname" value="John"&#62;<br>
+      &#60;label for="cname"&#62;Last name:&#60;/label&#62;<br>
+      &#60;input type="text" id="cname" name="cname" value="Doe"&#62;<br><br>
+      &#60;input type="submit" value="Submit"&#62;
+  &#60;/fieldset&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php"><fieldset><legend>Personalia:</legend><label for="name_first">First name:</label><br><input type="text" id="name_first" name="name_first" value="John"><br><label for="lstname">Last name:</label><br><input type="text" id="lstname" name="lstname" value="Doe"><br><br><input type="submit" value="Submit"></fieldset></form></td><td><p> The &#60;fieldset&#62; element is used to group related data in a form. </p> <p> The &#60;legend&#62; element defines a caption for the &#60;fieldset&#62; element. </p> </td></tr>
+<tr><td>The &#60;datalist&#62; Element</td><td>&#60;datalist id="browsers"&#62; &#60;/datalist&#62;</td><td><pre><code>
+&#60;form action="/action_page.php"&#62;
+  &#60;input list="browsers"&#62;
+    &#60;datalist id="browsers"&#62;
+       &#60;option value="Internet Explorer"&#62;
+       &#60;option value="Firefox"&#62;
+       &#60;option value="Chrome"&#62;
+       &#60;option value="Opera"&#62;
+       &#60;option value="Safari"&#62;
+    &#60;/datalist&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php"><input list="browsers"><datalist id="browsers"><option value="Internet Explorer"><option value="Firefox"><option value="Chrome"><option value="Opera"><option value="Safari"></datalist></form></td><td><p> The &#60;datalist&#62; element specifies a list of pre-defined options for an &#60;input&#62; element. </p> <p> Users will see a drop-down list of the pre-defined options as they input data. </p> <p> The list attribute of the &#60;input&#62; element, must refer to the id attribute of the &#60;datalist&#62; element. </p> </td></tr>
+<tr><td>The &#60;output&#62; Element</td><td></td><td><pre><code>
+&#60;form action="/action_page.php"
+    oninput="x.value=parseInt(a.value)+parseInt(b.value)"&#62;
+0
+&#60;input type="range"  id="a" name="a" value="50"&#62;
+100 +
+&#60;input type="number" id="b" name="b" value="50"&#62;
+=
+&#60;output name="x" for="a b"&#62;&#60;/output&#62;
+
+
+&#60;input type="submit"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">0<input type="range"  id="a" name="a" value="50">100 +<input type="number" id="b" name="b" value="50">=<output name="x" for="a b"></output><br><br><input type="submit"></form></td><td> <p> The &#60;output&#62; element represents the result of a calculation (like one performed by a script). </p> </td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="form_attributes">
+<h2> Form Attributes </h2>
+<table style="margin: auto;">
+<thead></thead>
+<tbody>
+<tr><td>The Action Attribute</td><td><pre><code>
+&#60;form action="/action_page.php"&#62;
+&#60;label for="firstname"&#62;First name:&#60;/label&#62;
+&#60;input type="text" id="firstname" name="firstname" value="John">
+&#60;label for="lastname"&#62;Last name:&#60;/label&#62;
+&#60;input type="text" id="lastname" name="lastname" value="Doe"&#62;
+&#60;input type="submit" value="Submit"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php"><label for="firstname">First name:</label><br><input type="text" id="firstname" name="firstname" value="John"><br><label for="lastname">Last name:</label><br><input type="text" id="lastname" name="lastname" value="Doe"><br><br><input type="submit" value="Submit"></form></td><td> <p> The action attribute defines the action to be performed when the form is submitted. </p> <p> Usually, the form data is sent to a file on the server when the user clicks on the submit button. </p> <p> <u>Tip:</u> If the action attribute is omitted, the action is set to the current page. </p> </td></tr>
+<tr><td>The target Attribute</td><td><code>&#60;form action="/action_page.php" target="_blank"&#62;&#60;/form&#62;</code></td><td><form action="/action_page.php" target="_blank"></form></td><td><p> The target attribute specifies where to display the response that is received after submitting the form. </p> <p>The target attribute can have one of the following values:</p> <ul> <li>_blank	The response is displayed in a new window or tab.</li> <li>_self	The response is displayed in the current window.</li> <li>_parent	The response is displayed in the parent frame.</li> <li>_top	The response is displayed in the full body of the window.</li> <li>framename	The response is displayed in a named iframe.</li> </ul> <p> The default value is _self which means that the response will open in the current window. </p> </td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<div id="method_attribute">
+<h2> The Method Attribute </h2>
+<p> The method attribute specifies the HTTP method to be used when submitting the form data. </p>
+<p> The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post"). </p>
+<p> The default HTTP method when submitting form data is GET. </p> 
+<table>
+<thead></thead>
+<tbody>
+<tr><td> This example uses the GET method when submitting the form data: <span style="border:2px solid black;"><code>&#60;form action="/action_page.php" method="get"&#62;</code></span> </td></tr>
+<tr><td> This example uses the POST method when submitting the form data: <span style="border:2px solid black;"><code>&#60;form action="/action_page.php" method="post"&#62;</code></span> </td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<dl>
+<dt>Notes on GET:</dt>
+<dd> Appends the form data to the URL, in name/value pairs. </dd>
+<dd>There is a limit to how much data you can place in a URL (varies between browsers), therefore, you cannot be sure that all of the form-data will be correctly transferred. </dd>
+<dd> NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!). </dd>
+<dd> The length of a URL is limited (2048 characters). </dd>
+<dd> Useful for form submissions where a user wants to bookmark the result. </dd>
+<dd> GET is good for non-secure data, like query strings in Google. </dd>
+<dd> Never use the "get" method to pass sensitive information! (password or other sensitive information will be visible in the browser's address bar). </dd>
+</dl>
+<dl>
+<dt>Notes on POST:</dt>
+<dd> Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL). </dd>
+<dd> POST has no size limitations, and can be used to send large amounts of data. </dd>
+<dd> Form submissions with POST cannot be bookmarked. </dd>
+<dd> This method sends the form-data as an HTTP post transaction. </dd>
+<dd> The "post" method is more robust and secure than "get", and "post" does not have size limitations. </dd>
+<dd> <u>Tip:</u> Always use POST if the form data contains sensitive or personal information! </dd>
+</dl>
+</div>
+<table>
+<thead></thead>
+<tbody>
+<tr><td>The Autocomplete Attribute</td><td><code>&#60;form action="/action_page.php" autocomplete="on"&#62;&#60;/form&#62;</code></td><td><form action="/action_page.php" autocomplete="on"></form></td><td> <p> The autocomplete attribute specifies whether a form should have autocomplete on or off. </p> <p> When autocomplete is on, the browser automatically complete values based on values that the user has entered before. </p> </td></tr>
+<tr><td>The Novalidate Attribute</td><td><code>&#60;form action="/action_page.php" novalidate&#62;</code></td><td><form action="/action_page.php" novalidate></form></td><td> <p> The novalidate attribute is a boolean attribute. </p> <p> When present, it specifies that the form-data (input) should not be validated when submitted. </p> </td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="input_attributes">
+<h2> HTML Input Attributes </h2>
+<p> This chapter describes the different attributes for the HTML &#60;input&#62; element. </p>
+<table>
+<thead></thead>
+<tbody>
+<tr><td>The Name Attribute for &#60;input&#62;</td><td><pre><code>
+&#60;form action="/action_page.php"&#62;
+  &#60;label for="oname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="oname" value="John"&#62;
+    
+  &#60;input type="submit" value="Submit"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php"><label for="oname">First name:</label><br><input type="text" id="oname" value="John"><br><br><input type="submit" value="Submit"></form></td><td> <p> Notice that each input field must have a name attribute to be submitted. </p> <p> If the name attribute is omitted, the value of the input field will not be sent at all. </p> </td></tr> 
+<tr><td>The value Attribute</td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="gname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="gname" name="gname" value="John"&#62;
+   &#60;label for="kname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="kname" name="kname" value="Doe"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="gname">First name:</label><br><input type="text" id="gname" name="gname" value="John"><br><label for="kname">Last name:</label><br><input type="text" id="kname" name="kname" value="Doe"></form></td><td> <p> The input value attribute specifies an initial value for an input field. </p> </td></tr>
+<tr><td>The readonly Attribute</td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="qname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="qname" name="qname" value="John" readonly&#62;
+  &#60;label for="wname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="wname" name="wname" value="Doe"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="qname">First name:</label><br><input type="text" id="qname" name="qname" value="John" readonly><br><label for="wname">Last name:</label><br><input type="text" id="wname" name="wname" value="Doe"></form></td><td> <p> The input readonly attribute specifies that an input field is read-only. </p> <p> A read-only input field cannot be modified (however, a user can tab to it, highlight it, and copy the text from it). </p> <p> The value of a read-only input field will be sent when submitting the form! </p> </td></tr>
+<tr><td>The disabled Attribute</td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="ename"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="ename" name="ename" value="John" disabled&#62;
+  &#60;label for="mname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="mname" name="mname" value="Doe"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="ename">First name:</label><br><input type="text" id="ename" name="ename" value="John" disabled><br><label for="rname">Last name:</label><br><input type="text" id="rname" name="rname" value="Doe"></form></td><td> <p> The input disabled attribute specifies that an input field should be disabled. </p> <p> A disabled input field is unusable and un-clickable. </p> <p> The value of a disabled input field will not be sent when submitting the form! </p> </td></tr>
+<tr><td> The size Attribute</td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="tname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="tname" name="tname" size="50"&#62;
+  &#60;label for="pin"&#62;PIN:&#60;/label&#62;
+  &#60;input type="text" id="pin" name="pin" size="4"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="tname">First name:</label><br><input type="text" id="tname" name="tname" size="50"><br><label for="pin_text">PIN:</label><br><input type="text" id="pin_text" name="pin_text" size="4"></form></td><td> <p> The input size attribute specifies the visible width, in characters, of an input field. </p> <p> The default value for size is 20. </p> <p> <u>Note:</u> The size attribute works with the following input types: text, search, tel, url, email, and password. </p> </td></tr>
+<tr><td>The maxlength Attribute</td><td><pre><code>  
+&#60;form&#62;
+  &#60;label for="yname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="yname" name="yname" size="50"&#62;
+  &#60;label for="pin"&#62;PIN:&#60;/label&#62;
+  &#60;input type="text" id="pin" name="pin" maxlength="4" size="4"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="yname">First name:</label><br><input type="text" id="yname" name="yname" size="50"><br><label for="pin">PIN:</label><br><input type="text" id="pin" name="pin" maxlength="4" size="4"></form></td><td> <p> The input maxlength attribute specifies the maximum number of characters allowed in an input field. </p> <p> <u>Note:</u> When a maxlength is set, the input field will not accept more than the specified number of characters. However, this attribute does not provide any feedback. So, if you want to alert the user, you must write JavaScript code. </p>  </td></tr>
+<tr><td>The min and max Attributes</td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="datemax"&#62;Enter a date before 1980-01-01:&#60;/label&#62;
+  &#60;input type="date" id="datemax" name="datemax" max="1979-12-31"&#62;
+  
+  &#60;label for="datemin"&#62;Enter a date after 2000-01-01:&#60;/label&#62;
+  &#60;input type="date" id="datemin" name="datemin" min="2000-01-02"&#62;
+  
+
+  &#60;label for="quantity"&#62;Quantity (between 1 and 5):&#60;/label&#62;
+  &#60;input type="number" id="quantity" name="quantity" min="1" max="5"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="datemax">Enter a date before 1980-01-01:</label><input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br><label for="datemin">Enter a date after 2000-01-01:</label><input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br><label for="quantity">Quantity (between 1 and 5):</label><input type="number" id="quantity" name="quantity" min="1" max="5"></form></td><td><p> The input min and max attributes specify the minimum and maximum values for an input field. </p> The min and max attributes work with the following input types: number, range, date, datetime-local, month, time and week. <p> </p> <p> <u>Tip:</u> Use the max and min attributes together to create a range of legal values. </p> </td></tr>
+<tr><td>The multiple Attribute</td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="files"&#62;Select files:&#60;/label&#62;
+  &#60;input type="file" id="files" name="files" multiple&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="files">Select files:</label><input type="file" id="files" name="files" multiple></form></td><td> <p> The input multiple attribute specifies that the user is allowed to enter more than one value in an input field. </p> <p> The multiple attribute works with the following input types: email, and file. </p> </td></tr>
+<tr><td>The pattern Attribute</td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="country_code"&#62;Country code:&#60;/label&#62;
+  &#60;input type="text" id="country_code" name="country_code"
+    pattern="[A-Za-z]{3}" title="Three letter country code"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="country_code">Country code:</label><input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"></form></td><td> <p> The input pattern attribute specifies a regular expression that the input field's value is checked against, when the form is submitted. </p> <p> The pattern attribute works with the following input types: text, date, search, url, tel, email, and password. </p> <p> <u>Tip:</u> Use the global title attribute to describe the pattern to help the user. </p> <p> <u>Tip:</u> Learn more about regular expressions in our JavaScript tutorial. </p> </td></tr>
+<tr><td>The placeholder Attribute</td><td><pre> 
+&#60;form&#62;
+  &#60;label for="phone"&#62;Enter a phone number:&#60;/label&#62;
+  &#60;input type="tel" id="phone" name="phone"
+  placeholder="123-45-678"
+  pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"&#62;
+&#60;/form&#62;
+<code></code></pre></td><td><form><label for="phone">Enter a phone number:</label><input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></form></td><td> <p> The input placeholder attribute specifies a short hint that describes the expected value of an input field (a sample value or a short description of the expected format). </p> <p> The short hint is displayed in the input field before the user enters a value. </p> <p>The placeholder attribute works with the following input types: text, search, url, tel, email, and password. </p> </td></tr>
+<tr><td>The required Attribute</td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="username"&#62;Username:&#60;/label&#62;
+  &#60;input type="text" id="username" name="username" required&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="username">Username:</label><input type="text" id="username" name="username" required></form></td><td> <p> The input required attribute specifies that an input field must be filled out before submitting the form. </p> <p> The required attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file. </p> </td></tr>
+<tr><td>The step Attribute</td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="points"&#62;Points:&#60;/label&#62;
+  &#60;input type="number" id="points" name="points" step="3"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="points">Points:</label><input type="number" id="points" name="points" step="3"></form></td><td> <p> The input step attribute specifies the legal number intervals for an input field. </p> <p> Example: if step="3", legal numbers could be -3, 0, 3, 6, etc. </p> <p> Tip: This attribute can be used together with the max and min attributes to create a range of legal values. </p> <p> The step attribute works with the following input types: number, range, date, datetime-local, month, time and week. </p> <p> Note: Input restrictions are not foolproof, and JavaScript provides many ways to add illegal input. To safely restrict input, it must also be checked by the receiver (the server)! </p> </td></tr>
+<tr><td>The autofocus Attribute</td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="pname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="pname" name="pname" autofocus&#62;
+  &#60;label for="bvname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="bvname" name="bvname"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="pname">First name:</label><br><input type="text" id="pname" name="pname" autofocus><br><label for="bvname">Last name:</label><br><input type="text" id="bvname" name="bvname"></form></td><td> <p> The input autofocus attribute specifies that an input field should automatically get focus when the page loads. </p> </td></tr>
+<tr><td>The height and width Attributes</td><td><pre><code>
+&#60;form&#62;
+  &#60;label for="iname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="iname" name="iname"&#62;
+  &#60;label for="lnname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="lnname" name="lnname"&#62;
+  &#60;input type="image" src="img_submit.gif" alt="Submit" width="48" height="48"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><label for="iname">First name:</label><input type="text" id="iname" name="iname"><br><br><label for="lnname">Last name:</label><input type="text" id="lnname" name="lnname"><br><br><input type="image" src="img_submit.gif" alt="Submit" width="48" height="48"></form></td><td><p> The input height and width attributes specify the height and width of an &#60;input type="image"&#62; element. </p> <p> <u>Tip:</u> Always specify both the height and width attributes for images. If height and width are set, the space required for the image is reserved when the page is loaded. Without these attributes, the browser does not know the size of the image, and cannot reserve the appropriate space to it. The effect will be that the page layout will change during loading (while the images load). </p> </td></tr>
+<tr><td>The list Attribute</td><td><pre><code>
+&#60;form&#62;
+  &#60;input list="browsers"&#62;
+   &#60;datalist id="browsers">
+    &#60;option value="Internet Explorer"&#62;
+    &#60;option value="Firefox"&#62;
+    &#60;option value="Chrome"&#62;
+    &#60;option value="Opera"&#62;
+    &#60;option value="Safari"&#62;
+   &#60;/datalist&#62;
+&#60;/form&#62;
+</code></pre></td><td><form><input list="browwsers"><datalist id="browwsers"><option value="Internet Explorer"><option value="Firefox"><option value="Chrome"><option value="Opera"><option value="Safari"></datalist></form></td><td> <p> The input list attribute refers to a &#60;datalist&#62; element that contains pre-defined options for an &#60;input&#62; element. </p> </td></tr>
+<tr><td>The autocomplete Attribute</td><td><pre><code>
+&#60;form action="/action_page.php" autocomplete="on"&#62;
+  &#60;label for="jname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="jname" name="jname"&#62;
+  &#60;label for="jnname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="jnname" name="jnname"&#62;
+  &#60;label for="email"&#62;Email:&#60;/label&#62;
+  &#60;input type="email" id="email" name="email" autocomplete="off"&#62;
+  &#60;input type="submit" value="Submit"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php" autocomplete="on"><label for="jname">First name:</label><input type="text" id="jname" name="jname"><br><br><label for="jnname">Last name:</label><input type="text" id="jnname" name="jnname"><br><br><label for="eemail">Email:</label><input type="email" id="eemail" name="eemail" autocomplete="off"><br><br><input type="submit" value="Submit"></form>
+</td><td> <p> The input autocomplete attribute specifies whether a form or an input field should have autocomplete on or off. </p> <p> Autocomplete allows the browser to predict the value. When a user starts to type in a field, the browser should display options to fill in the field, based on earlier typed values. </p> <p> The autocomplete attribute works with &#60;form&#62; and the following &#60;input&#62; types: text, search, url, tel, email, password, datepickers, range, and color. </p> <p> <u>Tip:</u> In some browsers you may need to activate an autocomplete function for this to work (Look under "Preferences" in the browser's menu). </p> </td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="form_two_attributes">
+<h2> HTML Input form* Attributes </h2>
+<table>
+<thead></thead>
+<tbody>
+<tr><td>The form Attribute</td><td><pre><code>
+&#60;form action="/action_page.php" id="form1"&#62;
+  &#60;label for="aname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="aname" name="aname"&#62;
+  &#60;input type="submit" value="Submit"&#62;
+&#60;/form&#62;
+    
+  &#60;label for="xdname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="xdname" name="xdname" form="form1"&#62;
+</code></pre></td><td><form action="/action_page.php" id="form1"><label for="aname">First name:</label><input type="text" id="aname" name="aname"><br><br><input type="submit" value="Submit"></form><label for="xdname">Last name:</label><input type="text" id="xdname" name="xdname" form="form1"></td><td> <p> The input form attribute specifies the form the &#60;input&#62; element belongs to. </p> <p> The value of this attribute must be equal to the id attribute of the &#60;form&#62; element it belongs to. </p> <p> An input field located outside of the HTML form (but still a part of the form). </p> </td></tr>
+<tr><td>The formaction Attribute</td><td><pre><code>
+&#60;form action="/action_page.php"&#62;
+  &#60;label for="sname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="sname" name="sname"&#62;
+  &#60;label for="lvname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="lvname" name="lvname"&#62;
+  &#60;input type="submit" value="Submit"&#62;
+  &#60;input type="submit" formaction="/action_page2.php" value="Submit as Admin"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php"><label for="sname">First name:</label><input type="text" id="sname" name="nsame"><br><br><label for="lvname">Last name:</label><input type="text" id="lvname" name="lvname"><br><br><input type="submit" value="Submit"><input type="submit" formaction="/action_page2.php" value="Submit as Admin"></form></td><td> <p> The input formaction attribute specifies the URL of the file that will process the input when the form is submitted. </p> <p> <u>Note:</u> This attribute overrides the action attribute of the &#60;form&#62; element. </p> <p> The formaction attribute works with the following input types: submit and image. </p> </td></tr>
+<tr><td>The formenctype Attribute</td><td><pre><code>
+&#60;form action="/action_page_binary.asp" method="post"&#62;
+  &#60;label for="dname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="dname" name="dname"&#62;
+  &#60;input type="submit" value="Submit"&#62;
+  &#60;input type="submit" formenctype="multipart/form-data"
+    value="Submit as Multipart/form-data"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page_binary.asp" method="post"><label for="dname">First name:</label><input type="text" id="dname" name="dname"><br><br><input type="submit" value="Submit"><input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data"></form></td><td> <p> The input formenctype attribute specifies how the form-data should be encoded when submitted (only for forms with method="post"). </p> <p> <u>Note:</u> This attribute overrides the enctype attribute of the &#60;form&#62; element. </p> <p> The formenctype attribute works with the following input types: submit and image. </p> <p> A form with two submit buttons. The first sends the form-data with default encoding, the second sends the form-data encoded as "multipart/form-data". </p> </td></tr>
+<tr><td>The formmethod Attribute</td><td><pre><code>
+&#60;form action="/action_page.php" method="get"&#62;
+  &#60;label for="hname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="hname" name="hname"&#62;
+  &#60;label for="luname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="luname" name="luname"&#62;
+  &#60;input type="submit" value="Submit using GET"&#62;
+  &#60;input type="submit" formmethod="post" value="Submit using POST"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php" method="get"><label for="hname">First name:</label><input type="text" id="hname" name="hname"><br><br><label for="luname">Last name:</label><input type="text" id="luname" name="luname"><br><br><input type="submit" value="Submit using GET"><input type="submit" formmethod="post" value="Submit using POST"></form></td><td> <p> The input formmethod attribute defines the HTTP method for sending form-data to the action URL. </p> <p> <u>Note:</u> This attribute overrides the method attribute of the &#60;form&#62; element. </p> <p> The formmethod attribute works with the following input types: submit and image. </p> <p> The form-data can be sent as URL variables (method="get") or as an HTTP post transaction (method="post"). </p> </td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="formtarget_attribute">
+<table>
+<thead></thead>
+<tbody>
+<tr><td>The formtarget Attribute</td><td><pre><code>
+&#60;form action="/action_page.php"&#62;
+  &#60;label for="zname"&#62;First name:&#60;/label&#62;
+  &#60;input type="text" id="zname" name="zname"&#62;
+  &#60;label for="hyname"&#62;Last name:&#60;/label&#62;
+  &#60;input type="text" id="hyname" name="hyname"&#62;
+  &#60;input type="submit" value="Submit"&#62;
+  &#60;input type="submit" formtarget="_blank" value="Submit to a new window/tab"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php"><label for="zname">First name:</label><input type="text" id="zname" name="zname"><br><br><label for="hyname">Last name:</label><input type="text" id="hyname" name="hyname"><br><br><input type="submit" value="Submit"><input type="submit" formtarget="_blank" value="Submit to a new window/tab"></form></td><td> <p> The input formtarget attribute specifies a name or a keyword that indicates where to display the response that is received after submitting the form. </p> <p> <u>Note:</u> This attribute overrides the target attribute of the &#60;form&#62; element. </p> <p> The formtarget attribute works with the following input types: submit and image. </p> </td></tr>
+<tr><td>The formnovalidate Attribute</td><td><pre><code>
+&#60;form action="/action_page.php"&#62;
+  &#60;label for="email"&#62;Enter your email:&#60;/label&#62;
+  &#60;input type="email" id="email" name="email"&#62;
+  &#60;input type="submit" value="Submit"&#62;
+  &#60;input type="submit" formnovalidate="formnovalidate"
+    value="Submit without validation"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php"><label for="email">Enter your email:</label><input type="email" id="emmail" name="emmail"><br><br><input type="submit" value="Submit"><input type="submit" formnovalidate="formnovalidate" value="Submit without validation"></form></td><td> <p> The input formnovalidate attribute specifies that an &#60;input&#62; element should not be validated when submitted. </p> <p> <u>Note:</u> This attribute overrides the novalidate attribute of the &#60;form&#62; element. </p> <p> The formnovalidate attribute works with the following input types: submit. </p> <p> A form with two submit buttons (with and without validation). </p> </td></tr>
+<tr><td>The novalidate Attribute</td><td><pre><code>
+&#60;form action="/action_page.php" novalidate&#62;
+  &#60;label for="email"&#62;Enter your email:&#60;/label&#62;
+  &#60;input type="email" id="email" name="email"&#62;
+  &#60;input type="submit" value="Submit"&#62;
+&#60;/form&#62;
+</code></pre></td><td><form action="/action_page.php" novalidate><label for="email">Enter your email:</label><input type="email" id="email" name="email"><br><br><input type="submit" value="Submit"></form></td><td> <p> The novalidate attribute is a &#60;form&#62; attribute. </p> <p> When present, novalidate specifies that all of the form-data should not be validated when submitted. </p> <p> Specify that no form-data should be validated on submit. </p> </td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</main>
+</body>
+</html>

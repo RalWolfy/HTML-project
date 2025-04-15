@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Example of SSE </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Example of a SSE">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width">
+<style type="text/css">
+body{margin:10vw;}
+table, td{border-collapse: collapse; border:2px solid grey; margin:auto; margin-bottom:10px;}
+h1{text-align:center;}
+</style>
+</head>
+<body>
+<header> 
+<h1> SSE Example </h1>
+</header>
+<main> 
+<h2> Geting server updates </h2>
+<div id="result"> </div>
+<script>
+if(typeof(EventSource) !== "undefined") {
+var source = new EventSource("demo_sse.php");
+source.onmessge = function(event) {
+document.getElementById("result").innerHTML += event.data + "<br>";
+};
+} else {
+document.getElementById("result").innerHTML = "Sorry, your browser does not support the Server-Sent Events!";
+}
+</script>
+<h2> Full Example at what contain this example </h2>
+<div id="fullex">
+<table>
+<thead> 
+<tr> 
+<th> In the html </th> 
+</tr> 
+</thead>
+<tbody>
+<tr>
+<td>
+<pre>
+<code>
+if(typeof(EventSource) !== "undefined") {
+var source = new EventSource("demo_sse.php");
+source.onmessage = function(event) {
+document.getElememyById("result").innerHTML += event.data + "&#60;br&#62;";
+};
+} else {
+document.getElementById("result").innerHTML = "Sorry, your browser does not support the Server-Sent Events"
+}
+</code>
+</pre>
+</td>
+</tr>
+</tbody>
+<tfoot>
+</tfoot>
+</table>
+<table>
+<thead> 
+<tr>
+<th colspan="2"> In a differnt file: PHP or ASP </th>
+</tr>
+<tr>
+<th> PHP </th>
+<th> ASP </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<pre>
+<code>
+&#60;?php
+header('Content-Type: text/event-stream');
+header('Cache-Control: no-cache');
+
+$time = date('r');
+echo "data: The server time is: {$time}\n\n";
+flush();
+?&#62;
+</code>
+</pre>
+</td>
+<td>
+<pre>
+<code>
+&#60;%
+Response.ContentType = "text/event-stream"
+Response.Expires = -1
+Response.Write("data: The server time is: " & now())
+Response.Flush()
+%&#62;
+</code>
+</pre>
+</td>
+</tr>
+</tbody>
+<tfoot>
+</tfoot>
+</table>
+</div>
+</main>
+</body>
+</html>

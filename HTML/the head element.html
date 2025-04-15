@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> The Head Element </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="The &#60;head&#62; element is a container for the following elements:title, style, meta, link, script, base.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+ul{list-style-type:none;}
+.list:before{content:"!"; color:red;}
+table, td{border:3px solid black; border-collapse:collapse; padding:5px; background-color:#e2e8ff;}
+h1{text-align:center;}
+body{margin:10vw; background-color:#c2cdff; font-size:1.2vw;}
+</style>
+</head>
+<body>
+<header>
+<h1> The Head Element </h1>
+</header>
+<main>
+<p> The HTML &lt;head&gt; element is a container for the following elements: <a href="#title">&lt;title&gt;</a>, <a href="#style">&lt;style&gt;</a>, <a href="#meta">&lt;meta&gt;</a>, <a href="#link">&lt;link&gt;</a>, <a href="#script">&lt;script&gt;</a>, and <a href="#base">&lt;base&gt;</a>. </p>
+<div id="head_element">
+<h2> The HTML &lt;head&gt; Element </h2>
+<ul>
+<li> The &lt;head&gt; element is a container for metadata (data about data). </li>
+<li> Metadata is not displayed. </li>
+<li> Defines information about the document. </li>
+</ul>
+</div>
+<div id="title_element">
+<h2 id="title"> The HTML &lt;title&gt; Element </h2>
+<p> The &lt;title&gt; element defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab. </p>
+<ul>
+<li class="list"> The &lt;title&gt; element is required in HTML documents! </li>
+<li> The content of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results. </li>
+</ul>
+<table>
+<caption> The &lt;title&gt; element: </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td> -defines a title in the browser toolbar. </td>
+</tr>
+<tr>
+<td> -provides a title for the page when it is added to favorites. </td>
+</tr>
+<tr>
+<td> -displays a title for the page in search engine-results. </td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="style_element">
+<h2 id="style"> The &lt;style&gt; element </h2>
+<p> The &lt;style&gt; element is used to define style information for a document. </p>
+</div>
+<div id="link_element">
+<h2 id="link"> The HTML &lt;link&gt; Element </h2>
+<p> The &lt;link&gt; element defines the relationship between the current document and an external resource. </p>
+<p> The &lt;link&gt; tag is most often used to link to external style sheets: </p>
+</div>
+<div id="meta_element">
+<h2 id="meta"> The HTML &#60;meta&#62; Element </h2>
+<p> The &lt;meta&gt; element is typically used to specify the character set, page description, keywords, author of the document, and viewport settings. </p>
+<p> The metadata will not be displayed on the page, but is used by browsers (how to display content or reload page), by search engines (keywords), and other web services. </p>
+<table>
+<thead></thead>
+<tbody>
+<tr>
+<td> Define the character set used: </td>
+<td> &lt;meta charset="UTF-8"&gt; </td>
+</tr>
+<tr>
+<td> Define keywords for search engines: </td>
+<td> &lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt; </td>
+</tr>
+<tr>
+<td> Define a description of your web page: </td>
+<td> &lt;meta name="description" content="Free Web tutorials"&gt; </td>
+</tr>
+<tr>
+<td> Define the author of a page: </td>
+<td> &lt;meta name="author" content="John Doe"&gt; </td>
+</tr>
+<tr>
+<td> Refresh document every 30 seconds: </td>
+<td> &lt;meta http-equiv="refresh" content="30"&gt; </td>
+</tr>
+<tr>
+<td> Setting the viewport to make your website look good on all devices: </td>
+<td> &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; </td>
+</tr>
+<tr>
+<td>Other exemples:</td>
+<td><pre><code>
+&#60;meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png"&#62;
+&#60;meta property="og:description" content="This is an example page to demonstrate usage of metadata on web pages."&#62;
+&#60;meta property="og:title" content="Metadata; The HTML &lt;head&gt;, on MDN"&#62;
+</code></pre></td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<div id="viewport">
+<h3> Setting The Viewport </h3>
+<p> The viewport is the user's visible area of a web page. It varies with the device - it will be smaller on a mobile phone than on a computer screen. </p>
+<p> You should include the following &lt;meta&gt; element in all your web pages: </p>
+<ul>
+<li>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; - This gives the browser instructions on how to control the page's dimensions and scaling. </li>
+<li> The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device). </li>
+<li> The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser. </li>
+</ul>
+</div>
+</div>
+<div id="script_element">
+<h2 id="script"> The HTML &lt;script&gt; Element </h2>
+<p> The &lt;script&gt; element is used to define client-side JavaScripts. </p>
+<p> The following JavaScript writes "Hello JavaScript!" into an HTML element with id="demo": </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody><tr><td><pre><code>
+&lt;script&gt;
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+&lt;/script&gt;
+</code></pre></td></tr></tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="base_element">
+<h2 id="base"> The HTML &lt;base&gt; Element </h2>
+<p> The &lt;base&gt; element specifies the base URL and/or target for all relative URLs in a page. </p>
+<p> The &lt;base&gt; tag must have either an href or a target attribute present, or both. </p>
+<ul>
+<li class="list"> There can only be one single &#60;base&#62; element in a document! </li>
+</ul>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody>
+<tr>s
+<td> Specify a default URL and a default target for all links on a page:</td>
+</tr>
+<tr><td><pre><code>
+&lt;head&gt; 
+&lt;base href="https://www.w3schools.com/" target="_blank"&gt;
+&lt;/head&gt;
+</code></pre></td></tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+</main>
+</body>
+</html>

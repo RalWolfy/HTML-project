@@ -1,0 +1,3 @@
+(Apache, Unix) are case sensitive about file names: "london.jpg" cannot be accessed as "London.jpg".
+
+Other web servers (Microsoft, IIS

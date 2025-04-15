@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> HTML Images </title>
+<meta charset="UTF-8">
+<meta name="keywords" content="HTML">
+<meta name="description" content="Images can improve the design and the appearance of a web page.">
+<meta name="author" content="unknown">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1{text-align:center; margin:100px;}
+body{margin:10vw; background-color:#f7ffb2;}
+.personalized:before{content:"!"; color:red;}
+table{border:2px solid grey; margin:auto;}
+</style>
+</head>
+<body>
+<header>
+<h1> Images </h1>
+</header>
+<main>
+<p> Images can improve the design and the appearance of a web page. </p>
+<p> The HTML &#60;img&#62; tag is used to embed an image in a web page. </p>
+<p> Images are not technically inserted into a web page; images are linked to web pages. The &#60;img&#62; tag creates a holding space for the referenced image. </p>
+<p> The &#60;img&#62; tag is empty, it contains attributes only, and does not have a closing tag. </p>
+<p> The &#60;img&#62; tag has two required attributes: </p>
+<ul style="list-style-type:disc;">
+<li> <span style="color:blue;">src or href</span> - Specifies the path to the image. </li>
+<li> <span style="color:blue;">alt</span> - Specifies an alternate text for the image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader). </li>
+</ul>
+<div id="syntax">
+<h2> Syntax </h2>
+<table> <thead></thead> <tbody> <tr> <td> <code>&#60;img src="url" alt="alternate text"&#62;</code> </td> </tr> </tbody> <tfoot></tfoot> </table>
+<ul style="list-style-type:disc;">
+<li> The value of the alt attribute should describe the image. </li>
+</ul>
+<p> <u>Tip</u>: A screen reader is a software program that reads the HTML code, and allows the user to "listen" to the content. <span style="color:#2f20ff;">Screen readers are useful for people who are visually impaired or learning disabled.</span> </p>
+</div>
+<div id="size">
+<h2> Image Size - Width and Height </h2>
+<p> You can use the style attribute to specify the width and height of an image. </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td> <code>&#60;img src="img_girl.<abbr title="Joint Photographic Group">JPG</abbr>" alt="Girl in a jacket" <span style="color:#7970ff;"><u>style="width:500px;height:600px;"</u></span>&#62;</code> </td>
+</tr>
+<tr>
+<td> <code>&#60;img src="img_girl.<abbr title="Joint Photographic Group">JPG</abbr>" alt="Girl in a jacket" <span style="color:#7970ff;"><u>width="500" height="600"</u></span>&#62;</code> </td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+<ul style="list-style-type:none;">
+<li class="personalized"> The width and height attributes always define the width and height of the image in pixels. </li>
+<li> Always specify the width and height of an image. If width and height are not specified, the web page might flicker while the image loads. </li>
+</ul>
+</div>
+<div id="wh_style">
+<h2> Width and Height, or Style </h2>
+<p> The width, height, and style attributes are all valid in HTML. </p>
+<p> However, we suggest using the style attribute. It prevents styles sheets from changing the size of images. </p>
+</div>
+<div id="folder">
+<h2> Images in Another Folder </h2>
+<p> If you have your images in a sub-folder, you must include the folder name in the src attribute. </p>
+</div>
+<div id="server_website">
+<h2> Images on Another Server/Website </h2>
+<p> Some web sites point to an image on another server. </p>
+<p> To point to an image on another server, you must specify an absolute (full) URL in the src attribute. </p>
+<ul style="list-style-type:none;">
+<li class="personalized"> Notes on external images: External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; they can suddenly be removed or changed. </li>
+</ul>
+</div>
+<div id="animated">
+<h2> Animated Images </h2>
+<p> HTML allows animated <abbr title="Graphics Interchange Format">GIF</abbr>s: <span style="color:#7970ff;"><code><u>&#60;img src="programming.<abbr title="Graphics Interchange Format">GIF</abbr>" alt="Computer Man" style="width:48px;height:48px;"</u></code></span>&#62; </p>
+</div>
+<div id="link">
+<h2> Image as a Link </h2>
+<p> To use an image as a link, put the &#60;img&#60; tag inside the &#60;a&#62; tag. </p>
+</div>
+<div id="float">
+<h2> Image Floating </h2>
+<p> Use the CSS float property to let the image float to the right or to the left of a text. </p>
+<table>
+<caption> Example </caption>
+<thead></thead>
+<tbody>
+<tr>
+<td> <code>&#60;img src="smiley.<abbr title="Graphics Interchange Format">GIF</abbr>" alt="Smiley face" <span style="color:#7970ff;"><u>style="float:right;</u></span> width:42px; height:42px;"&#62; The image will float to the right of the text.</code> </td>
+</tr>
+<tr>
+<td> <code>&#60;img src="smiley.<abbr title="Graphics Interchange Format">GIF</abbr>" alt="Smiley face" <span style="color:#7970ff;"><u>style="float:left;</u></span> width:42px; height:42px;"&#62; The image will float to the left of the text.</code> </td>
+</tr>
+</tbody>
+<tfoot></tfoot>
+</table>
+</div>
+<div id="formats">
+<h2> Common Image Formats </h2>
+<p> Here are the most common image file types, which are supported in <q>all</q> browsers (Chrome, Edge, Firefox, Safari, Opera): </p>
+<table>
+<thead>
+<tr> <th> Abbreviation </th> <th> File Format </th> <th> File Extension </th> </tr>
+</thead>
+<tbody>
+<tr> <td> A<abbr title="Portable Network Graphics">PNG</abbr> </td> <td> Animated Portable Network Graphics </td> <td> .a<abbr title="Portable Network Graphics">PNG</abbr> </td> </tr>
+<tr> <td> <abbr title="Graphics Interchange Format">GIF</abbr> </td> <td> Graphics Interchange Format </td> <td> .<abbr title="Graphics Interchange Format">GIF</abbr> </td> </tr>
+<tr> <td> ICO </td> <td> Microsoft Icon </td> <td> .ico, .cur </td> </tr>
+<tr> <td> <abbr title="Joint Photographic Experts Group">JPEG</abbr> </td> <td> Joint Photographic Expert Group image </td> <td> .<abbr title="Joint Photographic Group">JPG</abbr>, .<abbr title="Joint Photographic Experts Group">JPEG</abbr>, .jfif, .p<abbr title="Joint Photographic Experts Group">JPEG</abbr>, .pjp </td> </tr>
+<tr> <td> <abbr title="Portable Network Graphics">PNG</abbr> </td> <td> Portable Network Graphics </td> <td> .<abbr title="Portable Network Graphics">PNG</abbr> </td> </tr>
+<tr> <td> SVG </td> <td> Scalable Vector Graphics </td> <td> .svg </td> </tr>
+</tbody>
+<tfoot>
+</tfoot>
+</table>
+<ul style="list-style-type:none;">
+<li class="personalized"> Loading large images takes time, and can slow down your web page. Use images carefully. </li>
+</ul>
+</div>
+<p> Types of image files: <a href="types_images/types.html">Click!</a></p>
+</main>
+</body>
+</html>
+
+
+
